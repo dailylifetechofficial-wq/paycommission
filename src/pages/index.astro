@@ -1,50 +1,284 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+// src/pages/index.astro
+const title = "8th Pay Commission Calculator, Pay Matrix & Latest News 2026";
+const description = "Calculate revised 8th CPC basic pay, HRA, and pension estimates using projected fitment factors (1.92x - 3.83x). Check pay matrix levels and updates.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://8thpaycommission.pages.dev");
+
+const fitmentOptions = [
+  { value: "1.92", label: "1.92x (Conservative Estimate)" },
+  { value: "2.28", label: "2.28x (Moderate Projection)", default: true },
+  { value: "2.57", label: "2.57x (7th CPC Baseline)" },
+  { value: "2.86", label: "2.86x (Staff Side Demand)" },
+  { value: "3.83", label: "3.83x (Union Recommendation)" },
+];
+
+const faqs = [
+  {
+    q: "What is the expected fitment factor for the 8th Pay Commission?",
+    a: "Employee federations have projected fitment factors between 2.86 and 3.83, while conservative analyst projections expect the multiplier to settle around 1.92 to 2.28."
+  },
+  {
+    q: "What will happen to Dearness Allowance (DA) under the 8th CPC?",
+    a: "Under standard pay commission terms, accumulated DA is merged into the revised basic salary, and the new DA counter resets to 0%."
+  },
+  {
+    q: "How will the 8th CPC impact pensioners?",
+    a: "The basic pension will be revised by applying the finalized fitment factor to the current 7th CPC basic pension, alongside updated Dearness Relief (DR)."
+  }
+];
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <meta name="keywords" content="8th pay commission, 8th cpc calculator, fitment factor, pay matrix, central government salary hike, pension revision" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph / Social Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+
+  <!-- JSON-LD Structured Data for Rich Snippets -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "8th Pay Commission Portal",
+        "url": canonicalURL.toString(),
+        "description": description
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(item => ({
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a
+          }
+        }))
+      }
+    ]
+  })} />
+
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-accent: #2563eb;
+      --accent: #f59e0b;
+      --text: #1e293b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: var(--primary); color: #fff; position: sticky; top: 0; z-index: 50; }
+    .nav-wrap { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; }
+    .brand { font-size: 1.2rem; font-weight: 700; color: #fff; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    nav a { color: #e2e8f0; text-decoration: none; margin-left: 1.25rem; font-size: 0.95rem; font-weight: 500; }
+    nav a:hover { color: var(--accent); }
+    .hero { background: linear-gradient(to right, #1e3a8a, #1d4ed8); color: #fff; padding: 3rem 1.25rem; text-align: center; }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.75rem; }
+    .hero p { max-width: 700px; margin: 0 auto; opacity: 0.95; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.25rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .grid-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+    .field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem; }
+    .field input, .field select { width: 100%; padding: 0.65rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+    .btn { grid-column: 1 / -1; background: var(--primary-accent); color: white; border: none; padding: 0.8rem; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .btn:hover { background: #1d4ed8; }
+    .results { margin-top: 1.5rem; background: #eff6ff; border-left: 4px solid var(--primary-accent); padding: 1.25rem; border-radius: 4px; display: none; }
+    .results h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.15rem; }
+    .layout-split { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+    @media(max-width: 768px) { .layout-split { grid-template-columns: 1fr; } nav { display: none; } }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.92rem; }
+    th, td { border: 1px solid var(--border); padding: 0.65rem 0.75rem; text-align: left; }
+    th { background: #f1f5f9; }
+    .faq-block { margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; }
+    .faq-block h4 { color: #0f172a; margin-bottom: 0.25rem; }
+    footer { background: #0f172a; color: #94a3b8; padding: 2rem 1.25rem; text-align: center; font-size: 0.85rem; margin-top: 3rem; }
+    footer a { color: #cbd5e1; text-decoration: none; margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrap">
+      <a href="/" class="brand">8th Pay<span>Commission</span></a>
+      <nav>
+        <a href="#calculator">Calculator</a>
+        <a href="#matrix">Pay Matrix</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>8th Central Pay Commission Calculator & Matrix</h1>
+    <p>Check projected fitment factor revisions, revised basic salary estimates, and pension hike tables for central government staff.</p>
+  </section>
+
+  <main>
+    <!-- Salary Calculator -->
+    <section class="card" id="calculator">
+      <h2>8th CPC Salary & Fitment Calculator</h2>
+      <p style="color: #64748b; font-size: 0.9rem;">Select your current pay tier and fitment factor scenario to forecast your revised basic pay.</p>
+
+      <form id="calcForm">
+        <div class="grid-fields">
+          <div class="field">
+            <label for="basicPay">Current 7th CPC Basic Pay (₹)</label>
+            <input type="number" id="basicPay" value="18000" min="18000" step="100" required />
+          </div>
+          <div class="field">
+            <label for="fitment">Fitment Factor Multiplier</label>
+            <select id="fitment">
+              {fitmentOptions.map(opt => (
+                <option value={opt.value} selected={opt.default}>{opt.label}</option>
+              ))}
+            </select>
+          </div>
+          <div class="field">
+            <label for="cityClass">HRA Classification</label>
+            <select id="cityClass">
+              <option value="0.27">X Class (27% / 30% Projected)</option>
+              <option value="0.18">Y Class (18% / 20% Projected)</option>
+              <option value="0.09">Z Class (9% / 10% Projected)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Calculate Revised Salary</button>
+        </div>
+      </form>
+
+      <div id="output" class="results">
+        <h3>Estimated 8th CPC Salary Details</h3>
+        <p><strong>Revised Basic Pay:</strong> ₹<span id="outBasic">0</span></p>
+        <p><strong>Estimated HRA:</strong> ₹<span id="outHRA">0</span></p>
+        <p><strong>Gross Total (Basic + HRA, ex. DA):</strong> ₹<span id="outGross">0</span></p>
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 0.5rem;">*Note: Dearness Allowance (DA) resets to 0% upon implementation of a new Pay Commission.</p>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="layout-split">
+      <div>
+        <article class="card" id="matrix">
+          <h2>Projected Entry Pay by Pay Matrix Level</h2>
+          <p>Estimated basic pay levels across key government grades using a 2.28x moderate multiplier:</p>
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Pay Level</th>
+                  <th>7th CPC Basic</th>
+                  <th>8th CPC (1.92x)</th>
+                  <th>8th CPC (2.28x)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Level 1</strong> (MTS / Group D)</td>
+                  <td>₹18,000</td>
+                  <td>₹34,560</td>
+                  <td>₹41,040</td>
+                </tr>
+                <tr>
+                  <td><strong>Level 2</strong> (LDC)</td>
+                  <td>₹19,900</td>
+                  <td>₹38,208</td>
+                  <td>₹45,372</td>
+                </tr>
+                <tr>
+                  <td><strong>Level 6</strong> (Inspector / Sub-Inspector)</td>
+                  <td>₹35,400</td>
+                  <td>₹67,968</td>
+                  <td>₹80,712</td>
+                </tr>
+                <tr>
+                  <td><strong>Level 10</strong> (Group A Entry)</td>
+                  <td>₹56,100</td>
+                  <td>₹1,07,712</td>
+                  <td>₹1,27,908</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <section class="card" id="faqs">
+          <h2>Frequently Asked Questions</h2>
+          {faqs.map(faq => (
+            <div class="faq-block">
+              <h4>{faq.q}</h4>
+              <p>{faq.a}</p>
+            </div>
+          ))}
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Pension Revision</h3>
+          <p style="font-size: 0.9rem; color: #475569; margin-top: 0.5rem;">
+            Central government pensioners will have their basic pensions recalculated by applying the final fitment multiplier directly to their basic pension amount.
+          </p>
+          <hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border);" />
+          <h4 style="font-size: 0.9rem;">Core Pension Demands:</h4>
+          <ul style="font-size: 0.85rem; padding-left: 1.2rem; color: #475569; margin-top: 0.35rem;">
+            <li>Minimum pension hike from ₹9,000 to ₹17,000+</li>
+            <li>Restoration of commuted pension at 12 years</li>
+            <li>Additional old-age pension relief tiers starting at 65</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="#calculator">Calculator</a> | 
+      <a href="#matrix">Pay Matrix</a> | 
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Disclaimer</a>
+    </p>
+    <p style="margin-top: 0.5rem;">
+      © 2026 8th Pay Commission Info Portal. Unofficial informational tool based on public representations and proposals.
+    </p>
+  </footer>
+
+  <!-- Client-side Calculation Script -->
+  <script is:inline>
+    const form = document.getElementById('calcForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const basic = parseFloat(document.getElementById('basicPay').value) || 0;
+      const fitment = parseFloat(document.getElementById('fitment').value) || 2.28;
+      const hraRate = parseFloat(document.getElementById('cityClass').value) || 0.27;
+
+      const revisedBasic = Math.round(basic * fitment);
+      const revisedHRA = Math.round(revisedBasic * hraRate);
+      const gross = revisedBasic + revisedHRA;
+
+      document.getElementById('outBasic').textContent = revisedBasic.toLocaleString('en-IN');
+      document.getElementById('outHRA').textContent = revisedHRA.toLocaleString('en-IN');
+      document.getElementById('outGross').textContent = gross.toLocaleString('en-IN');
+
+      const out = document.getElementById('output');
+      out.style.display = 'block';
+      out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+
+</body>
 </html>
