@@ -1,6 +1,6 @@
 ---
 // src/pages/index.astro
-const title = "8th Pay Commission 2026 | Salary, Fitment Factor, Pay Matrix & Latest Updates";
+const title = "8th Pay Commission 2026 | Salary, Fitment Factor & Pay Matrix";
 const description = "Comprehensive portal for 8th Central Pay Commission (CPC). Calculate revised salaries, explore projected pay matrix levels 1 to 18, pension revision, and arrears.";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://8thpaycommission.pages.dev");
 
@@ -25,19 +25,6 @@ const payLevels = [
   { level: "Level 16", entry7th: 205400, gradePay: "HAG+", post: "Special Secretary / DG" },
   { level: "Level 17", entry7th: 225000, gradePay: "Apex Scale", post: "Secretary to Govt of India" },
   { level: "Level 18", entry7th: 250000, gradePay: "Cabinet Sec", post: "Cabinet Secretary of India" }
-];
-
-// 8-10 News Articles
-const newsItems = [
-  { date: "Sept 2026", title: "National Council (JCM) submits formal representation to Finance Ministry", excerpt: "Employee unions press for timely constitution of the 8th CPC terms of reference." },
-  { date: "Aug 2026", title: "DA hike impact: Central Dearness Allowance crosses critical benchmark", excerpt: "Allowances review triggered as cumulative DA trajectory sets high baseline for merger." },
-  { date: "July 2026", title: "Defence Forces federations demand revision in Military Service Pay (MSP)", excerpt: "Key memorandum stresses proportional hike in risk allowances under the next commission." },
-  { date: "June 2026", title: "Pensioners' Forum submits memorandum on commuted pension recovery", excerpt: "Demand intensifies to restore commuted pension after 12 years instead of 15 years." },
-  { date: "May 2026", title: "Fitment Factor Debate: Economic experts assess feasibility of 2.28x vs 2.86x", excerpt: "Fiscal impact evaluations model central exchequer liability under varied multipliers." },
-  { date: "April 2026", title: "Railway unions pass resolution demanding minimum basic pay revision", excerpt: "Joint action committee calls for minimum basic revision up to ₹41,000+ for Level 1." },
-  { date: "March 2026", title: "HRA classification slabs expected to undergo metro re-benchmarking", excerpt: "X, Y, and Z city tier classification under review to align with updated census figures." },
-  { date: "Feb 2026", title: "Standing Committee reviews parity in Autonomous Body pensions", excerpt: "Recommendations seek uniform applicability of 8th CPC pension formulas for autonomous institutions." },
-  { date: "Jan 2026", title: "10-Year Cycle Reaches Milestone: Focus shifts to 8th CPC notification", excerpt: "A decade after 7th CPC rollout, government employees await official formation updates." }
 ];
 
 // 20 Structured FAQs
@@ -89,8 +76,6 @@ const faqs = [
     :root {
       --primary: #0f172a;
       --primary-accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --gold: #d97706;
       --text: #334155;
       --heading: #0f172a;
       --bg: #f8fafc;
@@ -135,10 +120,6 @@ const faqs = [
     /* Card Containers */
     .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 
-    /* Update Banner */
-    .update-banner { background: #eff6ff; border-left: 5px solid var(--primary-accent); padding: 1.25rem; border-radius: 6px; display: flex; gap: 1rem; align-items: flex-start; }
-    .update-tag { background: var(--primary-accent); color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
-
     /* Calculators Grid */
     .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
     .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: #475569; }
@@ -167,13 +148,6 @@ const faqs = [
     .level-pill-card:hover { border-color: var(--primary-accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     .level-pill-card strong { display: block; color: var(--heading); }
     .level-pill-card span { font-size: 0.75rem; color: #64748b; }
-
-    /* News Grid */
-    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
-    .news-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; }
-    .news-date { font-size: 0.8rem; color: var(--gold); font-weight: 600; margin-bottom: 0.3rem; }
-    .news-card h4 { font-size: 1rem; color: var(--heading); margin-bottom: 0.5rem; line-height: 1.4; }
-    .news-card p { font-size: 0.88rem; color: #64748b; }
 
     /* FAQ Accordion */
     .faq-item { border-bottom: 1px solid var(--border); padding: 1rem 0; }
@@ -206,10 +180,9 @@ const faqs = [
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#salary-calculator">Salary</a></li>
-          <li><a href="#fitment-factor">Fitment</a></li>
+          <li><a href="#salary-calculator">Calculator</a></li>
           <li><a href="#pay-matrix">Pay Matrix</a></li>
           <li><a href="#pension-calculator">Pension</a></li>
-          <li><a href="#latest-news">News</a></li>
         </ul>
       </nav>
     </div>
@@ -218,7 +191,7 @@ const faqs = [
   <!-- H1 HERO SECTION -->
   <section class="hero">
     <h1>8th Pay Commission 2026</h1>
-    <p>Salary, Fitment Factor, Pay Matrix & Latest Updates</p>
+    <p>Salary, Fitment Factor & Pay Matrix</p>
     <div class="hero-buttons">
       <a href="#salary-calculator" class="btn btn-primary">Salary Calculator</a>
       <a href="#fitment-factor" class="btn btn-secondary">Fitment Calculator</a>
@@ -226,20 +199,7 @@ const faqs = [
     </div>
   </section>
 
-  <div class="container">
-
-    <!-- LATEST 8TH CPC UPDATE -->
-    <section style="margin-top: 2rem;">
-      <div class="update-banner">
-        <div class="update-tag">Latest Update</div>
-        <div>
-          <strong style="color: var(--heading);">Joint Consultative Machinery (JCM) Dialogue Progresses</strong>
-          <p style="font-size: 0.9rem; color: #475569; margin-top: 0.2rem;">
-            Staff side federations submit consolidated proposals demanding an early notification of the 8th Pay Commission terms of reference, focusing on a baseline fitment multiplier to absorb ongoing inflationary pressures.
-          </p>
-        </div>
-      </div>
-    </section>
+  <div class="container" style="margin-top: 2rem;">
 
     <!-- 8TH PAY COMMISSION SALARY CALCULATOR -->
     <section id="salary-calculator">
@@ -320,7 +280,7 @@ const faqs = [
           </table>
         </div>
         <div style="margin-top: 1rem;">
-          <a href="#salary-calculator" class="btn btn-secondary">Calculate Custom Salary</a>
+          <a href="#salary-calculator" class="btn btn-secondary">Calculate Salary</a>
         </div>
       </div>
     </section>
@@ -525,27 +485,6 @@ const faqs = [
       </div>
     </section>
 
-    <!-- LATEST NEWS (8-10 Articles) -->
-    <section id="latest-news">
-      <h2 class="section-title">Latest 8th CPC News & Updates</h2>
-      <p class="section-subtitle">Track timely announcements, confederation updates, and memorandum releases.</p>
-
-      <div class="news-grid">
-        {newsItems.map((item) => (
-          <div class="news-card">
-            <div>
-              <div class="news-date">{item.date}</div>
-              <h4>{item.title}</h4>
-              <p>{item.excerpt}</p>
-            </div>
-            <div style="margin-top: 1rem;">
-              <span style="font-size: 0.8rem; font-weight: 600; color: var(--primary-accent);">Read Memo Details →</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
     <!-- PENSIONERS SECTION -->
     <section>
       <div class="card">
@@ -628,9 +567,9 @@ const faqs = [
         <p style="font-size: 0.8rem;">Independent utility & research guide. Not an official government website.</p>
       </div>
       <div class="footer-links">
-        <a href="#">About Us</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
+        <a href="#">Privacy</a>
         <a href="#">Disclaimer</a>
       </div>
     </div>
@@ -679,7 +618,7 @@ const faqs = [
       const factor = parseFloat(document.getElementById('pensionFactor').value) || 2.25;
 
       const revisedPension = Math.round(basicPension * factor);
-      const familyPension = Math.round(revisedPension * 0.6); // standard proportion
+      const familyPension = Math.round(revisedPension * 0.6);
 
       document.getElementById('resPension').textContent = '₹' + revisedPension.toLocaleString('en-IN');
       document.getElementById('resFamilyPension').textContent = '₹' + familyPension.toLocaleString('en-IN');
