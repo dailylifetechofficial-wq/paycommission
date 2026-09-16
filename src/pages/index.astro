@@ -30,7 +30,7 @@ const payMatrixData = [
 
 // 22 Detailed SEO FAQ schema items
 const faqs = [
-  { q: "What is the expected 8th Pay Commission fitment factor?", a: "Economists and employee associations anticipate a fitment factor ranging between 1.92x and 2.86x. A multiplier of 2.25x to 2.57x is considered the primary baseline for balancing federal fiscal reserves with consumer price index (CPI) growth." },
+  { q: "What is the expected 8th Pay Commission fitment factor?", a: "Economists and employee federations anticipate a fitment factor ranging between 1.92x and 2.86x. A multiplier of 2.25x to 2.57x is considered the primary baseline for balancing federal fiscal reserves with consumer price index (CPI) growth." },
   { q: "What will be the revised Level 1 minimum basic pay under 8th CPC?", a: "Under the 7th CPC, the entry basic salary is ₹18,000. At an expected 2.25x fitment factor, minimum basic pay will adjust to ₹40,500, while at a 2.57x multiplier it reaches ₹46,260, and at 2.86x it exceeds ₹51,480." },
   { q: "When is the 8th Central Pay Commission expected to be effective?", a: "Historically, central pay commissions are appointed once every decade. With the 7th CPC implemented on January 1, 2016, the 10-year transition cycle points toward the 2026 calendar cycle." },
   { q: "How is the 8th Pay Commission revised basic salary calculated?", a: "The formula is: Revised Basic Pay = Current 7th CPC Basic Pay × Approved Fitment Factor. The calculated amount is then fitted into the nearest pay matrix cell index." },
@@ -79,7 +79,7 @@ const faqs = [
   <meta name="twitter:title" content={pageTitle} />
   <meta name="twitter:description" content={pageDescription} />
 
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -141,12 +141,12 @@ const faqs = [
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
-    body { background-color: var(--bg-page); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body { background-color: var(--bg-page); color: var(--text-main); line-height: 1.7; font-size: 16px; -webkit-font-smoothing: antialiased; }
     a { color: var(--primary-accent); text-decoration: none; transition: color 0.2s ease; }
     a:hover { color: #1d4ed8; }
 
     /* Modern Navigation */
-    header { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(12px); color: #fff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    header { background: rgba(10, 25, 47, 0.96); backdrop-filter: blur(12px); color: #fff; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .nav-wrapper { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1.25rem; }
     .logo { font-size: 1.25rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem; text-decoration: none !important; letter-spacing: -0.02em; }
     .rupee-badge { background: var(--accent-gradient); width: 34px; height: 34px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: #fff; box-shadow: 0 2px 8px rgba(37,99,235,0.4); }
@@ -156,14 +156,14 @@ const faqs = [
     nav a:hover { color: #fff; }
     @media (max-width: 860px) { nav ul { display: none; } }
 
-    /* Layout & Cards */
+    /* Layout & Structural Containers */
     .container { max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; }
     section { margin-bottom: 3.75rem; scroll-margin-top: 5rem; }
     .card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm); }
     .section-title { font-size: 1.85rem; color: var(--text-dark); margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
     .section-desc { color: var(--text-muted); margin-bottom: 1.75rem; font-size: 1rem; }
 
-    /* Hero Section */
+    /* Hero */
     .hero { background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0a192f 100%); color: #fff; padding: 5rem 1.25rem 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .hero h1 { font-size: 2.6rem; margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; }
     .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 780px; margin: 0 auto 2.25rem; font-weight: 400; }
@@ -174,11 +174,8 @@ const faqs = [
     .btn-secondary { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(4px); }
     .btn-secondary:hover { background: rgba(255,255,255,0.15); }
 
-    /* AdSense Placeholder Slots (Fully responsive container with clear labeling) */
-    .adsense-slot { margin: 2rem 0; padding: 1.25rem; background: #f1f5f9; border: 1px dashed #cbd5e1; border-radius: var(--radius-sm); text-align: center; font-size: 0.8rem; color: #94a3b8; letter-spacing: 0.05em; text-transform: uppercase; }
-
-    /* Trust & Transparency Author Bar (Crucial for AdSense / E-E-A-T) */
-    .trust-meta-bar { display: flex; align-items: center; gap: 1.25rem; padding: 1rem 1.25rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); margin-bottom: 2rem; font-size: 0.88rem; color: var(--text-muted); flex-wrap: wrap; }
+    /* Trust / Editorial Transparency Bar */
+    .trust-meta-bar { display: flex; align-items: center; gap: 1.25rem; padding: 1rem 1.25rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); margin-bottom: 2.5rem; font-size: 0.88rem; color: var(--text-muted); flex-wrap: wrap; }
     .trust-meta-bar strong { color: var(--text-dark); }
     .meta-item { display: flex; align-items: center; gap: 0.4rem; }
 
@@ -211,6 +208,13 @@ const faqs = [
     .level-badge strong { display: block; color: var(--text-dark); font-size: 1rem; }
     .level-badge span { font-size: 0.8rem; color: var(--text-muted); }
 
+    /* Editorial Content */
+    .editorial-prose { margin: 1.5rem 0; font-size: 1.05rem; color: #334155; }
+    .editorial-prose p { margin-bottom: 1.25rem; }
+    .editorial-prose h3 { font-size: 1.35rem; color: var(--text-dark); margin: 2rem 0 0.85rem; font-weight: 700; }
+    .editorial-prose ul { margin-left: 1.5rem; margin-bottom: 1.25rem; }
+    .editorial-prose li { margin-bottom: 0.5rem; }
+
     /* FAQ System */
     .faq-accordion { margin-top: 1.5rem; }
     .faq-row { border-bottom: 1px solid var(--border-subtle); padding: 1.2rem 0; }
@@ -219,13 +223,6 @@ const faqs = [
     .faq-row.open .faq-body { display: block; }
     .faq-row.open .chevron { transform: rotate(180deg); }
     .chevron { transition: transform 0.2s ease; font-size: 0.85rem; color: var(--text-muted); }
-
-    /* Prose Formatting */
-    .editorial-prose { margin: 1.5rem 0; font-size: 1.05rem; color: #334155; }
-    .editorial-prose p { margin-bottom: 1.25rem; }
-    .editorial-prose h3 { font-size: 1.35rem; color: var(--text-dark); margin: 2rem 0 0.85rem; font-weight: 700; }
-    .editorial-prose ul { margin-left: 1.5rem; margin-bottom: 1.25rem; }
-    .editorial-prose li { margin-bottom: 0.5rem; }
 
     /* Official Government Reference Cards */
     .official-sources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1.25rem; }
@@ -314,11 +311,6 @@ const faqs = [
         </ul>
       </div>
     </section>
-
-    <!-- TOP LEADERBOARD AD SLOT -->
-    <div class="adsense-slot">
-      <span>Advertisement / Sponsored Placement</span>
-    </div>
 
     <!-- 8TH PAY COMMISSION SALARY CALCULATOR -->
     <section id="salary-calculator">
@@ -422,11 +414,6 @@ const faqs = [
         </div>
       </div>
     </section>
-
-    <!-- IN-ARTICLE AD SLOT -->
-    <div class="adsense-slot">
-      <span>Advertisement / Sponsored Placement</span>
-    </div>
 
     <!-- 8TH CPC PAY MATRIX (LEVEL 1 TO LEVEL 18) -->
     <section id="pay-matrix">
