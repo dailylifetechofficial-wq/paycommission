@@ -1,7 +1,7 @@
 ---
 // src/pages/index.astro
-const title = "8th Pay Commission: Expected Pay Matrix, Salary Calculator & Fitment Factor (2026)";
-const description = "Comprehensive 8th Central Pay Commission (8th CPC) portal. Real-time salary calculator, fitment factor projections (1.92 - 2.86), pay matrix levels 1-18, DA merger rules, and state revision guides.";
+const title = "₹ 8PayCommission: Expected Pay Matrix, Salary Calculator & Fitment Factor (2026)";
+const description = "India's dedicated 8th Central Pay Commission (8th CPC) portal. Real-time salary calculator, fitment factor scenarios (1.92 - 2.86), pay matrix levels 1 to 18, DA merger rules, and state government pay revision.";
 const siteUrl = "https://8paycommission.com";
 ---
 
@@ -15,20 +15,20 @@ const siteUrl = "https://8paycommission.com";
   <link rel="canonical" href={siteUrl} />
   <meta name="robots" content="index, follow" />
   
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={siteUrl} />
   
-  <!-- Google Schema Markup -->
+  <!-- Google Schema Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "8th Pay Commission Portal",
+      "name": "₹ 8PayCommission",
       "url": "https://8paycommission.com",
-      "description": "Central Government 8th Pay Commission calculators, pay matrix, fitment factors, and circulars.",
+      "description": "8th Pay Commission calculators, pay matrix level 1 to 18, fitment factors, and government circulars.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://8paycommission.com/search?q={search_term_string}",
@@ -39,12 +39,12 @@ const siteUrl = "https://8paycommission.com";
 </head>
 
 <body>
-  <!-- ==================== HEADER (Hand-Drawn Sketch Match) ==================== -->
+  <!-- ==================== HEADER & TOP NAVIGATION ==================== -->
   <header class="header">
     <div class="nav-container">
-      <a href="/" class="brand-logo" aria-label="8th Pay Commission Home">
-        <span class="logo-badge">8th</span>
-        <span class="logo-text">PayCommission<span class="dot">.com</span></span>
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
       </a>
 
       <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
@@ -53,50 +53,65 @@ const siteUrl = "https://8paycommission.com";
         <span class="bar"></span>
       </button>
 
+      <!-- HIGH-VOLUME SEO MENUS ONLY -->
       <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="/" class="nav-item active">Home</a></li>
           
+          <!-- #1 Search Cluster: Calculators -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">Calculators <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="#calculator">8th Pay Salary Calculator</a></li>
+              <li><a href="#calculator">Salary Calculator</a></li>
               <li><a href="/arrears-calculator/">Expected Arrears Calculator</a></li>
-              <li><a href="/pension-calculator/">Pension & Gratuity Calculator</a></li>
-              <li><a href="/da-hra-calculator/">HRA & DA Hike Estimator</a></li>
+              <li><a href="/pension-calculator/">Pension Hike Calculator</a></li>
+              <li><a href="/da-hra-calculator/">DA & HRA Calculator</a></li>
             </ul>
           </li>
 
+          <!-- #2 Search Cluster: Pay Matrix -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
               <li><a href="/pay-matrix/level-1-to-5/">Pay Level 1 to 5 (GP 1800 - 2800)</a></li>
               <li><a href="/pay-matrix/level-6-to-9/">Pay Level 6 to 9 (GP 4200 - 5400)</a></li>
               <li><a href="/pay-matrix/level-10-to-18/">Pay Level 10 to 18 (Officers)</a></li>
-              <li><a href="/pay-matrix/7th-vs-8th-comparison/">7th vs 8th CPC Matrix</a></li>
+              <li><a href="/pay-matrix/7th-vs-8th-cpc/">7th vs 8th CPC Matrix Comparison</a></li>
             </ul>
           </li>
 
+          <!-- #3 Search Cluster: Fitment Factor -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="/fitment-factor/">Expected Fitment Factor (1.92 - 2.86)</a></li>
-              <li><a href="/fitment-factor/minimum-basic-pay/">Minimum Basic Pay Projections</a></li>
+              <li><a href="/fitment-factor/expected-rate/">Expected Factor (1.92 to 2.86)</a></li>
+              <li><a href="/fitment-factor/minimum-basic-pay/">Minimum Basic Pay Revision</a></li>
               <li><a href="/fitment-factor/historical-trends/">Historical Fitment Trends</a></li>
             </ul>
           </li>
 
+          <!-- #4 Search Cluster: DA & Allowances -->
           <li class="has-dropdown">
-            <button class="dropdown-trigger">Allowances <span class="arrow">▾</span></button>
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
               <li><a href="/allowances/da-rate-merger/">DA Merger & 0% Reset Rules</a></li>
               <li><a href="/allowances/hra-slabs-city-wise/">Revised HRA Slabs (X, Y, Z Cities)</a></li>
               <li><a href="/allowances/transport-allowance/">Transport Allowance (TA)</a></li>
+              <li><a href="/allowances/children-education-allowance/">Children Education Allowance (CEA)</a></li>
             </ul>
           </li>
 
-          <li><a href="/pensioners/" class="nav-item">Pensioners</a></li>
+          <!-- #5 Search Cluster: Pensioners -->
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/pensioners/minimum-pension/">Minimum Pension Revision</a></li>
+              <li><a href="/pensioners/gratuity-limit/">Gratuity Limit Hike (₹25 Lakh)</a></li>
+              <li><a href="/pensioners/ups-integration/">UPS vs 8th Pay Commission</a></li>
+            </ul>
+          </li>
 
+          <!-- #6 Search Cluster: State Gov -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">State Gov <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
@@ -106,43 +121,44 @@ const siteUrl = "https://8paycommission.com";
             </ul>
           </li>
 
+          <!-- #7 Search Cluster: News -->
           <li><a href="/latest-news/" class="nav-item">Latest News</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
   <main class="page-container">
 
-    <!-- HERO SECTION: CALCULATOR (Hand-Drawn Sketch Position) -->
+    <!-- HERO SECTION: SALARY CALCULATOR -->
     <section class="calculator-hero" id="calculator">
       <div class="calc-header-box">
         <span class="calc-pill">Updated for 2026 Baseline</span>
-        <h1 class="main-heading">8th Pay Commission Salary Calculator</h1>
-        <p class="sub-lead">Estimate your revised monthly basic pay, gross salary, and expected net take-home hike.</p>
+        <h1 class="main-heading">₹ 8th Pay Commission Salary Calculator</h1>
+        <p class="sub-lead">Instantly estimate your revised basic pay, city allowances, and monthly in-hand take-home salary.</p>
       </div>
 
       <div class="calculator-card">
         <div class="calc-grid">
-          <!-- Input Side -->
+          <!-- Input Form -->
           <div class="calc-inputs">
             <div class="form-group">
               <label for="cpcLevel">Select 7th CPC Pay Matrix Level:</label>
               <select id="cpcLevel" class="calc-select">
-                <option value="18000" data-level="1">Level 1 (GP ₹1,800) - Min ₹18,000</option>
-                <option value="19900" data-level="2">Level 2 (GP ₹1,900) - Min ₹19,900</option>
-                <option value="21700" data-level="3">Level 3 (GP ₹2,000) - Min ₹21,700</option>
-                <option value="25500" data-level="4">Level 4 (GP ₹2,400) - Min ₹25,500</option>
-                <option value="29200" data-level="5">Level 5 (GP ₹2,800) - Min ₹29,200</option>
-                <option value="35400" data-level="6" selected>Level 6 (GP ₹4,200) - Min ₹35,400</option>
-                <option value="44900" data-level="7">Level 7 (GP ₹4,600) - Min ₹44,900</option>
-                <option value="47600" data-level="8">Level 8 (GP ₹4,800) - Min ₹47,600</option>
-                <option value="53100" data-level="9">Level 9 (GP ₹5,400) - Min ₹53,100</option>
-                <option value="56100" data-level="10">Level 10 (GP ₹5,400) - Min ₹56,100</option>
-                <option value="67700" data-level="11">Level 11 (GP ₹6,600) - Min ₹67,700</option>
-                <option value="78800" data-level="12">Level 12 (GP ₹7,600) - Min ₹78,800</option>
-                <option value="118500" data-level="13">Level 13 (GP ₹8,700) - Min ₹1,18,500</option>
+                <option value="18000">Level 1 (GP ₹1,800) - Min ₹18,000</option>
+                <option value="19900">Level 2 (GP ₹1,900) - Min ₹19,900</option>
+                <option value="21700">Level 3 (GP ₹2,000) - Min ₹21,700</option>
+                <option value="25500">Level 4 (GP ₹2,400) - Min ₹25,500</option>
+                <option value="29200">Level 5 (GP ₹2,800) - Min ₹29,200</option>
+                <option value="35400" selected>Level 6 (GP ₹4,200) - Min ₹35,400</option>
+                <option value="44900">Level 7 (GP ₹4,600) - Min ₹44,900</option>
+                <option value="47600">Level 8 (GP ₹4,800) - Min ₹47,600</option>
+                <option value="53100">Level 9 (GP ₹5,400) - Min ₹53,100</option>
+                <option value="56100">Level 10 (GP ₹5,400) - Min ₹56,100</option>
+                <option value="67700">Level 11 (GP ₹6,600) - Min ₹67,700</option>
+                <option value="78800">Level 12 (GP ₹7,600) - Min ₹78,800</option>
+                <option value="118500">Level 13 (GP ₹8,700) - Min ₹1,18,500</option>
               </select>
             </div>
 
@@ -154,16 +170,16 @@ const siteUrl = "https://8paycommission.com";
             <div class="form-group">
               <label for="fitmentFactor">Fitment Factor Scenario:</label>
               <select id="fitmentFactor" class="calc-select">
-                <option value="1.92">1.92 (Conservative / DA Merge Baseline)</option>
-                <option value="2.08">2.08 (Moderate Union Representation)</option>
+                <option value="1.92">1.92 (Conservative / DA Merger Floor)</option>
+                <option value="2.08">2.08 (Moderate Union Baseline)</option>
                 <option value="2.28" selected>2.28 (NC-JCM Expected Working Base)</option>
                 <option value="2.57">2.57 (7th Pay Commission Parity)</option>
-                <option value="2.86">2.86 (Maximum Employee Council Demand)</option>
+                <option value="2.86">2.86 (Maximum Staff Side Demand)</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="cityType">City Classification (HRA):</label>
+              <label for="cityType">City Classification (HRA Slabs):</label>
               <select id="cityType" class="calc-select">
                 <option value="0.27" selected>X Class Metro (27% HRA)</option>
                 <option value="0.18">Y Class Tier-2 (18% HRA)</option>
@@ -172,7 +188,7 @@ const siteUrl = "https://8paycommission.com";
             </div>
           </div>
 
-          <!-- Output Side -->
+          <!-- Calculation Results -->
           <div class="calc-outputs">
             <div class="result-badge">Projected 8th CPC Overview</div>
             
@@ -187,7 +203,7 @@ const siteUrl = "https://8paycommission.com";
             </div>
 
             <div class="output-item">
-              <span class="label">Reset DA at Inception:</span>
+              <span class="label">Dearness Allowance at Inception:</span>
               <span class="value">0% (Merged)</span>
             </div>
 
@@ -202,17 +218,17 @@ const siteUrl = "https://8paycommission.com";
               <span class="total-label">Estimated Gross Salary:</span>
               <span class="total-value" id="grossSalary">₹1,08,264</span>
             </div>
-            <p class="calc-note">*Values are based on NC-JCM recommendations and historical commission fitment models.</p>
+            <p class="calc-note">*Estimates generated using projected fitment multipliers and statutory allowance guidelines.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== 8-MENU QUICK NAV GRID (Hand-Drawn Sketch Position) ==================== -->
+    <!-- ==================== 8-CARD QUICK NAV HUB (Sketch Match) ==================== -->
     <section class="quick-nav-grid" aria-label="8th Pay Commission Topic Matrix">
       <div class="section-title-wrap">
         <h2>Quick Navigation & Analysis Hub</h2>
-        <p>Access in-depth documentation, government circulars, and departmental analysis</p>
+        <p>Explore official departmental updates, salary scales, and policy forecasts</p>
       </div>
 
       <div class="grid-container">
@@ -230,7 +246,7 @@ const siteUrl = "https://8paycommission.com";
           <span class="card-link">Compare Factors →</span>
         </a>
 
-        <a href="/salary-calculator/" class="grid-card">
+        <a href="#calculator" class="grid-card">
           <div class="card-icon">🧮</div>
           <h3>Salary Calculator</h3>
           <p>Accurate take-home forecasting tool including NPS/UPS, CGEGIS, and tax slabs.</p>
@@ -278,22 +294,22 @@ const siteUrl = "https://8paycommission.com";
     <article class="seo-content-body">
       
       <section class="content-block">
-        <h2>8th Central Pay Commission: Implementation Framework & Key Projections</h2>
+        <h2>8th Central Pay Commission: Strategic Framework & Key Projections</h2>
         <p>
-          The implementation of the <strong>8th Central Pay Commission (8th CPC)</strong> marks a vital economic milestone for over 48 lakh Central Government civil and defence employees, alongside more than 67 lakh pensioners across India. As the decennial cycle established since the initial pay commissions dictates, pay revisions review baseline compensation, purchasing power erosion from inflation, and rationalization of allowances across 18 distinct levels of the pay matrix.
+          The constitution and upcoming implementation of the <strong>8th Central Pay Commission (8th CPC)</strong> represents an essential financial revision for more than 48 lakh Central Government employees and over 67 lakh pensioners across India. As part of the decennial revision established since the earliest post-independence commissions, pay commissions serve to adjust baseline compensation, correct purchasing power erosion caused by retail inflation, and rationalize allowances across 18 distinct levels of the pay matrix.
         </p>
         <p>
-          Historically, the Government of India institutes a Central Pay Commission approximately every ten years. The 6th Pay Commission was notified in 2006, followed by the landmark 7th Pay Commission in 2016, which officially eliminated the obsolete "Pay Band and Grade Pay" system, replacing it with an intuitive, unified <strong>Pay Matrix</strong> comprising 19 horizontal levels and 40 vertical incremental progression cells. As macroeconomic pressures, changing cost-of-living indices (CPI-IW), and demands by employee federations take center stage, the 8th Pay Commission introduces decisive revisions in salary mechanics.
+          Historically, the Government of India institutes a Central Pay Commission approximately every ten years. The 6th Pay Commission was notified in 2006, followed by the landmark 7th Pay Commission in 2016, which officially eliminated the obsolete "Pay Band and Grade Pay" system, replacing it with an intuitive, unified <strong>Pay Matrix</strong> comprising 19 horizontal levels and 40 vertical incremental progression cells. With macroeconomic shifts, changing Consumer Price Index for Industrial Workers (CPI-IW) datasets, and detailed representations by employee federations, the 8th Pay Commission introduces decisive revisions in salary mechanics.
         </p>
       </section>
 
       <section class="content-block">
         <h2>Fitment Factor Analysis: How Basic Pay Revisions Are Formulated</h2>
         <p>
-          The core mechanism driving salary and pension revisions in Indian Pay Commissions is the <strong>Fitment Factor</strong>. This mathematical multiplier converts existing 7th CPC Basic Pay directly into revised 8th CPC Basic Pay. While the 7th CPC recommended an overall fitment factor of <strong>2.57</strong>, this was composed of two distinct components: the merger of 125% Dearness Allowance (which had accrued by January 1, 2016) representing a 2.25x factor, supplemented by a ~14.29% real net hike.
+          The primary mathematical driver of basic pay and pension revisions in Indian Pay Commissions is the <strong>Fitment Factor</strong>. This uniform multiplier converts existing 7th CPC Basic Pay directly into revised 8th CPC Basic Pay. When the 7th CPC recommended an overall fitment factor of <strong>2.57</strong>, this was comprised of two distinct components: the merger of 125% Dearness Allowance (which had accrued by January 1, 2016) representing a 2.25x baseline, supplemented by a ~14.29% real net hike.
         </p>
         <p>
-          For the 8th Pay Commission, the Dearness Allowance reached the key threshold of 50% and continued its upward trajectory under AICPI-IW datasets. Consequently, the fitment factor for the 8th CPC is calculated based on three primary economic scenarios:
+          For the 8th Pay Commission, the Dearness Allowance crossed the statutory 50% milestone and continues its upward trajectory under AICPI-IW datasets. Consequently, fitment factor scenarios for the 8th CPC center on four primary economic scenarios:
         </p>
         
         <div class="table-wrapper">
@@ -309,7 +325,7 @@ const siteUrl = "https://8paycommission.com";
             </thead>
             <tbody>
               <tr>
-                <td><strong>Conservative (DA Neutral)</strong></td>
+                <td><strong>Conservative (DA Neutral Floor)</strong></td>
                 <td>1.92x</td>
                 <td>₹34,560</td>
                 <td>₹67,968</td>
@@ -320,7 +336,7 @@ const siteUrl = "https://8paycommission.com";
                 <td>2.28x</td>
                 <td>₹41,040</td>
                 <td>₹80,712</td>
-                <td>Standard wage hike mirroring industrial compensation growth</td>
+                <td>Balanced hike mirroring industrial compensation trends</td>
               </tr>
               <tr>
                 <td><strong>Parity Model (7th CPC Equivalent)</strong></td>
@@ -334,7 +350,7 @@ const siteUrl = "https://8paycommission.com";
                 <td>2.86x</td>
                 <td>₹51,480</td>
                 <td>₹1,01,244</td>
-                <td>Aggressive compensation adjustment countering urban housing hikes</td>
+                <td>Aggressive compensation adjustment countering urban cost surges</td>
               </tr>
             </tbody>
           </table>
@@ -430,7 +446,7 @@ const siteUrl = "https://8paycommission.com";
     </article>
   </main>
 
-  <!-- ==================== FOOTER (Hand-Drawn Sketch Match) ==================== -->
+  <!-- ==================== FOOTER (DISCLAIMER + SITEMAP) ==================== -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
@@ -443,7 +459,7 @@ const siteUrl = "https://8paycommission.com";
           </p>
         </div>
 
-        <!-- Right Column: Footer Links -->
+        <!-- Right Column: SEO High Intent Footer Links -->
         <div class="footer-col links-col">
           <h3 class="footer-title">Important Links & Resources</h3>
           <div class="footer-links-grid">
@@ -465,14 +481,14 @@ const siteUrl = "https://8paycommission.com";
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 8paycommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
       </div>
     </div>
   </footer>
 
   <!-- ==================== CLIENT JAVASCRIPT ==================== -->
   <script is:inline>
-    // Mobile Nav Toggle
+    // Mobile Navigation Drawer Toggle
     const toggleBtn = document.getElementById('mobileNavToggle');
     const navMenu = document.getElementById('mainNavigation');
 
@@ -483,7 +499,7 @@ const siteUrl = "https://8paycommission.com";
       });
     }
 
-    // Dropdown for mobile
+    // Dropdown toggles for touchscreens
     const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
     dropdownTriggers.forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -521,7 +537,7 @@ const siteUrl = "https://8paycommission.com";
       // HRA calculated on new basic
       const projectedHra = revisedBasic * hraRate;
 
-      // Indicative TA (Tier-based estimation scaling with factor)
+      // Transport Allowance baseline
       const baseTa = basic >= 35400 ? 3600 : 1350;
       const projectedTa = baseTa * 1.6;
 
@@ -549,7 +565,7 @@ const siteUrl = "https://8paycommission.com";
 </body>
 </html>
 
-<!-- ==================== PREMIUM RESPONSIVE CSS ==================== -->
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
 <style is:global>
   /* --- Reset & Baseline --- */
   *, *::before, *::after {
@@ -611,21 +627,24 @@ const siteUrl = "https://8paycommission.com";
   .brand-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     text-decoration: none;
     color: #ffffff;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
-  .logo-badge {
+  .rupee-symbol {
     background-color: var(--brand-highlight);
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 800;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    text-transform: uppercase;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
   }
 
   .logo-text .dot {
@@ -635,7 +654,7 @@ const siteUrl = "https://8paycommission.com";
   .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0.5rem;
+    gap: 0.4rem;
     align-items: center;
   }
 
@@ -645,13 +664,13 @@ const siteUrl = "https://8paycommission.com";
     color: #e2e8f0;
     font-size: 0.92rem;
     font-weight: 500;
-    padding: 0.6rem 0.9rem;
+    padding: 0.6rem 0.85rem;
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.25rem;
     transition: all 0.2s ease;
   }
 
@@ -660,7 +679,7 @@ const siteUrl = "https://8paycommission.com";
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  /* Dropdown Styles */
+  /* Dropdown Menus */
   .has-dropdown {
     position: relative;
   }
@@ -671,7 +690,7 @@ const siteUrl = "https://8paycommission.com";
     top: 100%;
     left: 0;
     background-color: var(--bg-surface);
-    min-width: 240px;
+    min-width: 245px;
     list-style: none;
     padding: 0.5rem 0;
     border-radius: var(--radius-md);
@@ -681,7 +700,7 @@ const siteUrl = "https://8paycommission.com";
 
   .dropdown-menu li a {
     display: block;
-    padding: 0.6rem 1.2rem;
+    padding: 0.65rem 1.2rem;
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.88rem;
@@ -714,7 +733,7 @@ const siteUrl = "https://8paycommission.com";
     transition: all 0.3s;
   }
 
-  /* --- MAIN PAGE LAYOUT --- */
+  /* --- MAIN CONTAINER --- */
   .page-container {
     width: 100%;
     max-width: 1200px;
@@ -722,7 +741,7 @@ const siteUrl = "https://8paycommission.com";
     padding: 2rem 1.25rem 4rem 1.25rem;
   }
 
-  /* --- HERO & CALCULATOR SECTION --- */
+  /* --- CALCULATOR HERO SECTION --- */
   .calculator-hero {
     background: linear-gradient(135deg, #0f2b48 0%, #1e3a5f 100%);
     color: #ffffff;
@@ -740,7 +759,7 @@ const siteUrl = "https://8paycommission.com";
 
   .calc-pill {
     display: inline-block;
-    background-color: rgba(217, 119, 6, 0.2);
+    background-color: rgba(217, 119, 6, 0.25);
     color: #fcd34d;
     border: 1px solid rgba(253, 211, 77, 0.4);
     padding: 0.25rem 0.8rem;
@@ -953,7 +972,7 @@ const siteUrl = "https://8paycommission.com";
     color: var(--brand-accent);
   }
 
-  /* --- RICH SEO CONTENT BODY (1500+ WORDS) --- */
+  /* --- RICH SEO CONTENT BODY --- */
   .seo-content-body {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -994,7 +1013,7 @@ const siteUrl = "https://8paycommission.com";
     font-size: 0.96rem;
   }
 
-  /* Data Table */
+  /* Responsive Data Table */
   .table-wrapper {
     overflow-x: auto;
     margin: 1.5rem 0;
@@ -1052,7 +1071,7 @@ const siteUrl = "https://8paycommission.com";
     margin-bottom: 0;
   }
 
-  /* --- FOOTER (DISCLAIMER + NAV) --- */
+  /* --- FOOTER STYLES --- */
   .footer {
     background-color: #0b1a2d;
     color: #94a3b8;
@@ -1123,8 +1142,7 @@ const siteUrl = "https://8paycommission.com";
     color: #64748b;
   }
 
-  /* ==================== MOBILE FULL-SCREEN OPTIMIZATION ==================== */
-  /* Eliminates left/right gaps completely on mobile screens */
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
   @media (max-width: 960px) {
     .nav-toggle {
       display: flex;
@@ -1179,7 +1197,7 @@ const siteUrl = "https://8paycommission.com";
       padding-left: 2rem;
     }
 
-    /* Full-bleed Edge to Edge on Mobile */
+    /* Full bleed edge-to-edge eliminating all margin/gaps */
     .page-container {
       padding: 0 !important;
       margin: 0 !important;
@@ -1207,7 +1225,7 @@ const siteUrl = "https://8paycommission.com";
       gap: 1.25rem !important;
     }
 
-    /* 8 Grid items: 2 columns on mobile for readable touch buttons */
+    /* 8 Grid items: 2 columns on mobile for smooth tapping */
     .grid-container {
       grid-template-columns: repeat(2, 1fr) !important;
       gap: 0.6rem !important;
@@ -1235,10 +1253,10 @@ const siteUrl = "https://8paycommission.com";
     }
 
     .grid-card p {
-      display: none; /* Hide snippet on ultra-compact mobile view for clean touch cards */
+      display: none; /* Hidden on compact view for clean card buttons */
     }
 
-    /* Content block edge-to-edge with clean internal padding */
+    /* Full-width content block with clean interior padding */
     .seo-content-body {
       border-radius: 0 !important;
       border-left: none !important;
@@ -1250,7 +1268,7 @@ const siteUrl = "https://8paycommission.com";
       grid-template-columns: 1fr !important;
     }
 
-    /* Footer Mobile view */
+    /* Mobile Footer */
     .footer {
       padding: 2rem 1rem 1rem 1rem !important;
     }
