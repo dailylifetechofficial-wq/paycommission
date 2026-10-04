@@ -1,7 +1,7 @@
 ---
 // src/pages/privacy-policy.astro
-const title = "Privacy Policy - 8PayCommission.com | Data Protection & Cookies (2026)";
-const description = "Read the Privacy Policy of 8PayCommission.com. Learn about our client-side zero-tracking policy, Google AdSense cookie usage, GDPR/CCPA rights, and user data protection.";
+const title = "Privacy Policy - 8PayCommission.com (2026)";
+const description = "Privacy Policy for 8PayCommission.com. Learn how we handle data, our zero-storage calculator standards, cookie policies, and advertising disclosures.";
 const canonicalUrl = "https://8paycommission.com/privacy-policy/";
 ---
 
@@ -14,14 +14,14 @@ const canonicalUrl = "https://8paycommission.com/privacy-policy/";
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
   <meta name="robots" content="index, follow" />
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
-  
-  <!-- Structured Data: WebPage & Organization Schema for Transparency -->
+
+  <!-- Structured Data: WebPage & Organization Schema for Search Transparency -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,7 +37,7 @@ const canonicalUrl = "https://8paycommission.com/privacy-policy/";
           "@type": "WebPage",
           "name": "Privacy Policy - 8PayCommission",
           "url": "https://8paycommission.com/privacy-policy/",
-          "description": "Comprehensive privacy policy detailing data practices, cookie policies, advertising disclosures, and user rights on 8PayCommission.com."
+          "description": "Comprehensive privacy policy, cookie disclosures, and advertising practices for 8PayCommission.com."
         }
       ]
     }
@@ -62,273 +62,7 @@ const canonicalUrl = "https://8paycommission.com/privacy-policy/";
       <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="/" class="nav-item">Home</a></li>
-          
-          <li class="has-dropdown">
-            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
-              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
-              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
-              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
-            </ul>
-          </li>
 
-          <li class="has-dropdown">
-            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
-              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
-              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
-              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
-              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
-              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
-              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
-              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
-              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
-              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
-            </ul>
-          </li>
-
-          <li class="has-dropdown">
-            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu mega-state-menu">
-              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
-              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
-              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
-              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
-              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
-              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
-              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
-              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
-            </ul>
-          </li>
-
-          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
-  <main class="page-container">
-
-    <!-- BREADCRUMBS -->
-    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
-      <a href="/">Home</a> <span>›</span> 
-      <span class="active-page">Privacy Policy</span>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="privacy-hero-wrapper">
-      <div class="hero-text-block">
-        <span class="status-pill">Last Updated: October 2026</span>
-        <h1 class="main-heading">Privacy Policy</h1>
-        <p class="hero-summary">
-          Your privacy is paramount. This Privacy Policy details the types of information collected and recorded by 8PayCommission.com, our client-side zero-tracking commitment for salary tools, our third-party advertising disclosures, and your statutory data protection rights.
-        </p>
-      </div>
-
-      <!-- KEY PRIVACY PILLARS -->
-      <div class="privacy-pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon">🔒</div>
-          <h3>Zero Financial Logging</h3>
-          <p>Our salary, arrears, and pension calculators execute purely inside your web browser. We never capture, record, or store your salary or grade pay numbers on our servers.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📢</div>
-          <h3>Google AdSense Disclosures</h3>
-          <p>We comply fully with Google Advertising policies regarding third-party vendor cookies, non-personalized advertising controls, and interest-based ad opt-outs.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">⚖️</div>
-          <h3>Global Rights Compliance</h3>
-          <p>Whether you browse under India's DPDP Act, the EU General Data Protection Regulation (GDPR), or the California Consumer Privacy Act (CCPA), your rights are respected.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== DETAILED POLICY BODY ==================== -->
-    <article class="editorial-body-wrapper">
-
-      <section class="editorial-chapter">
-        <h2>1. Introduction and Scope</h2>
-        <p>
-          At <strong>8PayCommission.com</strong> (referred to as "we", "our", or "the Website"), accessible from <a href="https://8paycommission.com">https://8paycommission.com</a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document outlines the types of information that is received and collected by 8PayCommission.com and how we use it.
-        </p>
-        <p>
-          This policy applies strictly to our online activities and is valid for visitors to our website with regards to the information that they share or that is collected via 8PayCommission.com. This policy does not apply to any offline information collection or channels other than this website.
-        </p>
-      </section>
-
-      <section class="editorial-chapter">
-        <h2>2. Information We Collect</h2>
-        <p>
-          We believe in data minimization. The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we request your personal information:
-        </p>
-        <ul class="bullet-feature-list">
-          <li><strong>Direct Contact Data:</strong> If you contact us directly via email at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a> or submit a message through our Contact Us form, we may receive information about you such as your name, email address, the contents of your message, attachments you may send us, and any other information you choose to provide.</li>
-          <li><strong>Web Calculator Inputs (No Storage):</strong> When you utilize our interactive tools (such as the 8th Pay Commission Salary Calculator, Pension Hike Estimator, or State Pay Matrix Inspectors), the numeric figures you enter—such as your basic pay, HRA percentages, and allowances—are processed <strong>locally within your client web browser via JavaScript</strong>. We do not store, log, harvest, or transmit your individual salary figures to our databases.</li>
-        </ul>
-      </section>
-
-      <section class="editorial-chapter">
-        <h2>3. Standard Log Files</h2>
-        <p>
-          8PayCommission.com follows a standard procedure of utilizing log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services' analytics.
-        </p>
-        <p>
-          The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of this information is to analyze broader demographic trends, administer the website, track users' navigation across pages, and preserve platform security.
-        </p>
-      </section>
-
-      <section class="editorial-chapter">
-        <h2>4. Cookies, Web Beacons and Advertising Partners</h2>
-        <p>
-          Like almost all professional websites, 8PayCommission.com uses "cookies". Cookies are small data files stored on your device to retain visitor preferences, record session statistics, and optimize web page display based on your browser type.
-        </p>
-        
-        <div class="policy-alert-box">
-          <h4>Google AdSense & DoubleClick DART Cookies</h4>
-          <p>
-            Google is a third-party vendor on our website. Google uses cookies, specifically DART cookies, to serve advertisements to our site visitors based on their visit to 8PayCommission.com and other sites on the internet.
-          </p>
-          <ul class="bullet-feature-list">
-            <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>
-            <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.</li>
-            <li>Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
-            <li>Alternatively, users can opt out of a third-party vendor's use of cookies for personalized advertising by visiting the <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">AboutAds.info Opt-Out Portal</a> or the <a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative (NAI) Opt-Out Page</a>.</li>
-          </ul>
-        </div>
-
-        <p>
-          Third-party ad servers or ad networks utilize technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on 8PayCommission.com. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
-        </p>
-        <p>
-          Please note that <strong>8PayCommission.com has no access to or control over these cookies that are used by third-party advertisers</strong>.
-        </p>
-      </section>
-
-      <section class="editorial-chapter">
-        <h2>5. Third-Party Privacy Policies</h2>
-        <p>
-          8PayCommission.com's Privacy Policy does not apply to other advertisers or external websites. Thus, we advise you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
-        </p>
-        <p>
-          You can choose to disable cookies through your individual browser options. Detailed information about cookie management with specific web browsers can be found at the browsers' respective websites (e.g., Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge).
-        </p>
-      </section>
-
-      <section class="editorial-chapter">
-        <h2>6. GDPR Data Protection Rights (For European & International Visitors)</h2>
-        <p>
-          If you are a resident of the European Economic Area (EEA), you possess statutory data protection rights under the General Data Protection Regulation (GDPR). We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data:
-        </p>
-        <ul class="bullet-feature-list">
-          <li><strong>The Right to Access:</strong> You have the right to request copies of your personal data held by us.</li>
-          <li><strong>The Right to Rectification:</strong> You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.</li>
-          <li><strong>The Right to Erasure:</strong> You have the right to request that we erase your personal data under certain conditions.</li>
-          <li><strong>The Right to Restrict Processing:</strong> You have the right to request that we restrict the processing of your personal data under certain conditions.</li>
-          <li><strong>The Right to Object to Processing:</strong> You have the right to object to our processing of your personal data under certain conditions.</li>
-          <li><strong>The Right to Data Portability:</strong> You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
-        </ul>
-        <p>
-          If you make a request,Here is the complete, build-safe, and AdSense-compliant code for `src/pages/privacy-policy.astro`.
-
-### Why This Page Passes Google AdSense Audits:
-* **Google AdSense & DoubleClick Cookie Disclosures:** Explicitly details how third-party vendors (including Google) use cookies (such as the DoubleClick DART cookie) to serve ads based on prior visits.
-* **User Opt-Out Information:** Provides direct guidance on managing personalized advertising via Google Ads Settings and the Network Advertising Initiative (NAI).
-* **Clear Data Handling Boundaries:** Clarifies that client-side calculation tools run locally in the user's browser without storing personal salary or pension data on external servers.
-* **Compliance Standards:** Aligns with GDPR, CCPA/CPRA, and India's Digital Personal Data Protection (DPDP) Act frameworks.
-* **Direct Point of Contact:** Embeds your verified administrative contact email (`dailylifetech.official@gmail.com`) in the content and the JSON-LD schema.
-
-```astro
----
-// src/pages/privacy-policy.astro
-const title = "Privacy Policy - 8PayCommission.com (2026)";
-const description = "Privacy Policy for 8PayCommission.com. Learn how we handle information, our zero-storage calculator standards, cookie policies, and advertising disclosures.";
-const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8paycommission.com/privacy-policy/)";
----
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href={canonicalUrl} />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonicalUrl} />
-  
-  <!-- Structured Data: WebPage & Organization Schema -->
-  <script type="application/ld+json">
-    {
-      "@context": "[https://schema.org](https://schema.org)",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "name": "8PayCommission",
-          "url": "[https://8paycommission.com](https://8paycommission.com)",
-          "logo": "[https://8paycommission.com/favicon.svg](https://8paycommission.com/favicon.svg)",
-          "email": "dailylifetech.official@gmail.com"
-        },
-        {
-          "@type": "WebPage",
-          "name": "Privacy Policy - 8PayCommission",
-          "url": "[https://8paycommission.com/privacy-policy/](https://8paycommission.com/privacy-policy/)",
-          "description": "Comprehensive privacy disclosure, cookie policy, and third-party advertising practices for 8PayCommission.com."
-        }
-      ]
-    }
-  </script>
-</head>
-
-<body>
-  <!-- ==================== HEADER ==================== -->
-  <header class="header">
-    <div class="nav-container">
-      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
-        <span class="rupee-symbol">₹</span>
-        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
-      </a>
-
-      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-
-      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li><a href="/" class="nav-item">Home</a></li>
-          
           <li class="has-dropdown">
             <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
@@ -411,8 +145,27 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
         <span class="status-pill">Legal & Regulatory Compliance</span>
         <h1 class="main-heading">Privacy Policy</h1>
         <p class="hero-summary">
-          Last Updated: October 2026. This Privacy Policy outlines the types of information collected when visiting 8PayCommission.com, how it is used, and how your privacy is protected.
+          Last revised: October 2026. This Privacy Policy details how 8PayCommission.com collects, utilizes, and protects information, our client-side zero-storage policy for calculation tools, and our third-party advertising disclosures.
         </p>
+      </div>
+
+      <!-- KEY PRIVACY HIGHLIGHTS -->
+      <div class="privacy-highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">🔒</div>
+          <h3>Zero Data Logging on Calculators</h3>
+          <p>Every salary, pension, and arrears estimator operates strictly within your local browser. Your confidential basic pay and income inputs are never transmitted to our servers.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">📢</div>
+          <h3>AdSense & Cookie Disclosures</h3>
+          <p>We adhere to Google Publisher policies regarding advertising cookies, third-party ad delivery, and clear opt-out avenues for personalized ads.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">⚖️</div>
+          <h3>Statutory Rights Protection</h3>
+          <p>We respect your privacy rights under India's Digital Personal Data Protection (DPDP) Act, GDPR, and international data standards.</p>
+        </div>
       </div>
     </section>
 
@@ -420,27 +173,27 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
     <article class="editorial-body-wrapper">
 
       <section class="editorial-chapter">
-        <h2>1. Overview and Operational Philosophy</h2>
+        <h2>1. Scope and Core Commitments</h2>
         <p>
-          At <strong>8PayCommission.com</strong>, accessible from [https://8paycommission.com](https://8paycommission.com), safeguarding the privacy of our visitors is a primary priority. This document outlines the categories of data recorded, received, and processed through our web portal, alongside the standards we uphold to protect your digital presence.
+          At <strong>8PayCommission.com</strong> (accessible from https://8paycommission.com), preserving the privacy of our visitors is an essential institutional standard. This document outlines the types of information recorded and processed when accessing our portal, alongside the measures we maintain to secure your digital footprint.
         </p>
         <p>
-          Our platform functions primarily as an educational resource and computational simulator for public servants, military veterans, educators, and retirees across India. If you have additional questions or require further clarification regarding our privacy practices, please contact our administrative desk at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>.
+          This policy applies solely to online activities on this website and is valid for visitors regarding information shared or gathered via 8PayCommission.com. Inquiries concerning this policy can be directed to our administrative desk at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>.
         </p>
       </section>
 
       <section class="editorial-chapter">
         <h2>2. Zero-Storage Policy for Salary & Pension Calculators</h2>
         <p>
-          A cornerstone of our platform is our strict, client-side approach to data processing:
+          We operate under a strict principle of data minimization, particularly concerning personal financial information:
         </p>
-        <div class="highlight-callout">
+        <div class="callout-box">
           <h4>Client-Side Execution Guarantee:</h4>
           <p>
-            Whenever you utilize our interactive tools—including the 8th Pay Commission Salary Calculator, Arrears Estimator, Pension Multiplier, or DA/HRA Simulator—<strong>all mathematical evaluations take place locally inside your web browser</strong> using client-side JavaScript.
+            When utilizing our interactive tools—such as the 8th Pay Commission Salary Calculator, Pension Estimator, Arrears Simulator, or HRA/DA matrix tools—<strong>all mathematical evaluations execute locally within your client web browser via JavaScript</strong>.
           </p>
           <p>
-            We do not transmit, log, record, harvest, or retain your basic pay figures, pay band selections, gratuity values, pension amounts, or net income totals on any server or external database. When you refresh or close your browser tab, your entered numbers are immediately discarded.
+            We do not log, retain, collect, or transmit your individual salary figures, basic pay entries, pension amounts, or net take-home calculations to any external database or server. Refreshing or closing your browser tab discards all entered session values immediately.
           </p>
         </div>
       </section>
@@ -448,104 +201,100 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
       <section class="editorial-chapter">
         <h2>3. Information We Collect</h2>
         <p>
-          Depending on how you interact with our website, certain technical or voluntary information may be collected:
+          Depending on how you interact with our platform, certain technical or voluntary data may be processed:
         </p>
         <ul class="bullet-feature-list">
-          <li><strong>Log Files:</strong> Like standard web platforms, 8PayCommission.com utilizes log files. Information collected includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamps, referring/exit pages, and the number of clicks. This data is not linked to personally identifiable information and is used exclusively for site maintenance, trend analysis, and server security monitoring.</li>
-          <li><strong>Voluntary Communications:</strong> When you contact us directly via email at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>, we receive your email address, your name (if included in your email client signature), and the specific contents or attachments of your message. This correspondence is used strictly to answer your questions and provide technical or editorial support.</li>
+          <li><strong>Direct Email Correspondence:</strong> If you reach out to our team at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>, we receive your email address, name (if included in your email client signature), and the specific text or attachments of your query. This information is used strictly to provide editorial, technical, or research support.</li>
+          <li><strong>Standard Server Log Files:</strong> Like standard web infrastructure, our hosting servers automatically record non-identifying request data. This includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamps, referring/exit pages, and click counts. These metrics are evaluated in aggregate to monitor platform security, troubleshoot technical errors, and optimize server load.</li>
         </ul>
       </section>
 
       <section class="editorial-chapter">
-        <h2>4. Cookies and Web Beacons</h2>
+        <h2>4. Cookies, Web Beacons and Browser Settings</h2>
         <p>
-          8PayCommission.com uses standard cookies to enhance user experience. Cookies are small text files placed on your device to store preferences and record page-level visitor trends.
+          8PayCommission.com uses standard cookies (small text files saved by your browser) to ensure functional layout persistence, retain browsing preferences, and optimize mobile responsive delivery.
         </p>
         <p>
-          These cookies help us optimize our site speed, maintain layout rendering across desktop and mobile screens, and ensure responsive page delivery. You can disable cookies at any time through your individual browser settings. Detailed guidance on cookie management can be found directly on your browser provider's official support website.
+          You can disable cookies at any time through your individual browser options. Detailed instructions on cookie management can be found directly on the official help portals of major browsers (such as Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge).
         </p>
       </section>
 
       <section class="editorial-chapter">
         <h2>5. Google DoubleClick DART Cookies & Third-Party Advertising</h2>
         <p>
-          Google is an authorized third-party vendor on our website. It uses cookies, commonly known as <strong>DART cookies</strong>, to serve advertisements to visitors based on their visits to 8PayCommission.com and other websites across the internet.
+          Google is an authorized third-party vendor on our website. It uses cookies, commonly known as <strong>DART cookies</strong>, to serve advertisements to visitors based on visits to 8PayCommission.com and other websites across the internet.
         </p>
         <div class="compliance-box">
           <h4>Google AdSense Advertising Disclosures:</h4>
           <ul class="bullet-feature-list">
-            <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>
-            <li>Google's use of advertising cookies enables it and its partners to serve ads to users based on their visits to our site and/or other sites on the Internet.</li>
-            <li>Users may opt out of personalized advertising by visiting <a href="[https://adssettings.google.com/](https://adssettings.google.com/)" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
-            <li>Alternatively, you can opt out of third-party vendor cookies for personalized advertising by visiting <a href="[https://www.aboutads.info/choices/](https://www.aboutads.info/choices/)" target="_blank" rel="noopener noreferrer">AboutAds.info</a> or the <a href="[https://optout.networkadvertising.org/](https://optout.networkadvertising.org/)" target="_blank" rel="noopener noreferrer">Network Advertising Initiative</a>.</li>
+            <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other sites.</li>
+            <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visits to our portal and other sites on the Internet.</li>
+            <li>Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
+            <li>Alternatively, visitors can opt out of third-party vendor cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">AboutAds.info</a> or the <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative (NAI)</a>.</li>
           </ul>
         </div>
         <p>
-          Third-party ad servers or ad networks use technologies such as cookies, JavaScript, or Web Beacons within their respective advertisements and links displayed on our site. These technologies automatically receive your IP address when ad requests occur. They are primarily used to measure the effectiveness of advertising campaigns and to personalize the advertising content shown to you. 8PayCommission.com has no access to or control over cookies used by third-party advertisers.
+          Third-party ad networks automatically receive non-identifying technical data (such as IP addresses) when ad requests occur. These technologies are used by advertisers to gauge campaign effectiveness and personalize ad content. 8PayCommission.com has no access to or control over cookies placed by independent third-party advertising partners.
         </p>
       </section>
 
       <section class="editorial-chapter">
-        <h2>6. Third-Party Links & External Sites</h2>
+        <h2>6. Outgoing Links to Third-Party Portals</h2>
         <p>
-          Our guides and analytical reports frequently reference external resources, including official portals of the Ministry of Finance (finmin.nic.in), the Department of Personnel and Training (dopt.gov.in), the Central Pension Accounting Office (cpao.nic.in), and state finance departments.
+          Our analytical guides frequently cite external regulatory resources, including official websites of the Ministry of Finance (finmin.nic.in), the Department of Personnel and Training (dopt.gov.in), the Central Pension Accounting Office (cpao.nic.in), and state finance departments.
         </p>
         <p>
-          Please note that 8PayCommission.com exercises no administrative authority over external platforms. Once you click an external link leaving our domain, our Privacy Policy no longer applies. We strongly advise reviewing the respective privacy statements of any third-party websites you visit.
+          Please note that 8PayCommission.com exercises no administrative authority over third-party domains. Once you click an external link leaving our domain, our Privacy Policy is no longer operative. We recommend reviewing the individual privacy statements of any external platform you visit.
         </p>
       </section>
 
       <section class="editorial-chapter">
-        <h2>7. Data Protection Rights (GDPR, CCPA & DPDP Act India)</h2>
+        <h2>7. Data Protection Rights (DPDP Act India, GDPR & CCPA)</h2>
         <p>
-          We respect the privacy rights of all visitors globally and within India. Depending on your jurisdiction, you may hold the following statutory rights regarding your personal information:
+          We respect the data governance rights of our readership across India and worldwide. Depending on your jurisdiction, you hold specific statutory rights regarding personal communications:
         </p>
         <ul class="bullet-feature-list">
-          <li><strong>The Right to Access:</strong> You have the right to request copies of any personal correspondence or data we hold about you.</li>
-          <li><strong>The Right to Rectification:</strong> You may request corrections to any information you believe is inaccurate or incomplete.</li>
-          <li><strong>The Right to Erasure:</strong> You have the right to request that we delete your personal communications or email records, under certain statutory conditions.</li>
-          <li><strong>The Right to Restrict or Object to Processing:</strong> You may request that we limit or halt the processing of your personal data under applicable legal circumstances.</li>
-          <li><strong>Compliance with India's DPDP Act:</strong> In alignment with India's Digital Personal Data Protection Act, we process voluntary communications lawfully, transparently, and solely for the explicit purpose for which consent was granted.</li>
+          <li><strong>The Right to Access:</strong> You may request copies of any personal correspondence records we maintain regarding you.</li>
+          <li><strong>The Right to Rectification:</strong> You may request corrections to any information you believe is incomplete or inaccurate.</li>
+          <li><strong>The Right to Erasure:</strong> You may request the deletion of historical email correspondence under applicable statutory requirements.</li>
+          <li><strong>Compliance with India's DPDP Act:</strong> Under India's Digital Personal Data Protection Act, voluntary communications are processed lawfully, transparently, and solely for the specific support purpose for which you contacted us.</li>
         </ul>
         <p>
-          If you wish to exercise any of these statutory rights, please contact us at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>. We will respond to your request within 30 days.
+          To exercise any of these statutory rights, contact our administrative desk at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>. We address verified requests within 30 days.
         </p>
       </section>
 
       <section class="editorial-chapter">
-        <h2>8. Children's Information Protection</h2>
+        <h2>8. Protection of Children's Information</h2>
         <p>
-          Protecting minors while using the internet is an essential priority. 8PayCommission.com is an informational resource intended for adults, civil servants, working professionals, and retirees.
-        </p>
-        <p>
-          We do not knowingly collect personally identifiable information from children under the age of 13. If a parent or guardian believes that our platform holds personal data of a minor in its communication records, please contact us immediately, and we will take prompt steps to remove such information from our records.
+          Protecting minors while using the internet is an essential priority. 8PayCommission.com is an informational resource intended for working adults, civil servants, and retirees. We do not knowingly solicit or collect personally identifiable information from children under 13 years of age. If you believe a minor has provided personal details through our email channels, please notify us immediately for prompt deletion.
         </p>
       </section>
 
       <section class="editorial-chapter">
-        <h2>9. Updates to This Privacy Policy</h2>
+        <h2>9. Policy Revisions</h2>
         <p>
-          We reserve the right to revise or amend this Privacy Policy periodically to reflect technological changes, regulatory updates, or shifts in our digital infrastructure. Any updates will be posted directly to this page with an updated revision date. We encourage visitors to review this page regularly to stay informed about how we safeguard your data.
+          We reserve the right to amend this Privacy Policy periodically to reflect technological adjustments, regulatory developments, or platform infrastructure updates. Any modifications will be posted directly to this page with an updated revision date.
         </p>
       </section>
 
       <section class="editorial-chapter">
-        <h2>10. Contacting Our Administrative Desk</h2>
+        <h2>10. Administrative Contact Information</h2>
         <p>
-          If you have questions, feedback, or concerns regarding this Privacy Policy, our cookie disclosures, or our data handling practices, please connect with us through our administrative contact channel:
+          For questions, technical clarifications, or privacy feedback, please contact our administrative desk:
         </p>
-        
+
         <div class="contact-card">
           <div class="contact-row">
-            <span class="c-label">Official Email:</span>
+            <span class="c-label">Direct Email:</span>
             <a href="mailto:dailylifetech.official@gmail.com" class="c-link">dailylifetech.official@gmail.com</a>
           </div>
           <div class="contact-row">
-            <span class="c-label">Platform URL:</span>
-            <span>[https://8paycommission.com](https://8paycommission.com)</span>
+            <span class="c-label">Website Domain:</span>
+            <span>https://8paycommission.com</span>
           </div>
           <div class="contact-row">
-            <span class="c-label">Operating Region:</span>
+            <span class="c-label">Country of Operation:</span>
             <span>India</span>
           </div>
         </div>
@@ -558,7 +307,7 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
-        
+
         <!-- Left: Disclaimer -->
         <div class="footer-col disclaimer-col">
           <h3 class="footer-title">Disclaimer</h3>
@@ -857,6 +606,41 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
     line-height: 1.6;
   }
 
+  /* Privacy Highlights Grid */
+  .privacy-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .highlight-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .highlight-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
   /* Editorial Body */
   .editorial-body-wrapper {
     background-color: var(--bg-surface);
@@ -902,7 +686,7 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
     font-size: 0.98rem;
   }
 
-  .highlight-callout {
+  .callout-box {
     background-color: #f0fdf4;
     border-left: 4px solid #16a34a;
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -910,19 +694,19 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
     margin: 1.5rem 0;
   }
 
-  .highlight-callout h4 {
+  .callout-box h4 {
     color: #166534;
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
 
-  .highlight-callout p {
+  .callout-box p {
     margin-bottom: 0.75rem;
     font-size: 0.95rem;
   }
 
-  .highlight-callout p:last-child {
+  .callout-box p:last-child {
     margin-bottom: 0;
   }
 
@@ -1117,6 +901,11 @@ const canonicalUrl = "[https://8paycommission.com/privacy-policy/](https://8payc
 
     .main-heading {
       font-size: 1.55rem;
+    }
+
+    .privacy-highlights-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
 
     .editorial-body-wrapper {
