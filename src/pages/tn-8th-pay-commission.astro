@@ -1,0 +1,1472 @@
+---
+// src/pages/tn-8th-pay-commission.astro
+const title = "₹ TN 8th Pay Commission: Tamil Nadu Salary Calculator, 32-Level Matrix & Rules (2026)";
+const description = "Complete guide on Tamil Nadu 8th Pay Commission. Calculate revised state government salary, 32-level Pay Matrix, Selection Grade, Chennai HRA, and CPS/OPS pension impact.";
+const canonicalUrl = "https://8paycommission.com/tn-8th-pay-commission/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: Article & FAQPage for Rich Search Results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Tamil Nadu 8th Pay Commission: 32-Level Pay Matrix, Salary Calculator and Cadre Rules",
+          "description": "Comprehensive guide and interactive financial calculator for Tamil Nadu State Government employees, teachers, local body staff, and pensioners under the 8th Pay Commission.",
+          "author": {
+            "@type": "Organization",
+            "name": "8PayCommission Editorial Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "₹ 8PayCommission",
+            "url": "https://8paycommission.com"
+          },
+          "datePublished": "2026-04-28T09:00:00+05:30",
+          "dateModified": "2026-10-04T22:25:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does the Tamil Nadu Pay Matrix differ from the Central Pay Commission Matrix?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unlike the Central Government Pay Matrix which consists of 18 functional levels, the Tamil Nadu State Government operates a unique 32-Level Pay Matrix established under G.O. Ms. No. 303 (Finance Pay Cell). This 32-level grid accommodates state-specific hierarchies, judicial cadres, secondary grade teachers, and administrative departments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the expected minimum starting basic pay in Tamil Nadu under the 8th Pay Commission?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Tamil Nadu, the 7th CPC baseline minimum basic pay for Level 1 (Office Assistant / Sanitary Worker) was fixed at ₹15,700 per month. Under a projected 2.28 fitment factor, the revised Level 1 entry basic pay in Tamil Nadu is estimated to climb to approximately ₹35,796 (or ₹41,040 if the state government aligns fully with the Central Level 1 entry benchmark)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do Selection Grade and Special Grade promotions work in Tamil Nadu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under Tamil Nadu Revised Pay Rules, employees from Level 1 to Level 23 who stagnate without promotion for 10 years are awarded Selection Grade, which grants two promotional increments (moving two cells down or jumping levels). Upon completing 20 years of service, they receive Special Grade, which awards an additional two increments."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger active">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <a href="/state-pay-commissions/">State Pay Commissions</a> <span>›</span> 
+      <span class="active-page">TN 8th Pay Commission</span>
+    </nav>
+
+    <!-- HERO & INTERACTIVE TN SALARY CALCULATOR -->
+    <section class="calc-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Tamil Nadu State Government Revision (2026)</span>
+        <h1 class="main-heading">₹ TN 8th Pay Commission Calculator & 32-Level Matrix</h1>
+        <p class="hero-summary">
+          An authoritative analysis for Tamil Nadu State Government employees, government school teachers, local body staff, police personnel, and pensioners. Calculate revised basic pay, city-specific HRA (Chennai, Coimbatore, Madurai), and CPS / GPF deductions under the 8th Pay Commission.
+        </p>
+      </div>
+
+      <!-- MAIN APP INTERACTION -->
+      <div class="salary-app-card" id="tnSalaryCalculatorApp">
+        <div class="app-layout-grid">
+          
+          <!-- Column 1: Input Parameters -->
+          <div class="input-controls-column">
+            <h2 class="sub-card-title">1. Tamil Nadu Service Parameters</h2>
+
+            <div class="field-item">
+              <label for="tnLevelSelect">Select TN 32-Level Pay Matrix Cadre:</label>
+              <select id="tnLevelSelect" class="styled-input">
+                <option value="15700" data-level="1" selected>Level 1 (Old GP ₹1,300) - Office Assistant / Watchman (Min ₹15,700)</option>
+                <option value="16600" data-level="2">Level 2 (Old GP ₹1,400) - Record Clerk (Min ₹16,600)</option>
+                <option value="18000" data-level="5">Level 5 (Old GP ₹1,800) - Driver / Skilled Assistant (Min ₹18,000)</option>
+                <option value="19500" data-level="8">Level 8 (Old GP ₹2,400) - Junior Assistant / Typist / Constable (Min ₹19,500)</option>
+                <option value="20600" data-level="10">Level 10 (Old GP ₹2,800) - Assistant / Revenue Inspector (Min ₹20,600)</option>
+                <option value="35400" data-level="11">Level 11 (Old GP ₹4,200) - Secondary Grade Teacher / Sub-Inspector (Min ₹35,400)</option>
+                <option value="35900" data-level="13">Level 13 (Old GP ₹4,400) - Deputy Tahsildar / Superintendent (Min ₹35,900)</option>
+                <option value="36400" data-level="16">Level 16 (Old GP ₹4,600) - B.T. Assistant / Tahsildar (Min ₹36,400)</option>
+                <option value="36900" data-level="18">Level 18 (Old GP ₹4,800) - P.G. Teacher / Accounts Officer (Min ₹36,900)</option>
+                <option value="56100" data-level="22">Level 22 (Old GP ₹5,400) - Assistant Director / DSP (Min ₹56,100)</option>
+                <option value="59300" data-level="25">Level 25 (Old GP ₹6,600) - Joint Director / DRO (Min ₹59,300)</option>
+                <option value="123100" data-level="28">Level 28 (Old GP ₹8,700) - Additional Director / Chief Engineer (Min ₹1,23,100)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="tnCurrentBasic">Current 7th CPC TN Basic Pay (₹):</label>
+              <input type="number" id="tnCurrentBasic" class="styled-input" value="19500" min="15700" step="100" />
+              <span class="field-note">Enter your exact basic pay from your TN IFHRMS pay slip.</span>
+            </div>
+
+            <div class="field-item">
+              <label for="tnFitmentSelect">Expected Fitment Factor:</label>
+              <select id="tnFitmentSelect" class="styled-input">
+                <option value="1.92">1.92x (Inflation Neutral / DA Merge Baseline)</option>
+                <option value="2.08">2.08x (Moderate Representation)</option>
+                <option value="2.28" selected>2.28x (NC-JCM Expected Working Base)</option>
+                <option value="2.57">2.57x (TN 7th CPC Parity Factor / G.O. 303)</option>
+                <option value="2.86">2.86x (Staff Federation Demand)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="tnCityGradeSelect">City Posting Tier (TN HRA Classification):</label>
+              <select id="tnCityGradeSelect" class="styled-input">
+                <option value="0.27" data-city="chennai" selected>Grade I(a) - Greater Chennai Corporation (27% Metro HRA)</option>
+                <option value="0.18" data-city="grade1b">Grade I(b) - Coimbatore, Madurai, Tiruchirappalli, Salem (18% HRA)</option>
+                <option value="0.12" data-city="grade2">Grade II - District Headquarters & Major Municipalities (12% HRA)</option>
+                <option value="0.09" data-city="grade3">Grade III - Other Town Panchayats & Rural Stations (9% HRA)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="tnPensionScheme">Pension System Subscriptions:</label>
+              <select id="tnPensionScheme" class="styled-input">
+                <option value="0.10" selected>CPS / UPS (10% Employee Contribution)</option>
+                <option value="0.00">Old Pension Scheme (OPS / GPF Beneficiary)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 2: Computed Pay Slip Breakdown -->
+          <div class="output-summary-column">
+            <h2 class="sub-card-title">2. Projected Monthly Pay Slip (TN)</h2>
+
+            <div class="line-item emphasis">
+              <span class="line-label">Revised TN 8th CPC Basic Pay:</span>
+              <span class="line-value brand" id="outTnRevisedBasic">₹44,460</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">House Rent Allowance (TN HRA):</span>
+              <span class="line-value font-bold" id="outTnHra">₹12,004</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">City Compensatory Allowance (CCA):</span>
+              <span class="line-value" id="outTnCca">₹1,000</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Dearness Allowance (At Inception):</span>
+              <span class="line-value">0% (Merged into Base)</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Medical Allowance (Standard MA):</span>
+              <span class="line-value" id="outTnMa">₹300</span>
+            </div>
+
+            <div class="line-item gross-box">
+              <span class="line-label">Estimated Gross Salary:</span>
+              <span class="line-value text-gross" id="outTnGross">₹57,764</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <span class="deduction-header">Statutory Monthly Deductions</span>
+
+            <div class="line-item deduct">
+              <span class="line-label">Pension / CPS Deduction (10%):</span>
+              <span class="line-value text-deduct" id="outTnPensionDeduct">- ₹4,446</span>
+            </div>
+
+            <div class="line-item deduct">
+              <span class="line-label">NHIS, SPF & Family Benefit Fund (Est.):</span>
+              <span class="line-value text-deduct" id="outTnFixedDeduct">- ₹420</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="net-in-hand-wrap">
+              <span class="net-caption">Net Monthly Bank Credit:</span>
+              <span class="net-figure" id="outTnNetTakeHome">₹52,898</span>
+            </div>
+            
+            <p class="fine-print">
+              *Calculated based on Tamil Nadu Revised Pay Rules modeling. Final in-hand salary depends on Government Orders issued by Finance (Pay Cell) Department.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1500+ WORDS COMPREHENSIVE EDITORIAL ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>The Implementation Architecture of Pay Revisions in Tamil Nadu</h2>
+        <p>
+          In the Indian fiscal federal structure, while the Central Pay Commission formally reports to the Union Cabinet, its economic impact extends directly to state public sector employees. Among all Indian states, <strong>Tamil Nadu</strong> operates one of the most structured, extensive, and welfare-oriented civil service systems. Over twelve lakh active public servants—comprising Secretariat staff, revenue personnel, state police, secondary and graduate teachers, transport corporation staff, and local body employees—alongside more than seven lakh pensioners, monitor central commission notifications closely.
+        </p>
+        <p>
+          Historically, the Government of Tamil Nadu does not constitute a separate statutory Pay Commission from scratch. Instead, following the central notification, the state government appoints an <strong>Official Committee (Finance Pay Cell)</strong> led by senior IAS officers to review central recommendations and adapt them into the <strong>Tamil Nadu Revised Pay Rules</strong>. 
+        </p>
+        <p>
+          Under the 7th CPC revision notified via <strong>G.O. Ms. No. 303 (Finance Pay Cell)</strong> dated October 11, 2017, the state government adopted a uniform fitment factor of <strong>2.57</strong> while preserving local allowances, Selection Grade advancement, and state-specific pay scales. As the <strong>8th Central Pay Commission</strong> approaches, public servants across Tamil Nadu are evaluating projected basic pay adjustments, city allowances, and retirement pension options.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>The Unique 32-Level Tamil Nadu Pay Matrix Explained</h2>
+        <p>
+          A frequent source of confusion among state employees comparing central charts with state circulars is the matrix structure. While the Central Government Pay Matrix consists of 18 functional levels, <strong>the Tamil Nadu Pay Matrix features 32 distinct levels</strong>.
+        </p>
+        <p>
+          This 32-level architecture was designed specifically to accommodate state cadre nuances:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Levels 1 to 7 (Former Group 'D' Cadres):</strong> Spans Office Assistants, Watchmen, Sanitary Workers, and Drivers (starting from ₹15,700 under Level 1 up to ₹19,500 under Level 7).</li>
+          <li><strong>Levels 8 to 10 (Junior Clerical &amp; Executive Ranks):</strong> Covers Junior Assistants, Typists, Police Constables, and Revenue Inspectors (Level 8 starts at ₹19,500; Level 10 at ₹20,600).</li>
+          <li><strong>Levels 11 to 18 (School Education &amp; Supervisory Cadres):</strong> Represents Secondary Grade Teachers (Level 11: ₹35,400), Deputy Tahsildars (Level 13: ₹35,900), B.T. Assistants / Tahsildars (Level 16: ₹36,400), and P.G. Teachers (Level 18: ₹36,900).</li>
+          <li><strong>Levels 19 to 32 (State Civil Services &amp; Apex Administration):</strong> Spans Assistant Directors, DSPs (Level 22: ₹56,100), District Revenue Officers (Level 25: ₹59,300), Chief Engineers, and the Chief Secretary of Tamil Nadu (Level 32: ₹2,25,000).</li>
+        </ul>
+        <p>
+          Each vertical step across these 32 levels represents an annual <strong>compounding increment of exactly 3%</strong>, credited either on January 1st, April 1st, July 1st, or October 1st based on the employee's appointment cycle.
+        </p>
+      </section>
+
+      <!-- TAMIL NADU 32-LEVEL MASTER COMPARISON TABLE -->
+      <section class="editorial-chapter">
+        <h2>Tamil Nadu Pay Matrix: Levels 1 to 25 Projections Under 8th CPC (2.28x Factor)</h2>
+        <p>
+          The table below illustrates starting basic pay cells (Cell 1) across key Tamil Nadu levels under the 7th CPC baseline and projected figures under the working <strong>2.28 Fitment Factor</strong>:
+        </p>
+
+        <div class="table-scroll-container">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>TN Level</th>
+                <th>Pre-Revised Grade Pay</th>
+                <th>7th CPC Base (G.O. 303)</th>
+                <th>8th CPC Base (2.28x)</th>
+                <th>Covered Cadres (Tamil Nadu)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Level 1</strong></td>
+                <td>GP ₹1,300</td>
+                <td>₹15,700</td>
+                <td><strong>₹35,796</strong></td>
+                <td>Office Assistant, Sanitary Worker, Watchman</td>
+              </tr>
+              <tr>
+                <td><strong>Level 2</strong></td>
+                <td>GP ₹1,400</td>
+                <td>₹16,600</td>
+                <td><strong>₹37,848</strong></td>
+                <td>Record Clerk, Binder, Lab Attender</td>
+              </tr>
+              <tr>
+                <td><strong>Level 5</strong></td>
+                <td>GP ₹1,800</td>
+                <td>₹18,000</td>
+                <td><strong>₹41,040</strong></td>
+                <td>Driver (Regular), Skilled Assistant Gr-II</td>
+              </tr>
+              <tr>
+                <td><strong>Level 8</strong></td>
+                <td>GP ₹2,400</td>
+                <td>₹19,500</td>
+                <td><strong>₹44,460</strong></td>
+                <td>Junior Assistant (JA), Typist, Police Constable Gr-II</td>
+              </tr>
+              <tr>
+                <td><strong>Level 10</strong></td>
+                <td>GP ₹2,800</td>
+                <td>₹20,600</td>
+                <td><strong>₹46,968</strong></td>
+                <td>Assistant (Secretariat/Collectorate), Revenue Inspector (RI)</td>
+              </tr>
+              <tr>
+                <td><strong>Level 11</strong></td>
+                <td>GP ₹4,200</td>
+                <td>₹35,400</td>
+                <td><strong>₹80,712</strong></td>
+                <td>Secondary Grade Teacher (SGT), Sub-Inspector of Police</td>
+              </tr>
+              <tr>
+                <td><strong>Level 13</strong></td>
+                <td>GP ₹4,400</td>
+                <td>₹35,900</td>
+                <td><strong>₹81,852</strong></td>
+                <td>Deputy Tahsildar (DT), Superintendent (Collectorate)</td>
+              </tr>
+              <tr>
+                <td><strong>Level 16</strong></td>
+                <td>GP ₹4,600</td>
+                <td>₹36,400</td>
+                <td><strong>₹82,992</strong></td>
+                <td>B.T. Assistant (Teacher), Tahsildar, Inspector of Police</td>
+              </tr>
+              <tr>
+                <td><strong>Level 18</strong></td>
+                <td>GP ₹4,800</td>
+                <td>₹36,900</td>
+                <td><strong>₹84,132</strong></td>
+                <td>P.G. Assistant (Teacher), Accounts Officer (Treasuries)</td>
+              </tr>
+              <tr>
+                <td><strong>Level 22</strong></td>
+                <td>GP ₹5,400</td>
+                <td>₹56,100</td>
+                <td><strong>₹1,27,908</strong></td>
+                <td>Deputy Superintendent of Police (DSP), Assistant Director</td>
+              </tr>
+              <tr>
+                <td><strong>Level 25</strong></td>
+                <td>GP ₹6,600</td>
+                <td>₹59,300</td>
+                <td><strong>₹1,35,204</strong></td>
+                <td>District Revenue Officer (DRO), Joint Director</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Selection Grade &amp; Special Grade Rules: The 10 &amp; 20 Year Increments</h2>
+        <p>
+          A defining feature of the Tamil Nadu public compensation framework is the statutory provision for <strong>Selection Grade and Special Grade promotions</strong>. Governed under paragraph 6 of G.O. Ms. No. 303, this scheme protects state employees from career stagnation:
+        </p>
+        <div class="callout-box">
+          <h4>The 10 and 20 Year Career Advancement Rule:</h4>
+          <ul class="bullet-feature-list">
+            <li><strong>Selection Grade (On Completing 10 Years):</strong> An employee serving in Levels 1 through 23 who completes 10 years of continuous service in a single post without regular promotion is awarded Selection Grade. The employee is granted <strong>two vertical increments (a 6% cumulative base increase)</strong> within the same level.</li>
+            <li><strong>Special Grade (On Completing 20 Years):</strong> An employee who remains in the same post for 20 years without regular promotion is awarded Special Grade, which grants an additional <strong>two vertical increments</strong>.</li>
+          </ul>
+          <p>
+            This mechanism ensures that employees in operational and clerical cadres receive substantial pay progression even when departmental promotion vacancies are unavailable.
+          </p>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>City Classification and HRA Slabs in Tamil Nadu</h2>
+        <p>
+          In Tamil Nadu, House Rent Allowance (HRA) is administered under state-specific city grading orders issued by the Finance Department:
+        </p>
+        <div class="city-classification-grid">
+          <div class="city-box tier-chennai">
+            <h4>Grade I(a) - Greater Chennai</h4>
+            <div class="badge-tag">Greater Chennai Corporation Limits</div>
+            <p><strong>Projected HRA Rate:</strong> 27% of Basic Pay (or enhanced ceiling rate).</p>
+            <p><strong>Covered Areas:</strong> Chennai City, contiguous municipal zones, and Greater Chennai Police limits.</p>
+            <span class="card-footer-note">Reflects the highest residential rental cost bracket in Tamil Nadu.</span>
+          </div>
+
+          <div class="city-box tier-grade1b">
+            <h4>Grade I(b) - Major Corporations</h4>
+            <div class="badge-tag">Population 5 Lakh to 50 Lakh</div>
+            <p><strong>Projected HRA Rate:</strong> 18% of Basic Pay.</p>
+            <p><strong>Covered Cities:</strong> Coimbatore, Madurai, Tiruchirappalli, Salem, Tirunelveli, and Tiruppur.</p>
+            <span class="card-footer-note">Covers major industrial and educational municipal corporations.</span>
+          </div>
+
+          <div class="city-box tier-grade2">
+            <h4>Grade II - District Headquarters</h4>
+            <div class="badge-tag">District Headquarter Municipalities</div>
+            <p><strong>Projected HRA Rate:</strong> 12% of Basic Pay.</p>
+            <p><strong>Covered Towns:</strong> Erode, Vellore, Thanjavur, Dindigul, Thoothukudi, Nagercoil, and Kancheepuram.</p>
+            <span class="card-footer-note">Standard urban tier across district administrative centers.</span>
+          </div>
+
+          <div class="city-box tier-grade3">
+            <h4>Grade III - Town Panchayats &amp; Rural</h4>
+            <div class="badge-tag">Rural Taluks &amp; Small Towns</div>
+            <p><strong>Projected HRA Rate:</strong> 9% of Basic Pay.</p>
+            <p><strong>Covered Areas:</strong> All rural village panchayats, non-notified town panchayats, and remote taluks.</p>
+            <span class="card-footer-note">Baseline housing subsidy ensuring rental coverage across rural stations.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Contributory Pension Scheme (CPS) vs Old Pension Scheme (OPS) Debate</h2>
+        <p>
+          In Tamil Nadu, pension policy remains one of the most prominent topics of public discourse. Unlike central personnel who operate under the National Pension System (NPS) or the Unified Pension Scheme (UPS), post-2003 recruits in Tamil Nadu are enrolled in the state-managed <strong>Contributory Pension Scheme (CPS)</strong>:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>The CPS Structure:</strong> State employees contribute 10% of their Basic Pay &plus; DA, with matching state government contributions. However, employee confederations—led by JACTTO-GEO—have consistently campaigned for the restoration of the defined-benefit <strong>Old Pension Scheme (OPS)</strong>.</li>
+          <li><strong>Impact of 8th CPC on CPS:</strong> Under the 8th Pay Commission, because monthly CPS deductions equal 10% of the revised basic pay, employee retirement savings pools expand substantially, while employees advocate for state adoption of assured 50% defined pension models.</li>
+          <li><strong>Pensioners under OPS:</strong> Pre-2003 retirees and existing pensioners will see their basic pensions multiplied directly by the approved fitment factor, raising the minimum state pension from ₹7,850 to over <strong>₹17,900 per month</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Retrospective Arrears and Implementation Lag in Tamil Nadu</h2>
+        <p>
+          A vital consideration for state employees is the <strong>implementation timeline lag</strong>. Historically, state government orders follow the central announcement by twelve to twenty-four months:
+        </p>
+        <div class="callout-box">
+          <h4>Precedent from the 7th Pay Commission:</h4>
+          <p>
+            The Central 7th CPC took effect from January 1, 2016, with central notifications issued in July 2016. In Tamil Nadu, the Official Committee submitted its report in September 2017, and G.O. Ms. No. 303 was issued on October 11, 2017. 
+          </p>
+          <p>
+            The state government granted <em>notional effect from January 1, 2016</em>, with <em>monetary benefits starting from October 1, 2017</em>. For the 8th Pay Commission, staff confederations have submitted memorandums urging the state administration to disburse full cash arrears from the retrospective effective date (January 1, 2026), ensuring financial equity for state employees.
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official unit of the Government of Tamil Nadu, the Finance (Pay Cell) Department, or the Government of India</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents (including G.O. Ms. No. 303), and statistical indices. For official decisions, please refer directly to Government Orders (G.O.) issued by the Government of Tamil Nadu.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company &amp; Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central &amp; State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: TN SALARY CALCULATOR ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Real-Time Tamil Nadu Salary Calculation Engine
+    const tnLevelSelect = document.getElementById('tnLevelSelect');
+    const tnCurrentBasic = document.getElementById('tnCurrentBasic');
+    const tnFitmentSelect = document.getElementById('tnFitmentSelect');
+    const tnCityGradeSelect = document.getElementById('tnCityGradeSelect');
+    const tnPensionScheme = document.getElementById('tnPensionScheme');
+
+    const outTnRevisedBasic = document.getElementById('outTnRevisedBasic');
+    const outTnHra = document.getElementById('outTnHra');
+    const outTnCca = document.getElementById('outTnCca');
+    const outTnMa = document.getElementById('outTnMa');
+    const outTnGross = document.getElementById('outTnGross');
+    const outTnPensionDeduct = document.getElementById('outTnPensionDeduct');
+    const outTnFixedDeduct = document.getElementById('outTnFixedDeduct');
+    const outTnNetTakeHome = document.getElementById('outTnNetTakeHome');
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateTnSalary() {
+      const basic = parseFloat(tnCurrentBasic.value) || 0;
+      const fitment = parseFloat(tnFitmentSelect.value) || 2.28;
+      const hraRate = parseFloat(tnCityGradeSelect.value) || 0.27;
+      const pensionRate = parseFloat(tnPensionScheme.value) || 0.10;
+
+      // 1. Revised Basic Pay (rounded to nearest 100)
+      const revisedBasic = Math.round((basic * fitment) / 100) * 100;
+
+      // 2. House Rent Allowance (HRA) with TN floor protection
+      let calculatedHra = revisedBasic * hraRate;
+      let floorLimit = 3690;
+      if (hraRate >= 0.27) floorLimit = 11080;
+      else if (hraRate >= 0.18) floorLimit = 7390;
+      else if (hraRate >= 0.12) floorLimit = 5200;
+      calculatedHra = Math.max(calculatedHra, floorLimit);
+
+      // 3. City Compensatory Allowance (CCA in TN)
+      let ccaAmount = 0;
+      if (hraRate >= 0.27) ccaAmount = 1000; // Chennai Metro
+      else if (hraRate >= 0.18) ccaAmount = 600; // Coimbatore, Madurai
+
+      // 4. Standard Medical Allowance (MA)
+      const maAmount = 300;
+
+      // 5. Estimated Gross Salary
+      const grossSalary = revisedBasic + calculatedHra + ccaAmount + maAmount;
+
+      // 6. Deductions
+      const pensionDeduction = revisedBasic * pensionRate;
+      const fixedDeductions = 420; // NHIS (New Health Insurance Scheme) + SPF + Family Benefit Fund
+      const totalDeductions = pensionDeduction + fixedDeductions;
+
+      // 7. Net Take-Home Pay
+      const netSalary = grossSalary - totalDeductions;
+
+      // Update DOM
+      outTnRevisedBasic.innerText = formatINR(revisedBasic);
+      outTnHra.innerText = formatINR(calculatedHra);
+      outTnCca.innerText = formatINR(ccaAmount);
+      outTnMa.innerText = formatINR(maAmount);
+      outTnGross.innerText = formatINR(grossSalary);
+      outTnPensionDeduct.innerText = pensionDeduction > 0 ? ('- ' + formatINR(pensionDeduction)) : '₹0 (GPF)';
+      outTnFixedDeduct.innerText = '- ' + formatINR(fixedDeductions);
+      outTnNetTakeHome.innerText = formatINR(netSalary);
+    }
+
+    // Sync input when TN Level dropdown changes
+    tnLevelSelect.addEventListener('change', (e) => {
+      tnCurrentBasic.value = e.target.value;
+      calculateTnSalary();
+    });
+
+    tnCurrentBasic.addEventListener('input', calculateTnSalary);
+    tnFitmentSelect.addEventListener('change', calculateTnSalary);
+    tnCityGradeSelect.addEventListener('change', calculateTnSalary);
+    tnPensionScheme.addEventListener('change', calculateTnSalary);
+
+    // Initial run
+    calculateTnSalary();
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero Section */
+  .calc-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* App Card */
+  .salary-app-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+
+  .app-layout-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sub-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+
+  .field-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .field-item label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .styled-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .styled-input:focus {
+    border-color: var(--brand-accent);
+    background-color: #ffffff;
+  }
+
+  .field-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+
+  /* Output Column */
+  .output-summary-column {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+    font-size: 0.92rem;
+  }
+
+  .line-item.emphasis {
+    background-color: #e0f2fe;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .line-value.brand {
+    color: #0369a1;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .font-bold {
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .line-item.gross-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+  }
+
+  .text-gross {
+    font-weight: 800;
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+  }
+
+  .deduction-header {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #dc2626;
+    margin: 0.4rem 0 0.2rem 0;
+  }
+
+  .text-deduct {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .divider-line {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.8rem 0;
+  }
+
+  .net-in-hand-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.4rem;
+  }
+
+  .net-caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .net-figure {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #047857;
+  }
+
+  .fine-print {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .bullet-feature-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  .callout-box {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-highlight);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-box h4 {
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-box p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .callout-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Cadre Boxes Grid */
+  .cadre-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .cadre-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cadre-box.lvl1 { border-top: 4px solid #64748b; }
+  .cadre-box.lvl2 { border-top: 4px solid #0284c7; }
+  .cadre-box.lvl3 { border-top: 4px solid #2563eb; }
+  .cadre-box.lvl4 { border-top: 4px solid #d97706; }
+  .cadre-box.lvl5 { border-top: 4px solid #047857; }
+
+  .cadre-box h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.35rem;
+  }
+
+  .cadre-badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    align-self: flex-start;
+  }
+
+  .cadre-box p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .cadre-footer {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-top: 0.6rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  .cadre-footer strong {
+    color: #047857;
+  }
+
+  /* City Grid */
+  .city-classification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .city-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .city-box.tier-chennai { border-top: 4px solid var(--brand-highlight); }
+  .city-box.tier-grade1b { border-top: 4px solid var(--brand-accent); }
+  .city-box.tier-grade2 { border-top: 4px solid #0d9488; }
+  .city-box.tier-grade3 { border-top: 4px solid #64748b; }
+
+  .city-box h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    align-self: flex-start;
+  }
+
+  .city-box p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .card-footer-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Data Table */
+  .table-scroll-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .editorial-table th {
+    background-color: #0f2b48;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .editorial-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .calc-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-heading {
+      font-size: 1.55rem;
+    }
+
+    .salary-app-card {
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .app-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cadre-card-grid, .city-classification-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .net-figure {
+      font-size: 1.35rem;
+    }
+  }
+</style>
