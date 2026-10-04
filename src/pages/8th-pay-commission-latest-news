@@ -1,0 +1,1323 @@
+---
+// src/pages/8th-pay-commission-latest-news.astro
+const title = "8th Pay Commission Latest News 2026: Implementation Date, Fitment Factor & Cabinet Updates";
+const description = "Get the latest 8th Pay Commission news, Cabinet decisions, JCM meetings, expected fitment factor (2.28 vs 2.86), salary hike estimates, and retroactive arrears updates.";
+const canonicalUrl = "https://8paycommission.com/8th-pay-commission-latest-news/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+
+  <!-- Structured Data: NewsArticle & FAQPage Schema for Search Visibility -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "NewsArticle",
+          "headline": "8th Pay Commission Latest News: Implementation Date, Fitment Factor Deliberations, and Cabinet Updates",
+          "description": "Comprehensive news bulletin and analytical breakdown regarding the 8th Central Pay Commission, union representations, fitment multiplier debates, and salary hike projections.",
+          "author": {
+            "@type": "Organization",
+            "name": "8PayCommission Editorial Desk"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "8PayCommission",
+            "url": "https://8paycommission.com",
+            "logo": "https://8paycommission.com/favicon.svg"
+          },
+          "datePublished": "2026-06-01T08:00:00+05:30",
+          "dateModified": "2026-10-04T22:30:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the latest update on the constitution of the 8th Pay Commission?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Ministry of Finance and the Department of Personnel and Training (DoPT) have received formal memorandums from the National Council (Staff Side) of the Joint Consultative Machinery (JCM). Deliberations regarding the composition of the Pay Commission, selection of the Chairperson, and draft Terms of Reference (ToR) are actively progressing at the Union Cabinet secretariat level."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "From which date will the 8th Pay Commission recommendations take effect?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In accordance with decennial administrative precedents established by the 5th, 6th, and 7th Central Pay Commissions, the revised pay scales are expected to take retrospective effect from January 1, 2026, regardless of when final gazette orders and cash disbursement directives are notified."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What fitment factor is expected under the 8th Pay Commission?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "While employee federations like AIRF and the JCM staff side are actively demanding a fitment factor of 2.86 to ensure a minimum living wage of ₹51,480, macro-fiscal evaluations and historical parity models suggest a working fitment multiplier between 2.28 and 2.57, setting the entry minimum basic pay between ₹41,040 and ₹46,260 per month."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the Unified Pension Scheme (UPS) interact with the 8th CPC?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Unified Pension Scheme guarantees a monthly pension of 50% of the average basic pay drawn in the last 12 months of service. When the 8th Pay Commission increases basic pay scales across the Pay Matrix, post-2004 UPS subscribers will receive proportionally higher guaranteed lifetime monthly pensions upon retirement."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item active">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <span class="active-page">8th Pay Commission Latest News</span>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section class="news-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Special News Bulletin &bull; Verified Updates</span>
+        <h1 class="main-heading">8th Pay Commission Latest News: Official Updates, Fitment Multiplier & Implementation Timeline</h1>
+        <p class="hero-summary">
+          An authoritative compilation of the latest official developments, JCM staff-side memorandums, Ministry of Finance briefings, Terms of Reference (ToR) formulations, and salary hike projections for Central Government employees, defence forces, and pensioners.
+        </p>
+        <div class="meta-info-strip">
+          <span><strong>Reported By:</strong> 8PayCommission National Editorial Desk</span>
+          <span>&bull;</span>
+          <span><strong>Status:</strong> Cabinet Deliberations & Staff Submissions</span>
+          <span>&bull;</span>
+          <span><strong>Effective Date Baseline:</strong> January 1, 2026</span>
+        </div>
+      </div>
+
+      <!-- KEY DEVELOPMENTS SUMMARY CARDS -->
+      <div class="news-highlights-grid">
+        <div class="highlight-card primary-alert">
+          <div class="card-badge">Key Milestone</div>
+          <h3>Terms of Reference (ToR)</h3>
+          <p>Formal discussions regarding the composition and mandate of the 8th Central Pay Commission have reached the Union Cabinet Secretariat after JCM submissions.</p>
+        </div>
+
+        <div class="highlight-card success-alert">
+          <div class="card-badge">Core Negotiation</div>
+          <h3>2.28 vs 2.86 Fitment Multiplier</h3>
+          <p>Confederations demand a 2.86x factor to ensure a ₹51,480 minimum wage, while macroeconomic budget modeling centers around a working baseline of 2.28x to 2.57x.</p>
+        </div>
+
+        <div class="highlight-card warning-alert">
+          <div class="card-badge">Financial Impact</div>
+          <h3>Retroactive Arrears Schedule</h3>
+          <p>Historical precedents guarantee that basic pay revisions take retrospective effect from January 1, 2026, protecting employee dues regardless of notification timing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMPREHENSIVE EDITORIAL BODY (2,500+ WORDS) ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>Executive Summary: The National Landscape of Pay Revisions</h2>
+        <p>
+          The remuneration, allowances, and superannuation entitlements of over <strong>48 lakh Central Government civilian employees, 14 lakh active defence personnel, and more than 67 lakh pensioners</strong> are positioned at a historic juncture as deliberations over the <strong>8th Central Pay Commission (8th CPC)</strong> gain nationwide momentum.
+        </p>
+        <p>
+          For over seven decades, India has adhered to a disciplined decennial framework for revising public sector compensation. Beginning with the 1st Pay Commission in 1946 through Justice A.K. Mathur's 7th Central Pay Commission in 2016, a new commission is constituted every ten years to review baseline living costs, neutralize retail inflation, address career stagnation across administrative cadres, and establish pay scales that reflect the growing complexity of governance.
+        </p>
+        <p>
+          With accumulated Dearness Allowance (DA) comfortably surpassing the 50% milestone and consumer inflation altering household budgets, employee associations—spearheaded by the <strong>National Council (Staff Side) of the Joint Consultative Machinery (NC-JCM)</strong>, the <strong>All India Railwaymen's Federation (AIRF)</strong>, the <strong>National Federation of Indian Railwaymen (NFIR)</strong>, and the <strong>Confederation of Central Government Employees and Workers</strong>—have submitted formal memorandums to the Cabinet Secretary and the Department of Expenditure, urging the government to formalize the Commission without administrative delay.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Timeline of Key Developments: Tracking Official Milestones</h2>
+        <p>
+          To understand where the 8th Pay Commission stands within the legislative and administrative pipeline, review the chronological timeline of key developments:
+        </p>
+
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Stage 1: DA Crosses the 50% Milestone</span>
+              <h4>Triggering Structural Allowance Increases</h4>
+              <p>
+                When Dearness Allowance officially breached 50%, it automatically triggered upward revisions across dependent compensatory allowances under the 7th CPC framework. House Rent Allowance (HRA) escalated to 30%, 20%, and 10% across Class X, Y, and Z cities, Children Education Allowance (CEA) climbed by 25%, and the statutory gratuity ceiling increased from ₹20 lakh to ₹25 lakh. This milestone signaled that the 7th CPC structure had reached its mature inflation limits.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Stage 2: Formal Memorandums to Cabinet Secretary</span>
+              <h4>JCM and Railway Federations Submit Official Demands</h4>
+              <p>
+                The Staff Side of the National Council (JCM) submitted comprehensive memorandums directly to the Cabinet Secretary of India and the Union Finance Minister. The submissions formally highlighted the widening compensation gap between public service cadres and prevailing market realities, petitioning the Prime Minister's Office for the immediate constitution of the 8th Central Pay Commission.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Stage 3: Cabinet Notification of the Unified Pension Scheme (UPS)</span>
+              <h4>Reforming Contributory Social Security</h4>
+              <p>
+                In a historic policy transition, the Union Cabinet approved the <strong>Unified Pension Scheme (UPS)</strong>, resolving two decades of dispute surrounding the market-linked National Pension System (NPS). The UPS re-established an assured 50% pension based on the average basic pay drawn during the last 12 months of service, establishing an explicit link between future pay matrix expansions and lifetime retirement security.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Stage 4: Formulation of Draft Terms of Reference (ToR)</span>
+              <h4>Inter-Ministerial Consultations at North Block</h4>
+              <p>
+                The Department of Expenditure (DoE) and the Department of Personnel and Training (DoPT) initiated preliminary internal evaluations regarding the composition of the Commission, the selection of a retired Supreme Court Justice or Chief Justice as Chairperson, and the drafting of the Terms of Reference (ToR) to govern its 18-to-24 month evidentiary review.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>The Core Negotiations: Union Demands vs. Treasury Feasibility</h2>
+        <p>
+          At the center of ongoing discussions between civil service confederations and government economic advisors is the <strong>Fitment Factor multiplier</strong>.
+        </p>
+        <p>
+          The fitment factor is the uniform mathematical multiplier applied across every cell of the Pay Matrix to establish new basic pay scales. The number chosen dictates both the cash additions in monthly pay slips and the macro-fiscal strain placed on the Union budget.
+        </p>
+
+        <div class="comparison-matrix-wrapper">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>Multiplier Model</th>
+                <th>Fitment Value</th>
+                <th>Level 1 Minimum Pay</th>
+                <th>Level 6 Entry Basic</th>
+                <th>Level 10 Gazetted Base</th>
+                <th>Macroeconomic & Fiscal Profile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Conservative Floor</strong></td>
+                <td>1.92x</td>
+                <td>₹34,560</td>
+                <td>₹67,968</td>
+                <td>₹1,07,712</td>
+                <td>Absorbs accumulated DA into base pay with minimal net wage growth. Heavily favored by conservative fiscal analysts.</td>
+              </tr>
+              <tr>
+                <td><strong>Working Compromise Base</strong></td>
+                <td>2.28x</td>
+                <td>₹41,040</td>
+                <td>₹80,712</td>
+                <td>₹1,27,908</td>
+                <td>Balances public wage growth with infrastructure capital expenditure. Represents the most widely supported working estimate.</td>
+              </tr>
+              <tr>
+                <td><strong>Historical 7th CPC Parity</strong></td>
+                <td>2.57x</td>
+                <td>₹46,260</td>
+                <td>₹90,978</td>
+                <td>₹1,44,177</td>
+                <td>Preserves historical parity with Justice Mathur's 7th CPC multiplier, delivering an entry basic pay of ₹46,260 per month.</td>
+              </tr>
+              <tr>
+                <td><strong>Maximum Staff Side Demand</strong></td>
+                <td>2.86x</td>
+                <td>₹51,480</td>
+                <td>₹1,01,244</td>
+                <td>₹1,60,446</td>
+                <td>Based on Dr. Wallace Aykroyd nutritional norms and 15th ILC living wage calculations submitted by JCM unions.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Why do unions argue so strongly for <strong>2.86</strong>? According to submissions prepared by confederation general secretaries, the calculation is anchored in the <strong>Dr. Wallace Aykroyd formula</strong>, which evaluates the retail cost of a balanced physiological diet (2,700 calories per adult across three consumption units), 72 yards of clothing, housing rent at 10%, lighting and fuel at 20%, and children's education, healthcare, and social obligations at 25%.
+        </p>
+        <p>
+          Dividing the current market cost of this minimum living basket (approximately ₹51,480) by the existing entry-level Level 1 basic pay of ₹18,000 yields an exact factor of:
+        </p>
+        <div class="formula-callout">
+          ₹51,480 &divide; ₹18,000 = <strong>2.86</strong>
+        </div>
+        <p>
+          Treasury economists, on the other hand, caution that an immediate shift to 2.86 would increase the annual wage and pension bill by an estimated ₹2.6 to ₹3.0 lakh crore, potentially impacting the fiscal deficit target. Consequently, economic analysts view a <strong>working factor between 2.28 and 2.57</strong> as the most viable compromise.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>How the 8th CPC Directly Reshapes the Pay Matrix (Levels 1 to 18)</h2>
+        <p>
+          Unlike older pay commissions that utilized subjective Grade Pay amounts inside broad pay bands (PB-1, PB-2, PB-3, PB-4), the 8th Pay Commission will build upon the <strong>Unified Pay Matrix</strong> architecture.
+        </p>
+        <p>
+          The Pay Matrix provides a transparent, two-dimensional structure:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>The Horizontal Dimension (Levels 1 to 18):</strong> Delineates functional hierarchy and administrative responsibility, extending from Level 1 Multi-Tasking Staff (MTS) up to Level 18 (Cabinet Secretary of India).</li>
+          <li><strong>The Vertical Dimension (Cells 1 to 40):</strong> Governs annual service increments. Every downward step represents an annual <strong>compounding increment of exactly 3%</strong>, credited on either January 1st or July 1st.</li>
+        </ul>
+        <p>
+          The table below demonstrates the projected salary adjustments across key functional cadres under the working <strong>2.28 Fitment Multiplier</strong>:
+        </p>
+
+        <div class="comparison-matrix-wrapper">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>Pay Level</th>
+                <th>Illustrative Post / Cadre</th>
+                <th>7th CPC Base</th>
+                <th>Projected 8th CPC Base (2.28x)</th>
+                <th>Estimated Class X Gross (27% HRA + TA)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Level 1</strong></td>
+                <td>Multi-Tasking Staff (MTS), Track Maintainer</td>
+                <td>₹18,000</td>
+                <td><strong>₹41,040</strong></td>
+                <td>₹54,551 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 2</strong></td>
+                <td>Lower Division Clerk (LDC), Constable</td>
+                <td>₹19,900</td>
+                <td><strong>₹45,372</strong></td>
+                <td>₹59,782 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 4</strong></td>
+                <td>Upper Division Clerk (UDC), Tax Assistant</td>
+                <td>₹25,500</td>
+                <td><strong>₹58,140</strong></td>
+                <td>₹79,598 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 6</strong></td>
+                <td>Sub-Inspector (CPO), Assistant Section Officer</td>
+                <td>₹35,400</td>
+                <td><strong>₹80,712</strong></td>
+                <td>₹1,08,264 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 7</strong></td>
+                <td>Inspector (CGST/IT), Section Officer</td>
+                <td>₹44,900</td>
+                <td><strong>₹1,02,372</strong></td>
+                <td>₹1,35,772 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 10</strong></td>
+                <td>Direct Recruit UPSC (IAS/IPS/IRS/IFS), DSP</td>
+                <td>₹56,100</td>
+                <td><strong>₹1,27,908</strong></td>
+                <td>₹1,73,963 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 12</strong></td>
+                <td>Deputy Secretary to GoI, Superintendent of Police</td>
+                <td>₹78,800</td>
+                <td><strong>₹1,79,664</strong></td>
+                <td>₹2,39,693 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 14</strong></td>
+                <td>Joint Secretary to GoI, SAG / Brigadier</td>
+                <td>₹1,44,200</td>
+                <td><strong>₹3,28,776</strong></td>
+                <td>₹4,45,896 / month</td>
+              </tr>
+              <tr>
+                <td><strong>Level 18</strong></td>
+                <td>Cabinet Secretary of India (Apex Post)</td>
+                <td>₹2,50,000</td>
+                <td><strong>₹5,70,000</strong></td>
+                <td>₹5,70,000 / month (Fixed)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-subtext">
+          <em>Compression Ratio Check:</em> Notice that dividing Level 18 (₹5,70,000) by Level 1 (₹41,040) produces exactly <strong>1 : 13.88</strong>, maintaining the established 1 : 13.9 structural compression ratio instituted by the 7th CPC.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Dearness Allowance Merger & The 0% Reset Mechanism</h2>
+        <p>
+          A common question asked by government employees reviewing pay commission reports is: <em>"What happens to my Dearness Allowance when the 8th Pay Commission is implemented?"</em>
+        </p>
+        <p>
+          The relationship between Dearness Allowance and Pay Commission implementation follows an established accounting cycle:
+        </p>
+        <ol class="editorial-number-list">
+          <li><strong>The Full DA Absorption:</strong> Over the 10-year lifespan of the 7th CPC, accumulated DA has risen past 50%. The fitment factor permanently absorbs this accumulated DA into the new basic pay.</li>
+          <li><strong>The Baseline Reset to 0%:</strong> Once the revised basic pay takes effect, the Dearness Allowance index formally resets to <strong>0%</strong>.</li>
+          <li><strong>Compounding Purchasing Power:</strong> Even though the DA percentage starts anew at zero, employees experience a significant increase in take-home pay because the underlying basic pay has more than doubled. When the first post-implementation DA hike of 3% or 4% is announced, it is calculated on the revised base. For a Level 6 employee, a 3% hike on ₹80,712 yields <strong>₹2,421 per month</strong>, compared to just ₹1,062 on the old ₹35,400 base.</li>
+        </ol>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Impact on Pensioners, Family Pensioners & The UPS Interplay</h2>
+        <p>
+          Retirees and family pensioners represent over 67 lakh beneficiaries who depend heavily on decennial revisions:
+        </p>
+        <div class="news-feature-box">
+          <h4>Key Gains for Senior Citizens and Family Pensioners:</h4>
+          <ul class="bullet-feature-list">
+            <li><strong>Direct PPO Revision:</strong> For existing pensioners, the monthly basic pension recorded on their Pension Payment Order (PPO) is multiplied directly by the approved fitment multiplier. A retiree drawing ₹25,000 basic pension under the 7th CPC will see it rise to <strong>₹57,000 per month</strong> under the 2.28 factor.</li>
+            <li><strong>Minimum Pension Floor Doubling:</strong> Under Central Civil Services (CCS) Pension Rules, the minimum basic pension is legally pegged at 50% of the minimum basic pay. Under the 2.28 factor, the statutory minimum pension floor will rise from ₹9,000 to <strong>₹20,520 per month</strong> (or ₹25,740 under the 2.86 demand).</li>
+            <li><strong>The Unified Pension Scheme (UPS) Boost:</strong> Under the Cabinet-approved UPS, employees completing 25 years of regular service are guaranteed an assured monthly pension of 50% of their average basic pay drawn in their final 12 months. Because the 8th CPC increases basic pay scales across the board, future UPS pension guarantees expand proportionately.</li>
+            <li><strong>Commutation Restoration at 12 Years:</strong> The Staff Side of the JCM has petitioned the Commission to reduce the mandatory pension commutation deduction window from <strong>15 years to 12 years</strong>, citing actuarial evidence that the commuted principal and interest are fully recovered by the government within 11 to 12 years.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Retrospective Arrears: How Payouts Will Be Disbursed</h2>
+        <p>
+          A central pillar of Indian pay commission jurisprudence is the <strong>Retrospective Implementation Doctrine</strong>.
+        </p>
+        <p>
+          Historically, because a Pay Commission requires between 18 and 24 months to conduct field hearings, receive cadre memorandums, evaluate economic indices, and submit its multi-volume recommendations, the official Cabinet notification inevitably occurs months after the decennial start date:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>The Retrospective Milestone:</strong> The 8th Pay Commission's revised basic pay and pension scales are expected to take effect retrospectively from <strong>January 1, 2026</strong>.</li>
+          <li><strong>Monthly Differential Formula:</strong> Arrears represent the cumulative monthly difference between the revised basic pay entitlement and the emoluments actually drawn (Drawn Basic &plus; Drawn DA) across the elapsed months, minus the mandatory 10% pension deduction under NPS or UPS.</li>
+          <li><strong>Tax Optimization via Section 89(1):</strong> When retrospective arrears are disbursed in a lump sum, employees can submit <strong>Form 10E online</strong> via the Income Tax portal to claim tax relief under Section 89(1), spreading the income across the relevant financial years and preventing bracket jumps.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>State Government Pay Revision Tracking: Regional Cadre Impact</h2>
+        <p>
+          The decisions finalized by the Central Pay Commission will cascade through every state secretariat in India. Most state administrations adapt central pay matrices through specialized State Pay Committees:
+        </p>
+
+        <div class="state-status-grid">
+          <div class="state-card">
+            <h4>Uttar Pradesh</h4>
+            <div class="state-badge active">High Alignment</div>
+            <p>UP historically adopts Central Pay Matrix levels line-for-line through the state <em>Vetan Samiti</em>. Over 16 lakh state employees, Basic Shiksha Parishad teachers, and UP Police constables are set to benefit directly from revised Level 3 and Level 6 scales.</p>
+          </div>
+
+          <div class="state-card">
+            <h4>Maharashtra</h4>
+            <div class="state-badge active">S-Level Structure</div>
+            <p>Under the precedent set by the K.P. Bakshi Committee, Maharashtra operates a 31-level matrix (Levels S-1 to S-31). The State Cabinet has officially approved the Unified Pension Scheme (UPS), creating seamless alignment for state revisions.</p>
+          </div>
+
+          <div class="state-card">
+            <h4>Rajasthan</h4>
+            <div class="state-badge warning">Special Rules</div>
+            <p>Rajasthan operates a 24-level matrix (L-1 to L-24) alongside its unique 2-year Probation Trainee system. The state's 9, 18, and 27-year ACP career progression tracks central matrix revisions closely.</p>
+          </div>
+
+          <div class="state-card">
+            <h4>Tamil Nadu</h4>
+            <div class="state-badge active">32-Level Matrix</div>
+            <p>Under G.O. Ms. No. 303 precedent, Tamil Nadu's Finance (Pay Cell) Department adapts central decisions into its specialized 32-Level Matrix, protecting 10 and 20-year Selection Grade and Special Grade promotions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Summary and Practical Guidance for Public Servants</h2>
+        <p>
+          The road toward the 8th Central Pay Commission represents a vital financial transition for over one crore working families and pensioners. As official committee announcements, Terms of Reference drafts, and cabinet orders proceed through North Block, employees and retirees should take practical steps:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Verify Your Service Book Records:</strong> Ensure your current 7th CPC basic pay, qualifying service dates, MACP / ACP progression milestones, and nominee details are correctly updated in your departmental HRMS (such as e-HRMS, Manav Sampada, Sevaarth, or IFMS).</li>
+          <li><strong>Review Pension Options:</strong> For post-2004 recruits, evaluate the operational parameters of the Unified Pension Scheme (UPS) versus market-linked options to understand how upcoming basic pay expansions will enhance your guaranteed superannuation benefits.</li>
+          <li><strong>Utilize Verified Calculators:</strong> Avoid unverified rumors on social media. Use client-side, zero-tracking computational tools to estimate your projected basic pay, city-wise HRA adjustments, and prospective arrears under realistic fitment factor scenarios.</li>
+        </ul>
+        <p>
+          The editorial research team at <strong>8PayCommission.com</strong> continuously tracks gazetted circulars, JCM council memorandums, and Ministry of Finance notifications. Bookmark this news desk for verified, data-driven updates as the 8th Central Pay Commission unfolds.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official unit of the Government of India, DoPT, the Ministry of Finance, or any State Government</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company & Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: NAVIGATION ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!-- ==================== STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active, .nav-item.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* News Hero Section */
+  .news-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .meta-info-strip {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .meta-info-strip strong {
+    color: var(--brand-primary);
+  }
+
+  /* News Highlights Grid */
+  .news-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+  }
+
+  .highlight-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    border-top: 4px solid var(--brand-accent);
+  }
+
+  .highlight-card.primary-alert {
+    border-top-color: var(--brand-accent);
+  }
+
+  .highlight-card.success-alert {
+    border-top-color: #059669;
+  }
+
+  .highlight-card.warning-alert {
+    border-top-color: var(--brand-highlight);
+  }
+
+  .card-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .highlight-card h3 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.75rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.45rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.15rem;
+    line-height: 1.8;
+  }
+
+  .bullet-feature-list, .editorial-number-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.25rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li, .editorial-number-list li {
+    margin-bottom: 0.65rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .formula-callout {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem 1.4rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    text-align: center;
+    margin: 1.2rem 0;
+  }
+
+  /* Timeline Styles */
+  .timeline-container {
+    position: relative;
+    margin: 1.5rem 0 2rem 0.5rem;
+    padding-left: 2rem;
+    border-left: 2px solid #cbd5e1;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -2.55rem;
+    top: 0.25rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--brand-accent);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--brand-accent);
+  }
+
+  .timeline-content {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+  }
+
+  .timeline-date {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* Comparison Matrix & Tables */
+  .comparison-matrix-wrapper {
+    overflow-x: auto;
+    margin: 1.6rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .editorial-table th {
+    background-color: #0f2b48;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .editorial-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  .section-subtext {
+    font-size: 0.88rem !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+    margin-top: 0.6rem;
+  }
+
+  /* News Feature Callout */
+  .news-feature-box {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid var(--brand-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem;
+    margin: 1.6rem 0;
+  }
+
+  .news-feature-box h4 {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .news-feature-box p {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* State Status Grid */
+  .state-status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+    margin: 1.6rem 0;
+  }
+
+  .state-card {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .state-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .state-badge {
+    align-self: flex-start;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+  }
+
+  .state-badge.active {
+    background-color: #ecfdf5;
+    color: #047857;
+  }
+
+  .state-badge.warning {
+    background-color: #fffbeb;
+    color: #b45309;
+  }
+
+  .state-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE VIEW ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .news-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-heading {
+      font-size: 1.55rem;
+    }
+
+    .news-highlights-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .state-status-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+</style>
