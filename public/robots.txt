@@ -1,0 +1,38 @@
+# ==========================================
+# Robots.txt for 8PayCommission.com
+# Optimized for Googlebot & Google AdSense
+# ==========================================
+
+# 1. Global Crawler Rules
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /cdn-cgi/
+
+# 2. Google AdSense Mediapartners Crawler
+# Critical: AdSense crawler needs unrestricted access to scan page context for monetization approval
+User-agent: Mediapartners-Google
+Allow: /
+
+# 3. Googlebot & Googlebot-Mobile
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# 4. Microsoft Bing & Yahoo Crawler
+User-agent: Bingbot
+Allow: /
+
+# 5. Block Aggressive / Unwanted AI Scraping Crawlers (Optional bandwidth preservation)
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# 6. XML Sitemaps (Official Astro Integration generates sitemap-index.xml)
+Sitemap: https://8paycommission.com/sitemap-index.xml
+Sitemap: https://8paycommission.com/sitemap-0.xml
