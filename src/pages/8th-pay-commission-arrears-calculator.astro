@@ -1,0 +1,1315 @@
+---
+// src/pages/8th-pay-commission-arrears-calculator.astro
+const title = "₹ 8th Pay Commission Arrears Calculator: Estimate Retroactive Pay & Tax Relief (2026)";
+const description = "Calculate your 8th Pay Commission arrears. Estimate retroactive basic pay, revised HRA and TA arrears, DA adjustment offsets, and Section 89(1) tax relief.";
+const canonicalUrl = "https://8paycommission.com/8th-pay-commission-arrears-calculator/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: Article & FAQPage for Rich Search Results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "8th Pay Commission Arrears Calculator: Retroactive Due Estimation and Taxation Rules",
+          "description": "Comprehensive guide and analytical calculator for computing retroactive arrears under the 8th Central Pay Commission for Central and State Government employees.",
+          "author": {
+            "@type": "Organization",
+            "name": "8PayCommission Editorial Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "₹ 8PayCommission",
+            "url": "https://8paycommission.com"
+          },
+          "datePublished": "2026-02-01T08:30:00+05:30",
+          "dateModified": "2026-10-04T18:00:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How are 8th Pay Commission arrears calculated?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Arrears are calculated as the cumulative difference between the revised emoluments due under the 8th Pay Commission (Revised Basic Pay + Revised Allowances) and the emoluments actually drawn under the 7th Pay Commission (Old Basic Pay + Old DA + Old Allowances) for each retrospective month of the implementation period."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are Pay Commission arrears paid in a single lump-sum or multiple installments?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Historically, the Government of India has handled arrears based on fiscal conditions. While the 7th CPC arrears were credited in a single financial year, the 6th CPC disbursed arrears across two annual tranches (40% in Year 1 and 60% in Year 2)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can employees save tax on heavy lump-sum arrears disbursements?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Employees can claim tax relief under Section 89(1) of the Income Tax Act by filing Form 10E on the e-filing portal prior to submitting their Income Tax Return (ITR), recalculating tax liabilities as if the arrears had been received in their respective past assessment years."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger active">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <a href="/calculators/">Calculators</a> <span>›</span> 
+      <span class="active-page">8th Pay Commission Arrears Calculator</span>
+    </nav>
+
+    <!-- HERO & INTERACTIVE ARREARS CALCULATOR -->
+    <section class="calc-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Retrospective Financial Estimator</span>
+        <h1 class="page-title">₹ 8th Pay Commission Arrears Calculator</h1>
+        <p class="page-subtitle">
+          Calculate your accumulated retrospective arrears payout across civilian, railway, and defence pay bands with adjustment for drawn Dearness Allowance (DA) and mandatory statutory offsets.
+        </p>
+      </div>
+
+      <!-- ARREARS TOOL INTERACTION -->
+      <div class="salary-app-card" id="arrearsCalculatorApp">
+        <div class="app-layout-grid">
+          
+          <!-- Column 1: Input Fields -->
+          <div class="input-controls-column">
+            <h2 class="sub-card-title">1. Retrospective Baseline</h2>
+
+            <div class="field-item">
+              <label for="calcLevelSelect">Select 7th CPC Pay Matrix Level:</label>
+              <select id="calcLevelSelect" class="styled-input">
+                <option value="18000">Level 1 (GP ₹1,800) - Min ₹18,000</option>
+                <option value="19900">Level 2 (GP ₹1,900) - Min ₹19,900</option>
+                <option value="21700">Level 3 (GP ₹2,000) - Min ₹21,700</option>
+                <option value="25500">Level 4 (GP ₹2,400) - Min ₹25,500</option>
+                <option value="29200">Level 5 (GP ₹2,800) - Min ₹29,200</option>
+                <option value="35400" selected>Level 6 (GP ₹4,200) - Min ₹35,400</option>
+                <option value="44900">Level 7 (GP ₹4,600) - Min ₹44,900</option>
+                <option value="47600">Level 8 (GP ₹4,800) - Min ₹47,600</option>
+                <option value="53100">Level 9 (GP ₹5,400) - Min ₹53,100</option>
+                <option value="56100">Level 10 (GP ₹5,400) - Min ₹56,100</option>
+                <option value="67700">Level 11 (GP ₹6,600) - Min ₹67,700</option>
+                <option value="78800">Level 12 (GP ₹7,600) - Min ₹78,800</option>
+                <option value="118500">Level 13 (GP ₹8,700) - Min ₹1,18,500</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="calcBasicInput">Current 7th CPC Basic Pay (₹):</label>
+              <input type="number" id="calcBasicInput" class="styled-input" value="35400" min="18000" step="100" />
+              <span class="field-note">Basic pay drawn during the retrospective period.</span>
+            </div>
+
+            <div class="field-item">
+              <label for="calcFitmentSelect">Expected Fitment Factor:</label>
+              <select id="calcFitmentSelect" class="styled-input">
+                <option value="1.92">1.92x (Inflation Neutral / DA Merge Base)</option>
+                <option value="2.08">2.08x (Moderate Representation)</option>
+                <option value="2.28" selected>2.28x (NC-JCM Expected Working Base)</option>
+                <option value="2.57">2.57x (7th CPC Parity Factor)</option>
+                <option value="2.86">2.86x (Staff Side Maximum Demand)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="monthsRetroactive">Retrospective Arrears Months:</label>
+              <select id="monthsRetroactive" class="styled-input">
+                <option value="6">6 Months (Quick Interim Notification)</option>
+                <option value="12">12 Months (1 Full Financial Year)</option>
+                <option value="18" selected>18 Months (Standard Historical CPC Lag)</option>
+                <option value="24">24 Months (Extended Implementation Timeline)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="daDrawnBaseline">Average DA % Already Drawn in Period:</label>
+              <select id="daDrawnBaseline" class="styled-input">
+                <option value="0.50">50% Dearness Allowance</option>
+                <option value="0.53" selected>53% Dearness Allowance</option>
+                <option value="0.56">56% Dearness Allowance</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 2: Computed Arrears Breakdown -->
+          <div class="output-summary-column">
+            <h2 class="sub-card-title">2. Computed Arrears Entitlement</h2>
+            
+            <div class="line-item emphasis">
+              <span class="line-label">Revised 8th CPC Monthly Basic:</span>
+              <span class="line-value brand" id="resRevisedBasic">₹80,712</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Monthly Gross Basic Difference:</span>
+              <span class="line-value" id="resGrossDiff">+ ₹45,312</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Less Monthly DA Already Drawn:</span>
+              <span class="line-value text-deduct" id="resDaOffset">- ₹18,762</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Net Basic Increment per Month:</span>
+              <span class="line-value font-bold" id="resNetMonthlyDiff">₹26,550</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="line-item">
+              <span class="line-label">Total Basic Pay Arrears:</span>
+              <span class="line-value" id="resTotalBasicArrears">₹4,77,900</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Estimated Allowance Differential:</span>
+              <span class="line-value" id="resAllowanceArrears">₹71,685</span>
+            </div>
+
+            <div class="line-item deduct">
+              <span class="line-label">Less NPS/UPS Employee Deduction (10%):</span>
+              <span class="line-value text-deduct" id="resNpsDeduction">- ₹47,790</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="net-in-hand-wrap">
+              <span class="net-caption">Net Estimated Take-Home Arrears:</span>
+              <span class="net-figure" id="resTotalNetArrears">₹5,01,795</span>
+            </div>
+            
+            <p class="fine-print">
+              *Net estimate after deducting mandatory 10% pension contribution. Income tax liabilities can be mitigated under Section 89(1) Form 10E.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1500+ WORDS DETAILED SEO CONTENT ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>The Dynamics of Pay Commission Arrears: How Back-Pay Accrues</h2>
+        <p>
+          In the Indian civil administrative structure, a Central Pay Commission is established approximately every ten years to review baseline pay scales, retirement provisions, and allowances across all central ministries and defence wings. However, because a Pay Commission is an extensive statutory exercise involving interactions with dozens of employee federations, extensive actuarial reviews, and economic impact modeling, the final Cabinet notification rarely coincides with the official effective date of the new term.
+        </p>
+        <p>
+          This procedural lag creates an entitlement window known as <strong>Pay Commission Arrears</strong>. Arrears represent the retroactive financial compensation owed to government personnel for the duration between the official implementation date and the date the revised pay scales are formally disbursed by the Public Financial Management System (PFMS) or bank treasuries.
+        </p>
+        <p>
+          To compute your arrears accurately, one must look beyond simply multiplying new pay values by months of delay. The government utilizes a structured offset formula:
+        </p>
+        <div class="callout-box">
+          <h4>The Core Arrears Formula:</h4>
+          <p>
+            <strong>Gross Monthly Arrears</strong> = <em>[Revised 8th CPC Basic Pay + Revised Entitled Allowances]</em> − <em>[Old 7th CPC Basic Pay Actually Drawn + Dearness Allowance (DA) Already Paid + Old Allowances]</em>
+          </p>
+          <p>
+            Because employees have already collected substantial DA percentages (surpassing 50%) during the retrospective period, this drawn component is reconciled against the new base pay before final disbursement credits are processed.
+          </p>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Arrears Accumulation Timelines: Historical Precedents</h2>
+        <p>
+          Understanding how previous commissions structured retrospective arrears helps project what to expect under the 8th Pay Commission:
+        </p>
+        <ul class="bullet-feature-list">
+          <li>
+            <strong>The 5th Central Pay Commission:</strong> Notified with an effective baseline of January 1, 1996, but cleared by the Cabinet in late 1997, producing close to 20 months of accumulated arrears.
+          </li>
+          <li>
+            <strong>The 6th Central Pay Commission:</strong> Implemented effective January 1, 2006, but notified in August 2008. The resulting 32 months of arrears were divided into two fiscal years: 40% disbursed in FY 2008–09, and the remaining 60% in FY 2009–10 to prevent severe fiscal strain.
+          </li>
+          <li>
+            <strong>The 7th Central Pay Commission:</strong> Recommended an effective date of January 1, 2016, and received Cabinet approval in June 2016. Because the decision was reached swiftly, employees received approximately 7 to 8 months of basic pay arrears in a single lump-sum tranche during August 2016, whereas revised allowances were implemented prospectively starting July 2017.
+          </li>
+        </ul>
+        <p>
+          Depending on the duration required by the 8th Pay Commission to finalize terms of reference and submit its report, retrospective durations typically range between <strong>12 and 18 months</strong>.
+        </p>
+      </section>
+
+      <!-- DATA MATRIX TABLE -->
+      <section class="editorial-chapter">
+        <h2>Estimated Arrears Matrix: Levels 1 to 14 (18-Month Projection)</h2>
+        <p>
+          The table below demonstrates the estimated gross and net arrears across key functional pay matrix levels based on an <strong>18-month retroactive window</strong> using the widely favored <strong>2.28 Fitment Factor</strong> and accounting for an average 53% DA offset:
+        </p>
+
+        <div class="table-scroll-container">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>Pay Level</th>
+                <th>Illustrative Designation</th>
+                <th>7th CPC Base</th>
+                <th>8th CPC Base (2.28x)</th>
+                <th>Monthly Net Due (Basic)</th>
+                <th>18-Month Net Arrears (Est.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Level 1</strong></td>
+                <td>Multi-Tasking Staff (MTS)</td>
+                <td>₹18,000</td>
+                <td>₹41,040</td>
+                <td>₹13,500</td>
+                <td>₹2,55,150</td>
+              </tr>
+              <tr>
+                <td><strong>Level 2</strong></td>
+                <td>Lower Division Clerk (LDC)</td>
+                <td>₹19,900</td>
+                <td>₹45,372</td>
+                <td>₹14,925</td>
+                <td>₹2,82,082</td>
+              </tr>
+              <tr>
+                <td><strong>Level 4</strong></td>
+                <td>Upper Division Clerk (UDC)</td>
+                <td>₹25,500</td>
+                <td>₹58,140</td>
+                <td>₹19,125</td>
+                <td>₹3,61,462</td>
+              </tr>
+              <tr>
+                <td><strong>Level 6</strong></td>
+                <td>Sub-Inspector / Executive</td>
+                <td>₹35,400</td>
+                <td>₹80,712</td>
+                <td>₹26,550</td>
+                <td>₹5,01,795</td>
+              </tr>
+              <tr>
+                <td><strong>Level 7</strong></td>
+                <td>Inspector / Section Officer</td>
+                <td>₹44,900</td>
+                <td>₹1,02,372</td>
+                <td>₹33,675</td>
+                <td>₹6,36,457</td>
+              </tr>
+              <tr>
+                <td><strong>Level 10</strong></td>
+                <td>Assistant Commissioner (UPSC)</td>
+                <td>₹56,100</td>
+                <td>₹1,27,908</td>
+                <td>₹42,075</td>
+                <td>₹7,95,217</td>
+              </tr>
+              <tr>
+                <td><strong>Level 12</strong></td>
+                <td>Deputy Secretary / Senior Officer</td>
+                <td>₹78,800</td>
+                <td>₹1,79,664</td>
+                <td>₹59,100</td>
+                <td>₹11,16,990</td>
+              </tr>
+              <tr>
+                <td><strong>Level 14</strong></td>
+                <td>Joint Secretary / SAG Grade</td>
+                <td>₹1,44,200</td>
+                <td>₹3,28,776</td>
+                <td>₹1,08,150</td>
+                <td>₹20,43,935</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine-print">
+          *Estimates incorporate baseline allowance adjustments minus 10% statutory employee pension deductions (NPS/UPS). Final figures vary based on annual increment dates (January 1 or July 1).
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Allowances vs Basic Pay: What Attracts Retrospective Arrears?</h2>
+        <p>
+          A frequent issue raised during previous pay commission implementations involves whether <em>all</em> allowances qualify for retrospective arrears.
+        </p>
+        <p>
+          Historically, the Ministry of Finance has separated pay commission disbursements into two distinct accounting streams:
+        </p>
+        <ol class="editorial-number-list">
+          <li>
+            <strong>Basic Pay and Pension Arrears (Guaranteed Retrospective):</strong> Revised basic pay, military service pay (MSP), non-practicing allowance (NPA), and monthly basic pensions are systematically implemented with retrospective effect from the baseline implementation date.
+          </li>
+          <li>
+            <strong>Compensatory Allowances (Often Prospective):</strong> Allowances including House Rent Allowance (HRA), Transport Allowance (TA), Children Education Allowance (CEA), and Special Duty Allowances have occasionally been implemented <em>prospectively</em> from the date of Cabinet notification or Committee on Allowances approval. However, confederations consistently demand that if the basic pay moves retroactively, corresponding allowance differentials should follow suit.
+          </li>
+        </ol>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Tax Optimization on Lump-Sum Arrears: Section 89(1) and Form 10E</h2>
+        <p>
+          Receiving a substantial lump-sum arrears payout can cause significant financial disruption if not planned carefully: <strong>income tax bracket jumping</strong>.
+        </p>
+        <p>
+          Because income tax is evaluated on a cash-receipt basis in India, receiving ₹3 Lakh to ₹10 Lakh in arrears within a single financial year can push an employee who normally falls in the 10% or 15% tax bracket into the 30% tax slab, resulting in avoidable tax burdens.
+        </p>
+        <div class="tax-guidance-card">
+          <h4>How to Mitigate Tax with Section 89(1) Relief:</h4>
+          <p>
+            The Indian Income Tax Act provides a statutory mechanism specifically designed to address this problem under <strong>Section 89(1)</strong>. By preparing and submitting <strong>Form 10E</strong> online through the Income Tax e-filing portal prior to filing your annual Income Tax Return (ITR):
+          </p>
+          <ul class="bullet-feature-list">
+            <li>Your total tax liability is recalculated by distributing the arrears back to the respective past assessment years in which they were actually earned.</li>
+            <li>If the tax evaluated on the redistributed income is lower than the tax calculated on the lump-sum receipt today, the difference is granted as a <strong>direct tax credit</strong>.</li>
+            <li><em>Important:</em> Form 10E must be submitted electronically before filing the ITR, otherwise the Centralized Processing Center (CPC) in Bengaluru may disallow the Section 89 relief claim.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Impact on Pensioners and Family Pension Arrears</h2>
+        <p>
+          Senior citizens and family pensioners receive full retrospective parity under Central Pay Commission recommendations. When basic pensions are revised upward via the approved fitment multiplier, the difference between the new basic pension and the older drawn pension (less already credited Dearness Relief) is paid out as a lump-sum arrears credit to the retiree's designated pension account.
+        </p>
+        <p>
+          Furthermore, for employees who retired <em>during</em> the retrospective period, arrears extend to their terminal benefits:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Retirement Gratuity Recalculation:</strong> Gratuity limits are recalculated on the higher revised basic pay, resulting in top-up payments.</li>
+          <li><strong>Commutation Differential:</strong> Because commutation is calculated as a lump-sum factor of basic pay, retirees who retired inside the retrospective window are entitled to supplemental commutation differential amounts.</li>
+          <li><strong>Leave Encashment Arrears:</strong> Cash equivalent of accumulated leave up to 300 days is revised based on the new final basic pay.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>State Government Employees: Timeline and Implementation Lag</h2>
+        <p>
+          While the Central Government mandates arrears for civil servants and defence forces, state government employees in <strong>Tamil Nadu</strong>, <strong>Uttar Pradesh</strong>, <strong>Maharashtra</strong>, <strong>Rajasthan</strong>, <strong>Bihar</strong>, and <strong>Karnataka</strong> operate on separate fiscal timelines.
+        </p>
+        <p>
+          State governments typically establish their own State Pay Revision Committees following the release of the central gazette. Historically, state arrears are cleared either through cash installments or credited directly into employees' General Provident Fund (GPF) accounts with defined lock-in withdrawal periods, maintaining parity with central counterparts while managing state liquidity.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official entity of the Government of India, DoPT, or the Ministry of Finance</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company & Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: ARREARS CALCULATOR ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Interactive Arrears Calculation Engine
+    const calcLevelSelect = document.getElementById('calcLevelSelect');
+    const calcBasicInput = document.getElementById('calcBasicInput');
+    const calcFitmentSelect = document.getElementById('calcFitmentSelect');
+    const monthsRetroactive = document.getElementById('monthsRetroactive');
+    const daDrawnBaseline = document.getElementById('daDrawnBaseline');
+
+    const resRevisedBasic = document.getElementById('resRevisedBasic');
+    const resGrossDiff = document.getElementById('resGrossDiff');
+    const resDaOffset = document.getElementById('resDaOffset');
+    const resNetMonthlyDiff = document.getElementById('resNetMonthlyDiff');
+    const resTotalBasicArrears = document.getElementById('resTotalBasicArrears');
+    const resAllowanceArrears = document.getElementById('resAllowanceArrears');
+    const resNpsDeduction = document.getElementById('resNpsDeduction');
+    const resTotalNetArrears = document.getElementById('resTotalNetArrears');
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function computeArrears() {
+      const currentBasic = parseFloat(calcBasicInput.value) || 0;
+      const fitment = parseFloat(calcFitmentSelect.value) || 2.28;
+      const months = parseInt(monthsRetroactive.value) || 18;
+      const daRate = parseFloat(daDrawnBaseline.value) || 0.53;
+
+      // 1. Revised Monthly Basic
+      const newBasic = currentBasic * fitment;
+
+      // 2. Gross Basic Pay Monthly Difference
+      const grossMonthlyDiff = newBasic - currentBasic;
+
+      // 3. DA Already Drawn Monthly Offset
+      const daDrawnMonthly = currentBasic * daRate;
+
+      // 4. Net Monthly Basic Increment
+      const netMonthlyDiff = Math.max(0, grossMonthlyDiff - daDrawnMonthly);
+
+      // 5. Total Basic Pay Arrears over period
+      const totalBasicArrears = netMonthlyDiff * months;
+
+      // 6. Allowance differential estimation (approx 15% of basic difference)
+      const totalAllowanceArrears = totalBasicArrears * 0.15;
+
+      // 7. Mandatory Pension Deduction (NPS/UPS 10% on basic arrears)
+      const npsDeduction = totalBasicArrears * 0.10;
+
+      // 8. Net Estimated Take-Home Arrears
+      const finalNetArrears = (totalBasicArrears + totalAllowanceArrears) - npsDeduction;
+
+      // Update UI
+      resRevisedBasic.innerText = formatINR(newBasic);
+      resGrossDiff.innerText = '+ ' + formatINR(grossMonthlyDiff);
+      resDaOffset.innerText = '- ' + formatINR(daDrawnMonthly);
+      resNetMonthlyDiff.innerText = formatINR(netMonthlyDiff);
+      resTotalBasicArrears.innerText = formatINR(totalBasicArrears);
+      resAllowanceArrears.innerText = '+ ' + formatINR(totalAllowanceArrears);
+      resNpsDeduction.innerText = '- ' + formatINR(npsDeduction);
+      resTotalNetArrears.innerText = formatINR(finalNetArrears);
+    }
+
+    // Sync basic pay when level changes
+    calcLevelSelect.addEventListener('change', (e) => {
+      calcBasicInput.value = e.target.value;
+      computeArrears();
+    });
+
+    calcBasicInput.addEventListener('input', computeArrears);
+    calcFitmentSelect.addEventListener('change', computeArrears);
+    monthsRetroactive.addEventListener('change', computeArrears);
+    daDrawnBaseline.addEventListener('change', computeArrears);
+
+    // Initial calculation run
+    computeArrears();
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero & Calculator Section */
+  .calc-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 840px;
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .salary-app-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+
+  .app-layout-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sub-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+
+  .field-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .field-item label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .styled-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .styled-input:focus {
+    border-color: var(--brand-accent);
+    background-color: #ffffff;
+  }
+
+  .field-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+
+  /* Output Column */
+  .output-summary-column {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+    font-size: 0.92rem;
+  }
+
+  .line-item.emphasis {
+    background-color: #e0f2fe;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .line-value.brand {
+    color: #0369a1;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .font-bold {
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .text-deduct {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .divider-line {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.8rem 0;
+  }
+
+  .net-in-hand-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.4rem;
+  }
+
+  .net-caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .net-figure {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #047857;
+  }
+
+  .fine-print {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .bullet-feature-list, .editorial-number-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li, .editorial-number-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  .callout-box {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-highlight);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-box h4 {
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-box p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .callout-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .tax-guidance-card {
+    background-color: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .tax-guidance-card h4 {
+    color: #166534;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .tax-guidance-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Table */
+  .table-scroll-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .editorial-table th {
+    background-color: #0f2b48;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .editorial-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .calc-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-title {
+      font-size: 1.55rem;
+    }
+
+    .salary-app-card {
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .app-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .net-figure {
+      font-size: 1.35rem;
+    }
+  }
+</style>
