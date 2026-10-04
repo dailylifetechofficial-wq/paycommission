@@ -1,0 +1,932 @@
+---
+// src/pages/about-us.astro
+const title = "About Us - 8PayCommission.com | Editorial Standards & Mission (2026)";
+const description = "Learn about 8PayCommission.com: Our mission, editorial methodology, public compensation modeling tools, independent governance, and research standards.";
+const canonicalUrl = "https://8paycommission.com/about-us/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: Organization & AboutPage Schema for E-E-A-T Trust -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "8PayCommission",
+          "url": "https://8paycommission.com",
+          "logo": "https://8paycommission.com/favicon.svg",
+          "email": "dailylifetech.official@gmail.com",
+          "description": "Independent analytical and financial education portal dedicated to civil service compensation, pay matrices, pension modeling, and Pay Commission developments across India."
+        },
+        {
+          "@type": "AboutPage",
+          "name": "About Us - 8PayCommission",
+          "url": "https://8paycommission.com/about-us/",
+          "description": "An overview of the editorial principles, computational methodologies, and mission behind 8PayCommission.com."
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <span class="active-page">About Us</span>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="about-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Independent Public Compensation Research</span>
+        <h1 class="main-heading">About 8PayCommission.com</h1>
+        <p class="hero-summary">
+          An authoritative educational and analytical initiative designed to provide clear, mathematically verified, and transparent salary insights for Central and State Government employees, defence personnel, teachers, and pensioners.
+        </p>
+      </div>
+
+      <!-- VALUE PILLARS GRID -->
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">⚖️</div>
+          <h3>Mathematical Precision</h3>
+          <p>Every tool, formula, and matrix table is verified against statutory Fundamental Rules (FR), CCS rules, and gazetted Pay Commission recommendations.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🛡️</div>
+          <h3>Strict Independence</h3>
+          <p>We are a private, non-governmental initiative. We operate with complete editorial autonomy, free from political, union, or institutional bias.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🔒</div>
+          <h3>Privacy-First Modeling</h3>
+          <p>All salary simulations run locally on your device via client-side JavaScript. We do not track, collect, or store your private financial information.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDITORIAL CONTENT ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>Our Mission and Editorial Philosophy</h2>
+        <p>
+          Established to bring clarity to public sector wage determination, <strong>8PayCommission.com</strong> is a specialized financial intelligence portal dedicated to tracking, deconstructing, and modeling civil service compensation across India.
+        </p>
+        <p>
+          Every ten years, the constitution of a Central Pay Commission directly impacts the livelihoods of over 48 lakh central employees, 67 lakh central pensioners, and tens of millions of state employees whose compensation mirrors central pay decisions. Despite its massive economic footprint, public service compensation is often clouded by sensationalized rumors, inaccurate multiplier claims, and overly complex bureaucratic language.
+        </p>
+        <p>
+          Our mission is to establish a <strong>trusted, data-driven bridge</strong> between dense Government Orders (GOs) and the individual public servant. We translate legislative resolutions, consumer price indices, and macroeconomic pay models into intuitive calculators and comprehensive guides.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Who We Are & What We Cover</h2>
+        <p>
+          <strong>8PayCommission.com</strong> is maintained by an independent editorial team of financial analysts, open-web developers, and civil compensation researchers with in-depth knowledge of Indian administrative law, treasury frameworks, and pension jurisprudence.
+        </p>
+        <p>
+          Our continuous research and coverage encompass:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>The Central Pay Matrix:</strong> Detailed cadre analysis spanning operational support staff (Levels 1 to 5), supervisory executives (Levels 6 to 9), and Group A direct recruits through senior apex leadership (Levels 10 to 18).</li>
+          <li><strong>Real-Time Calculators:</strong> Zero-cost tools for calculating revised basic pay, HRA variations (Class X, Y, and Z tiers), dual-compounding Transport Allowance (TA), and retrospective arrears under Section 89(1) tax relief frameworks.</li>
+          <li><strong>Pension System Security:</strong> Tracking historical transitions from the Old Pension Scheme (OPS) to the National Pension System (NPS), as well as the newly codified Unified Pension Scheme (UPS) alongside CCS (Pension) Rules 2021.</li>
+          <li><strong>State-Specific Adaptations:</strong> Comprehensive tracking of state pay committees and regional pay rules across key states including Tamil Nadu, Uttar Pradesh, Maharashtra, Rajasthan, Bihar, West Bengal, Karnataka, and Madhya Pradesh.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Our Research and Verification Standards</h2>
+        <p>
+          To maintain high reliability, our team applies a strict editorial review process to all published content and interactive simulators:
+        </p>
+        <div class="methodology-card">
+          <h4>1. Primary Document Sourcing</h4>
+          <p>
+            We do not rely on second-hand reporting. Every formula, fitment scenario, and matrix cell is cross-referenced directly with notifications published by the Department of Expenditure (Ministry of Finance), the Department of Personnel and Training (DoPT), the Department of Pension and Pensioners' Welfare (DoPPW), and the Labour Bureau.
+          </p>
+          <h4>2. Verified Algorithmic Modeling</h4>
+          <p>
+            Our matrix tools use standardized computational logic: a uniform 3% compounding annual increment rounded to the nearest hundred rupees, statutory minimum HRA protections, and accurate pension commutation formulas.
+          </p>
+          <h4>3. Clear Scenario Transparency</h4>
+          <p>
+            When projecting future 8th CPC scenarios—such as comparing a 2.28 working factor against a 2.57 historical parity or a 2.86 union demand—we explicitly separate official statutory fact from economic projection, preventing user confusion.
+          </p>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Editorial Independence and Disclaimer of Non-Affiliation</h2>
+        <p>
+          Transparency regarding our institutional standing is central to our platform:
+        </p>
+        <div class="disclaimer-callout">
+          <h4>Clear Declaration of Non-Governmental Status:</h4>
+          <p>
+            <strong>8PayCommission.com is an independent educational and analytical website. We are NOT affiliated with, authorized by, endorsed by, or in any way officially connected to the Government of India, the Ministry of Finance, the Department of Expenditure, the DoPT, or any State Government administration.</strong>
+          </p>
+          <p>
+            The official portal of the Central Pay Commission, when constituted, is hosted under government domains (gov.in or nic.in). All content, data simulations, and estimates provided on our portal are for informational and planning purposes only. For legal matters and official government directives, public servants should always consult gazetted notifications.
+          </p>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Contact Details & Feedback</h2>
+        <p>
+          We value direct communication with our readership. If you notice a calculation discrepancy, need clarification on a state pay matrix, or wish to provide an editorial tip regarding an official Government Order, please reach out to our team:
+        </p>
+        
+        <div class="contact-box">
+          <div class="contact-item">
+            <span class="contact-label">Official Email:</span>
+            <a href="mailto:dailylifetech.official@gmail.com" class="contact-link">dailylifetech.official@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Subject Line:</span>
+            <span>Editorial Inquiry / Correction Request / General Feedback</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Response Time:</span>
+            <span>We review inquiries carefully and typically respond within 24 to 48 business hours.</span>
+          </div>
+        </div>
+
+        <p class="section-subtext">
+          Direct all formal inquiries, technical feedback, and partnership questions to <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a>.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official entity of the Government of India, DoPT, the Ministry of Finance, or any State Government</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company & Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: NAVIGATION ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero Section */
+  .about-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Pillars Grid */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .pillar-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .pillar-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Editorial Content */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .bullet-feature-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  .methodology-card {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .methodology-card h4 {
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .methodology-card h4:first-child {
+    margin-top: 0;
+  }
+
+  .methodology-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .methodology-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .disclaimer-callout {
+    background-color: #fffbeb;
+    border: 1.5px solid #fef3c7;
+    border-left: 5px solid #d97706;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .disclaimer-callout h4 {
+    color: #92400e;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .disclaimer-callout p {
+    color: #78350f;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .disclaimer-callout p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Contact Box */
+  .contact-box {
+    background-color: #eff6ff;
+    border: 1.5px solid #bfdbfe;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-label {
+    font-weight: 700;
+    color: var(--brand-primary);
+    min-width: 140px;
+  }
+
+  .contact-link {
+    color: var(--brand-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  .section-subtext {
+    font-size: 0.88rem !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+    margin-top: 0.8rem;
+  }
+
+  .section-subtext a {
+    color: var(--brand-accent);
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .about-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-heading {
+      font-size: 1.55rem;
+    }
+
+    .pillars-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+</style>
