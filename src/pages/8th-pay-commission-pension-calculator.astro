@@ -1,0 +1,1351 @@
+---
+// src/pages/8th-pay-commission-pension-calculator.astro
+const title = "₹ 8th Pay Commission Pension Calculator: Estimate Revised Pension & Commutation (2026)";
+const description = "Calculate your 8th Pay Commission pension online. Estimate revised basic pension, commutation deductions (up to 40%), age top-ups (80-100 yrs), and net monthly take-home.";
+const canonicalUrl = "https://8paycommission.com/8th-pay-commission-pension-calculator/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: Article & FAQPage for Google Rich Snippets -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "8th Pay Commission Pension Calculator: Interactive Computation & Retirement Guidelines",
+          "description": "Comprehensive analytical guide and real-time calculator for Central and State Government pensioners under proposed 8th CPC fitment factors.",
+          "author": {
+            "@type": "Organization",
+            "name": "8PayCommission Editorial Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "₹ 8PayCommission",
+            "url": "https://8paycommission.com"
+          },
+          "datePublished": "2026-02-15T09:00:00+05:30",
+          "dateModified": "2026-10-04T19:00:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does the 8th Pay Commission Pension Calculator compute revised basic pension?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The calculator multiplies your existing 7th CPC basic pension (excluding Dearness Relief) by the chosen fitment multiplier (ranging between 1.92 and 2.86). From this revised base, commuted deductions are subtracted, while senior age-tier bonuses (20% to 100%) and Fixed Medical Allowance (FMA) are added."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Dearness Relief (DR) calculated on the original or reduced pension after commutation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under Central Civil Services (CCS) Pension Rules, Dearness Relief is always calculated on the full, unreduced revised basic pension, even if the pensioner has commuted up to 40% of their base monthly payout."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the expected minimum basic pension under the 8th CPC?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The statutory minimum pension of ₹9,000 per month (established under the 7th CPC) is estimated to climb to approximately ₹20,520 under a 2.28 fitment factor, and up to ₹25,740 under the 2.86 employee federation demand."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger active">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <a href="/calculators/">Calculators</a> <span>›</span> 
+      <span class="active-page">8th Pay Commission Pension Calculator</span>
+    </nav>
+
+    <!-- HERO & PENSION CALCULATOR APP -->
+    <section class="calc-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Retiree Financial Modeling</span>
+        <h1 class="page-title">₹ 8th Pay Commission Pension Calculator</h1>
+        <p class="page-subtitle">
+          Estimate your revised basic pension, monthly commutation reductions, senior age top-up allowances, and net monthly take-home credits across multiple fitment scenarios.
+        </p>
+      </div>
+
+      <!-- INTERACTIVE CALCULATOR APP -->
+      <div class="salary-app-card" id="pensionCalculatorApp">
+        <div class="app-layout-grid">
+          
+          <!-- Column 1: Input Controls -->
+          <div class="input-controls-column">
+            <h2 class="sub-card-title">1. Current Pension Baseline</h2>
+
+            <div class="field-item">
+              <label for="pensionLevelCategory">Pay Level at Retirement:</label>
+              <select id="pensionLevelCategory" class="styled-input">
+                <option value="9000">Level 1 (GP ₹1,800) - Min Pension ₹9,000</option>
+                <option value="9950">Level 2 (GP ₹1,900) - Min Pension ₹9,950</option>
+                <option value="10850">Level 3 (GP ₹2,000) - Min Pension ₹10,850</option>
+                <option value="12750">Level 4 (GP ₹2,400) - Min Pension ₹12,750</option>
+                <option value="14600">Level 5 (GP ₹2,800) - Min Pension ₹14,600</option>
+                <option value="17700" selected>Level 6 (GP ₹4,200) - Min Pension ₹17,700</option>
+                <option value="22450">Level 7 (GP ₹4,600) - Min Pension ₹22,450</option>
+                <option value="23800">Level 8 (GP ₹4,800) - Min Pension ₹23,800</option>
+                <option value="26550">Level 9 (GP ₹5,400) - Min Pension ₹26,550</option>
+                <option value="28050">Level 10 (GP ₹5,400) - Min Pension ₹28,050</option>
+                <option value="33850">Level 11 (GP ₹6,600) - Min Pension ₹33,850</option>
+                <option value="39400">Level 12 (GP ₹7,600) - Min Pension ₹39,400</option>
+                <option value="59250">Level 13 (GP ₹8,700) - Min Pension ₹59,250</option>
+                <option value="72100">Level 14 (GP ₹10,000) - Min Pension ₹72,100</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="currentBasicPensionInput">Current 7th CPC Basic Pension (₹):</label>
+              <input type="number" id="currentBasicPensionInput" class="styled-input" value="17700" min="9000" step="100" />
+              <span class="field-note">Basic pension as shown in your Pension Payment Order (PPO) excluding DR.</span>
+            </div>
+
+            <div class="field-item">
+              <label for="fitmentSelect">Projected Fitment Factor:</label>
+              <select id="fitmentSelect" class="styled-input">
+                <option value="1.92">1.92x (Inflation Neutral / DA Merge Baseline)</option>
+                <option value="2.08">2.08x (Moderate Representation)</option>
+                <option value="2.28" selected>2.28x (NC-JCM Expected Working Base)</option>
+                <option value="2.57">2.57x (7th CPC Parity Multiplier)</option>
+                <option value="2.86">2.86x (Staff Side Maximum Demand)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="commutationPercentSelect">Commuted Pension Ratio (%):</label>
+              <select id="commutationPercentSelect" class="styled-input">
+                <option value="0" selected>0% (No Commutation / Fully Restored)</option>
+                <option value="20">20% Commutation Active</option>
+                <option value="33.33">33.33% Commutation Active</option>
+                <option value="40">40% Commutation Active (Maximum Ceiling)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="ageTierBonusSelect">Pensioner Age Tier (Additional Allowance):</label>
+              <select id="ageTierBonusSelect" class="styled-input">
+                <option value="0" selected>Under 80 Years (No Age Top-Up)</option>
+                <option value="0.20">80 to 85 Years (+20% of Basic)</option>
+                <option value="0.30">85 to 90 Years (+30% of Basic)</option>
+                <option value="0.40">90 to 95 Years (+40% of Basic)</option>
+                <option value="0.50">95 to 100 Years (+50% of Basic)</option>
+                <option value="1.00">100 Years & Above (+100% of Basic / Double)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="fmaMedicalSelect">Medical Coverage Entitlement:</label>
+              <select id="fmaMedicalSelect" class="styled-input">
+                <option value="2000" selected>Fixed Medical Allowance (FMA ₹2,000 Est.)</option>
+                <option value="0">CGHS Indoor & Outdoor Facility (No FMA)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 2: Computed Output Breakdown -->
+          <div class="output-summary-column">
+            <h2 class="sub-card-title">2. Projected Monthly Entitlement</h2>
+
+            <div class="line-item emphasis">
+              <span class="line-label">Revised 8th CPC Basic Pension:</span>
+              <span class="line-value brand" id="outRevisedBasicPension">₹40,356</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Dearness Relief at Inception:</span>
+              <span class="line-value">0% (Merged)</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Additional Age Allowance:</span>
+              <span class="line-value font-bold" id="outAgeTopupValue">₹0</span>
+            </div>
+
+            <div class="line-item gross-box">
+              <span class="line-label">Unreduced Gross Monthly Pension:</span>
+              <span class="line-value text-gross" id="outGrossUnreduced">₹40,356</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <span class="deduction-header">Monthly Commutation Deduction</span>
+
+            <div class="line-item deduct">
+              <span class="line-label">Less Commutation Portion Subtracted:</span>
+              <span class="line-value text-deduct" id="outCommutationCut">- ₹0</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Medical Allowance (FMA Credit):</span>
+              <span class="line-value" id="outFmaCredit">+ ₹2,000</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="net-in-hand-wrap">
+              <span class="net-caption">Net Monthly Bank Credit:</span>
+              <span class="net-figure" id="outNetTakeHomePension">₹42,356</span>
+            </div>
+            
+            <p class="fine-print">
+              *Calculated under CCS (Pension) Rules guidelines. Dearness Relief (DR) is always calculated on the full unreduced basic pension in future cycles.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1500+ WORDS DETAILED SEO CONTENT ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>Principles of Pension Revision Under Central Pay Commissions</h2>
+        <p>
+          In the Indian public administration framework, retirement benefits for civil servants, railway staff, posts and telecommunication cadres, and defence personnel are established on defined statutory principles. A pension is neither a bounty nor an ex-gratia remittance; as repeatedly affirmed by the Constitution Bench of the Supreme Court of India in the landmark <em>D.S. Nakara vs Union of India</em> case, it is vested deferred compensation for past services rendered to the state.
+        </p>
+        <p>
+          Unlike working employees who benefit from annual career increments, promotions, and variable allowances, senior citizens rely primarily on their monthly basic pension and biannual adjustments in <strong>Dearness Relief (DR)</strong>. Over a ten-year duration, retail price escalation systematically erodes the real purchasing power of a fixed pension. The implementation of the <strong>8th Central Pay Commission</strong> seeks to restore baseline parity across more than 67 lakh pensioners nationwide.
+        </p>
+        <p>
+          When utilizing our <strong>8th Pay Commission Pension Calculator</strong>, the underlying algorithm relies on established guidelines administered by the Department of Pension and Pensioners' Welfare (DoPPW):
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Consolidation of Basic Pension:</strong> Multiplying existing 7th CPC basic pension figures by the approved fitment multiplier.</li>
+          <li><strong>Dearness Relief (DR) Absorption:</strong> Incorporating accumulated inflation compensation directly into the new baseline, followed by a formal reset to zero percent.</li>
+          <li><strong>Commutation Recovery Accounting:</strong> Deducting up to 40% of the base payout for retirees still serving the 15-year recovery tenure.</li>
+          <li><strong>Super-Senior Additional Quantum:</strong> Factoring statutory age-based increments ranging from 20% to 100% for octogenarians and centenarians.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Fitment Multiplier Modeling for Pension Calculations</h2>
+        <p>
+          The <strong>Fitment Factor</strong> serves as the central mathematical lever for determining the revised pension. While working employees apply this factor to their last drawn basic pay, existing retirees apply it directly to their existing monthly basic pension as recorded on their Pension Payment Order (PPO).
+        </p>
+        <p>
+          Because the accumulated Dearness Relief under the 7th CPC expanded past the 50% threshold, the fitment factor operates not merely as an increment, but primarily as an absorption bridge. The table below illustrates the projected conversion across multiple working economic models:
+        </p>
+
+        <!-- DATA MATRIX TABLE -->
+        <div class="table-scroll-container">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>Fitment Scenario</th>
+                <th>Multiplier</th>
+                <th>Level 1 Minimum (₹9,000)</th>
+                <th>Level 6 Entry (₹17,700)</th>
+                <th>Level 10 Gazetted (₹28,050)</th>
+                <th>Economic Rationalization</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Conservative Floor</strong></td>
+                <td>1.92x</td>
+                <td>₹17,280</td>
+                <td>₹33,984</td>
+                <td>₹53,856</td>
+                <td>Guarantees complete absorption of accumulated DR with nominal real increment.</td>
+              </tr>
+              <tr>
+                <td><strong>Moderate Working Model</strong></td>
+                <td>2.08x</td>
+                <td>₹18,720</td>
+                <td>₹36,816</td>
+                <td>₹58,344</td>
+                <td>Midway union adjustment reflecting standard industrial cost-of-living indicators.</td>
+              </tr>
+              <tr>
+                <td><strong>NC-JCM Expected Base</strong></td>
+                <td>2.28x</td>
+                <td>₹20,520</td>
+                <td>₹40,356</td>
+                <td>₹63,954</td>
+                <td>The most widely cited benchmark balancing state fiscal stability with senior welfare.</td>
+              </tr>
+              <tr>
+                <td><strong>Historical Parity Factor</strong></td>
+                <td>2.57x</td>
+                <td>₹23,130</td>
+                <td>₹45,489</td>
+                <td>₹72,089</td>
+                <td>Maintains direct mathematical symmetry with the 7th CPC baseline factor.</td>
+              </tr>
+              <tr>
+                <td><strong>Maximum Staff Representation</strong></td>
+                <td>2.86x</td>
+                <td>₹25,740</td>
+                <td>₹50,622</td>
+                <td>₹80,223</td>
+                <td>Federation demand countering steep escalations in chronic medical and eldercare costs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Commutation Rules: Deductions and Dearness Relief Rules</h2>
+        <p>
+          A frequent point of confusion among retiring officers and existing pensioners is the interaction between <strong>commuted pension deductions</strong> and <strong>Dearness Relief adjustments</strong>.
+        </p>
+        <p>
+          Under Rule 5 of the Central Civil Services (Commutation of Pension) Rules, a government servant has the option to commute up to a maximum of <strong>40%</strong> of their monthly basic pension in exchange for an immediate, tax-free lump-sum capital disbursement at retirement.
+        </p>
+        <div class="callout-box">
+          <h4>Crucial Statutory Rule on Dearness Relief (DR):</h4>
+          <p>
+            Under official government instructions, <strong>Dearness Relief is always calculated on the full, unreduced revised basic pension</strong>, not on the net pension remaining after commutation deductions.
+          </p>
+          <p>
+            <em>Example:</em> If an 8th CPC pensioner is entitled to a revised basic pension of ₹50,000 and has commuted 40% (₹20,000), their net basic pension is ₹30,000. When a subsequent DR hike of 4% is declared, the 4% is calculated on the full ₹50,000 (adding ₹2,000 per month), meaning the pensioner receives ₹32,000 rather than ₹31,200.
+          </p>
+        </div>
+        <p>
+          Furthermore, pensioner federations continue to submit representations demanding that the commutation recovery period be reduced from <strong>15 years to 12 years</strong>, citing modern life expectancy figures and lower government borrowing rates which allow full capital recovery within 140 to 144 months.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Additional Pension Tiers for Super-Senior Retirees (Ages 80 to 100)</h2>
+        <p>
+          Recognizing the steep financial outlay required for chronic prescription pharmaceuticals, specialized therapies, and nursing care in advanced age, Indian Pay Commissions incorporate progressive top-up allowances for super-seniors.
+        </p>
+        <p>
+          These additions represent a percentage surcharge calculated on the revised basic pension:
+        </p>
+        <div class="senior-bracket-grid">
+          <div class="bracket-card">
+            <h4>Age 80 to Under 85 Years</h4>
+            <div class="bonus-percent">+20% Additional Basic</div>
+            <p>Initiates on the first day of the month in which the pensioner enters their 80th year of life.</p>
+          </div>
+          <div class="bracket-card">
+            <h4>Age 85 to Under 90 Years</h4>
+            <div class="bonus-percent">+30% Additional Basic</div>
+            <p>Enhanced support addressing heightened physical dependency and diagnostic requirements.</p>
+          </div>
+          <div class="bracket-card">
+            <h4>Age 90 to Under 95 Years</h4>
+            <div class="bonus-percent">+40% Additional Basic</div>
+            <p>Progressive increment shielding nonagenarians from personal care cost escalation.</p>
+          </div>
+          <div class="bracket-card">
+            <h4>Age 95 to Under 100 Years</h4>
+            <div class="bonus-percent">+50% Additional Basic</div>
+            <p>Substantial top-up providing extensive domestic nursing and palliative support.</p>
+          </div>
+          <div class="bracket-card highlight">
+            <h4>Centenarians (100+ Years)</h4>
+            <div class="bonus-percent">+100% Additional Basic</div>
+            <p>Effectively doubles the baseline pension, honoring milestone longevity.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Family Pension Revisions: Normal vs Enhanced Rates</h2>
+        <p>
+          The 8th Pay Commission Pension Calculator also assists spouses and dependent beneficiaries who receive a <strong>Family Pension</strong>. Family pension calculations are structured under two standard definitions:
+        </p>
+        <ol class="editorial-number-list">
+          <li>
+            <strong>Enhanced Family Pension (50% of Last Pay):</strong> Payable to the family of an employee who passes away during active service, or following retirement for a defined period of up to 10 years from the date of demise (subject to age ceiling guidelines).
+          </li>
+          <li>
+            <strong>Normal Family Pension (30% of Last Pay):</strong> Payable upon the expiration of the enhanced entitlement period. The normal family pension is evaluated at exactly <strong>30% of the revised basic pay</strong>, subject to the statutory minimum floor (estimated at ₹20,520 under a 2.28 factor).
+          </li>
+        </ol>
+        <p>
+          Family pensioners also receive full Dearness Relief parity and qualify for the same age-tier bonuses starting at age 80.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Fixed Medical Allowance (FMA) and Non-CGHS Zones</h2>
+        <p>
+          A notable financial challenge for central pensioners residing in rural districts, tier-3 municipalities, or agricultural belts is medical access. While metropolitan retirees access cashless medical care through the <strong>Central Government Health Scheme (CGHS)</strong>, those residing in non-CGHS areas receive a monthly <strong>Fixed Medical Allowance (FMA)</strong>.
+        </p>
+        <p>
+          The 7th CPC maintained the FMA at a nominal rate of ₹1,000 per month. Given modern pharmacy retail pricing and routine outpatient diagnostic fees, employee councils have submitted formal petitions to the Department of Expenditure recommending that the 8th Pay Commission expand the FMA base to <strong>₹2,000 to ₹3,000 per month</strong>, indexed with future inflation.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Impact on State Pensioners (Tamil Nadu, UP, Maharashtra, Rajasthan)</h2>
+        <p>
+          Although Central Pay Commissions apply directly to central civil servants, railways, postal workers, and defence forces, state governments across <strong>Tamil Nadu</strong>, <strong>Uttar Pradesh</strong>, <strong>Maharashtra</strong>, <strong>Rajasthan</strong>, <strong>Bihar</strong>, and <strong>Karnataka</strong> typically adopt central pension recommendations through their respective state pay revision committees.
+        </p>
+        <p>
+          State finance departments evaluate the finalized central fitment factor and release localized Government Orders (G.O.) ensuring horizontal parity for retired teachers, state police, municipal officials, and local body employees.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official entity of the Government of India, DoPT, or the Ministry of Finance</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company & Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: PENSION CALCULATOR ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Real-Time Pension Calculator Engine
+    const pensionLevelCategory = document.getElementById('pensionLevelCategory');
+    const currentBasicPensionInput = document.getElementById('currentBasicPensionInput');
+    const fitmentSelect = document.getElementById('fitmentSelect');
+    const commutationPercentSelect = document.getElementById('commutationPercentSelect');
+    const ageTierBonusSelect = document.getElementById('ageTierBonusSelect');
+    const fmaMedicalSelect = document.getElementById('fmaMedicalSelect');
+
+    const outRevisedBasicPension = document.getElementById('outRevisedBasicPension');
+    const outAgeTopupValue = document.getElementById('outAgeTopupValue');
+    const outGrossUnreduced = document.getElementById('outGrossUnreduced');
+    const outCommutationCut = document.getElementById('outCommutationCut');
+    const outFmaCredit = document.getElementById('outFmaCredit');
+    const outNetTakeHomePension = document.getElementById('outNetTakeHomePension');
+
+    function formatCurrency(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculatePensionPlan() {
+      const basic = parseFloat(currentBasicPensionInput.value) || 0;
+      const fitment = parseFloat(fitmentSelect.value) || 2.28;
+      const commuteRate = (parseFloat(commutationPercentSelect.value) || 0) / 100;
+      const ageRate = parseFloat(ageTierBonusSelect.value) || 0;
+      const fmaAmount = parseFloat(fmaMedicalSelect.value) || 0;
+
+      // 1. Revised Basic Pension
+      const revisedBasic = basic * fitment;
+
+      // 2. Age-Based Supplementary Top-Up
+      const ageTopup = revisedBasic * ageRate;
+
+      // 3. Unreduced Gross (Basic + Age Bonus)
+      const grossUnreduced = revisedBasic + ageTopup;
+
+      // 4. Commutation Monthly Deduction
+      const commuteCut = revisedBasic * commuteRate;
+
+      // 5. Net Monthly Take-Home (Gross - Commutation + FMA)
+      const netTakeHome = (grossUnreduced - commuteCut) + fmaAmount;
+
+      // Update UI
+      outRevisedBasicPension.innerText = formatCurrency(revisedBasic);
+      outAgeTopupValue.innerText = ageTopup > 0 ? ('+ ' + formatCurrency(ageTopup)) : '₹0';
+      outGrossUnreduced.innerText = formatCurrency(grossUnreduced);
+      outCommutationCut.innerText = commuteCut > 0 ? ('- ' + formatCurrency(commuteCut)) : '₹0';
+      outFmaCredit.innerText = fmaAmount > 0 ? ('+ ' + formatCurrency(fmaAmount)) : '₹0 (CGHS)';
+      outNetTakeHomePension.innerText = formatCurrency(netTakeHome);
+    }
+
+    // Sync basic pension when pay level changes
+    pensionLevelCategory.addEventListener('change', (e) => {
+      currentBasicPensionInput.value = e.target.value;
+      calculatePensionPlan();
+    });
+
+    currentBasicPensionInput.addEventListener('input', calculatePensionPlan);
+    fitmentSelect.addEventListener('change', calculatePensionPlan);
+    commutationPercentSelect.addEventListener('change', calculatePensionPlan);
+    ageTierBonusSelect.addEventListener('change', calculatePensionPlan);
+    fmaMedicalSelect.addEventListener('change', calculatePensionPlan);
+
+    // Initial calculation run
+    calculatePensionPlan();
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero & App Card */
+  .calc-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 840px;
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .salary-app-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+
+  .app-layout-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sub-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+
+  .field-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .field-item label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .styled-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .styled-input:focus {
+    border-color: var(--brand-accent);
+    background-color: #ffffff;
+  }
+
+  .field-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+
+  /* Output Summary Column */
+  .output-summary-column {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+    font-size: 0.92rem;
+  }
+
+  .line-item.emphasis {
+    background-color: #e0f2fe;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .line-value.brand {
+    color: #0369a1;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .font-bold {
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .line-item.gross-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+  }
+
+  .text-gross {
+    font-weight: 800;
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+  }
+
+  .deduction-header {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #dc2626;
+    margin: 0.5rem 0 0.2rem 0;
+  }
+
+  .text-deduct {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .divider-line {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.8rem 0;
+  }
+
+  .net-in-hand-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.4rem;
+  }
+
+  .net-caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .net-figure {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #047857;
+  }
+
+  .fine-print {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .bullet-feature-list, .editorial-number-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li, .editorial-number-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  .callout-box {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-highlight);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-box h4 {
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-box p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .callout-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Senior Bracket Grid */
+  .senior-bracket-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .bracket-card {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    padding: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .bracket-card.highlight {
+    border-color: #047857;
+    background-color: #ecfdf5;
+  }
+
+  .bracket-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .bonus-percent {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--brand-accent);
+    margin-bottom: 0.4rem;
+  }
+
+  .bracket-card.highlight .bonus-percent {
+    color: #047857;
+  }
+
+  .bracket-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Data Table */
+  .table-scroll-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .editorial-table th {
+    background-color: #0f2b48;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .editorial-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .calc-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-title {
+      font-size: 1.55rem;
+    }
+
+    .salary-app-card {
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .app-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .senior-bracket-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .net-figure {
+      font-size: 1.35rem;
+    }
+  }
+</style>
