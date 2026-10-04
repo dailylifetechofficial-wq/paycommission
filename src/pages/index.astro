@@ -1,7 +1,7 @@
 ---
 // src/pages/index.astro
 const title = "₹ 8PayCommission: Expected Pay Matrix, Salary Calculator & Fitment Factor (2026)";
-const description = "India's dedicated 8th Central Pay Commission (8th CPC) portal. Real-time salary calculator, fitment factor scenarios (1.92 - 2.86), pay matrix levels 1 to 18, DA merger rules, and state government pay revision.";
+const description = "Calculate 8th Pay Commission salary, pay matrix level 1 to 18, fitment factor 2.28 vs 2.86, DA merger, and state revisions for TN, UP, Maharashtra, Rajasthan, Bihar, and WB.";
 const siteUrl = "https://8paycommission.com";
 ---
 
@@ -21,14 +21,13 @@ const siteUrl = "https://8paycommission.com";
   <meta property="og:description" content={description} />
   <meta property="og:url" content={siteUrl} />
   
-  <!-- Google Schema Structured Data -->
+  <!-- Schema Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "₹ 8PayCommission",
       "url": "https://8paycommission.com",
-      "description": "8th Pay Commission calculators, pay matrix level 1 to 18, fitment factors, and government circulars.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://8paycommission.com/search?q={search_term_string}",
@@ -39,7 +38,7 @@ const siteUrl = "https://8paycommission.com";
 </head>
 
 <body>
-  <!-- ==================== HEADER & TOP NAVIGATION ==================== -->
+  <!-- ==================== HEADER (HIGH SEARCH VOLUME MENUS) ==================== -->
   <header class="header">
     <div class="nav-container">
       <a href="/" class="brand-logo" aria-label="8PayCommission Home">
@@ -53,90 +52,94 @@ const siteUrl = "https://8paycommission.com";
         <span class="bar"></span>
       </button>
 
-      <!-- HIGH-VOLUME SEO MENUS ONLY -->
+      <!-- NAVIGATION BAR -->
       <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="/" class="nav-item active">Home</a></li>
           
-          <!-- #1 Search Cluster: Calculators -->
+          <!-- #1 CALCULATOR CLUSTER -->
           <li class="has-dropdown">
-            <button class="dropdown-trigger">Calculators <span class="arrow">▾</span></button>
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="#calculator">Salary Calculator</a></li>
-              <li><a href="/arrears-calculator/">Expected Arrears Calculator</a></li>
-              <li><a href="/pension-calculator/">Pension Hike Calculator</a></li>
-              <li><a href="/da-hra-calculator/">DA & HRA Calculator</a></li>
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
             </ul>
           </li>
 
-          <!-- #2 Search Cluster: Pay Matrix -->
+          <!-- #2 PAY MATRIX CLUSTER -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="/pay-matrix/level-1-to-5/">Pay Level 1 to 5 (GP 1800 - 2800)</a></li>
-              <li><a href="/pay-matrix/level-6-to-9/">Pay Level 6 to 9 (GP 4200 - 5400)</a></li>
-              <li><a href="/pay-matrix/level-10-to-18/">Pay Level 10 to 18 (Officers)</a></li>
-              <li><a href="/pay-matrix/7th-vs-8th-cpc/">7th vs 8th CPC Matrix Comparison</a></li>
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
             </ul>
           </li>
 
-          <!-- #3 Search Cluster: Fitment Factor -->
+          <!-- #3 FITMENT FACTOR CLUSTER -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="/fitment-factor/expected-rate/">Expected Factor (1.92 to 2.86)</a></li>
-              <li><a href="/fitment-factor/minimum-basic-pay/">Minimum Basic Pay Revision</a></li>
-              <li><a href="/fitment-factor/historical-trends/">Historical Fitment Trends</a></li>
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
             </ul>
           </li>
 
-          <!-- #4 Search Cluster: DA & Allowances -->
+          <!-- #4 DA & ALLOWANCES CLUSTER -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="/allowances/da-rate-merger/">DA Merger & 0% Reset Rules</a></li>
-              <li><a href="/allowances/hra-slabs-city-wise/">Revised HRA Slabs (X, Y, Z Cities)</a></li>
-              <li><a href="/allowances/transport-allowance/">Transport Allowance (TA)</a></li>
-              <li><a href="/allowances/children-education-allowance/">Children Education Allowance (CEA)</a></li>
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
             </ul>
           </li>
 
-          <!-- #5 Search Cluster: Pensioners -->
+          <!-- #5 PENSIONERS CLUSTER -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
             <ul class="dropdown-menu">
-              <li><a href="/pensioners/minimum-pension/">Minimum Pension Revision</a></li>
-              <li><a href="/pensioners/gratuity-limit/">Gratuity Limit Hike (₹25 Lakh)</a></li>
-              <li><a href="/pensioners/ups-integration/">UPS vs 8th Pay Commission</a></li>
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
             </ul>
           </li>
 
-          <!-- #6 Search Cluster: State Gov -->
+          <!-- #6 EXPANDED HIGH-VOLUME STATE PAY COMMISSION CLUSTER -->
           <li class="has-dropdown">
-            <button class="dropdown-trigger">State Gov <span class="arrow">▾</span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/state-pay-commission/tamil-nadu/">Tamil Nadu Pay Revision</a></li>
-              <li><a href="/state-pay-commission/uttar-pradesh/">Uttar Pradesh Updates</a></li>
-              <li><a href="/state-pay-commission/maharashtra/">Maharashtra Updates</a></li>
+            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
             </ul>
           </li>
 
-          <!-- #7 Search Cluster: News -->
-          <li><a href="/latest-news/" class="nav-item">Latest News</a></li>
+          <!-- #7 NEWS CLUSTER -->
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
   <main class="page-container">
 
-    <!-- HERO SECTION: SALARY CALCULATOR -->
+    <!-- HERO SECTION: CALCULATOR (Hand-Drawn Sketch Position) -->
     <section class="calculator-hero" id="calculator">
       <div class="calc-header-box">
         <span class="calc-pill">Updated for 2026 Baseline</span>
         <h1 class="main-heading">₹ 8th Pay Commission Salary Calculator</h1>
-        <p class="sub-lead">Instantly estimate your revised basic pay, city allowances, and monthly in-hand take-home salary.</p>
+        <p class="sub-lead">Calculate your revised basic pay, city HRA allowances, and projected monthly in-hand salary.</p>
       </div>
 
       <div class="calculator-card">
@@ -170,7 +173,7 @@ const siteUrl = "https://8paycommission.com";
             <div class="form-group">
               <label for="fitmentFactor">Fitment Factor Scenario:</label>
               <select id="fitmentFactor" class="calc-select">
-                <option value="1.92">1.92 (Conservative / DA Merger Floor)</option>
+                <option value="1.92">1.92 (Conservative / DA Merge Baseline)</option>
                 <option value="2.08">2.08 (Moderate Union Baseline)</option>
                 <option value="2.28" selected>2.28 (NC-JCM Expected Working Base)</option>
                 <option value="2.57">2.57 (7th Pay Commission Parity)</option>
@@ -188,7 +191,7 @@ const siteUrl = "https://8paycommission.com";
             </div>
           </div>
 
-          <!-- Calculation Results -->
+          <!-- Outputs -->
           <div class="calc-outputs">
             <div class="result-badge">Projected 8th CPC Overview</div>
             
@@ -228,60 +231,60 @@ const siteUrl = "https://8paycommission.com";
     <section class="quick-nav-grid" aria-label="8th Pay Commission Topic Matrix">
       <div class="section-title-wrap">
         <h2>Quick Navigation & Analysis Hub</h2>
-        <p>Explore official departmental updates, salary scales, and policy forecasts</p>
+        <p>Access high-ranking dedicated portals for pay scales, calculators, and government orders</p>
       </div>
 
       <div class="grid-container">
-        <a href="/pay-matrix/" class="grid-card">
+        <a href="/8th-pay-commission-pay-matrix/" class="grid-card">
           <div class="card-icon">📊</div>
           <h3>Pay Matrix Table</h3>
           <p>Levels 1 to 18 mapped across Grade Pay bands from GP 1800 to GP 10000.</p>
           <span class="card-link">View Full Matrix →</span>
         </a>
 
-        <a href="/fitment-factor/" class="grid-card">
+        <a href="/fitment-factor-8th-pay-commission/" class="grid-card">
           <div class="card-icon">⚡</div>
           <h3>Fitment Factor</h3>
           <p>Analysis of 1.92x, 2.28x, and 2.57x multipliers with historical impact curves.</p>
           <span class="card-link">Compare Factors →</span>
         </a>
 
-        <a href="#calculator" class="grid-card">
+        <a href="/8th-pay-commission-salary-calculator/" class="grid-card">
           <div class="card-icon">🧮</div>
           <h3>Salary Calculator</h3>
-          <p>Accurate take-home forecasting tool including NPS/UPS, CGEGIS, and tax slabs.</p>
+          <p>Detailed salary calculations including NPS/UPS, CGEGIS, and tax slabs.</p>
           <span class="card-link">Launch Calculator →</span>
         </a>
 
-        <a href="/pensioners/" class="grid-card">
+        <a href="/8th-pay-commission-pension-hike/" class="grid-card">
           <div class="card-icon">🛡️</div>
           <h3>Pension Revisions</h3>
           <p>Minimum pension hike projections from ₹9,000 to ₹20,500+ with Dearness Relief.</p>
           <span class="card-link">Read Pension Guide →</span>
         </a>
 
-        <a href="/allowances/da-rate-merger/" class="grid-card">
+        <a href="/da-merger-8th-pay-commission/" class="grid-card">
           <div class="card-icon">📈</div>
           <h3>DA Merger & Reset</h3>
           <p>Dearness Allowance reset rules to 0% and inflation index re-basing mechanics.</p>
           <span class="card-link">Check DA Rules →</span>
         </a>
 
-        <a href="/allowances/hra-slabs-city-wise/" class="grid-card">
+        <a href="/hra-slabs-8th-pay-commission/" class="grid-card">
           <div class="card-icon">🏢</div>
           <h3>HRA & TA Slabs</h3>
           <p>City classifications (X, Y, Z) and revised allowances for central staff.</p>
           <span class="card-link">View Allowances →</span>
         </a>
 
-        <a href="/state-pay-commission/tamil-nadu/" class="grid-card">
+        <a href="/tn-8th-pay-commission/" class="grid-card">
           <div class="card-icon">🏛️</div>
           <h3>State Employees</h3>
-          <p>Impact on Tamil Nadu, UP, Maharashtra, and other state revenue departments.</p>
+          <p>Impact on Tamil Nadu, UP, Maharashtra, Rajasthan, Bihar, and WB cadres.</p>
           <span class="card-link">Select Your State →</span>
         </a>
 
-        <a href="/latest-news/" class="grid-card">
+        <a href="/8th-pay-commission-latest-news/" class="grid-card">
           <div class="card-icon">📢</div>
           <h3>Cabinet & DoPT Orders</h3>
           <p>Official notices, Terms of Reference (ToR), and Joint Consultative Machinery notes.</p>
@@ -296,20 +299,20 @@ const siteUrl = "https://8paycommission.com";
       <section class="content-block">
         <h2>8th Central Pay Commission: Strategic Framework & Key Projections</h2>
         <p>
-          The constitution and upcoming implementation of the <strong>8th Central Pay Commission (8th CPC)</strong> represents an essential financial revision for more than 48 lakh Central Government employees and over 67 lakh pensioners across India. As part of the decennial revision established since the earliest post-independence commissions, pay commissions serve to adjust baseline compensation, correct purchasing power erosion caused by retail inflation, and rationalize allowances across 18 distinct levels of the pay matrix.
+          The constitution and implementation of the <strong>8th Central Pay Commission (8th CPC)</strong> represents an essential financial revision for more than 48 lakh Central Government employees and over 67 lakh pensioners across India. As part of the decennial revision established since the earliest post-independence commissions, pay commissions serve to adjust baseline compensation, correct purchasing power erosion caused by retail inflation, and rationalize allowances across 18 distinct levels of the pay matrix.
         </p>
         <p>
-          Historically, the Government of India institutes a Central Pay Commission approximately every ten years. The 6th Pay Commission was notified in 2006, followed by the landmark 7th Pay Commission in 2016, which officially eliminated the obsolete "Pay Band and Grade Pay" system, replacing it with an intuitive, unified <strong>Pay Matrix</strong> comprising 19 horizontal levels and 40 vertical incremental progression cells. With macroeconomic shifts, changing Consumer Price Index for Industrial Workers (CPI-IW) datasets, and detailed representations by employee federations, the 8th Pay Commission introduces decisive revisions in salary mechanics.
+          Historically, the Government of India institutes a Central Pay Commission approximately every ten years. The 6th Pay Commission was notified in 2006, followed by the landmark 7th Pay Commission in 2016, which officially eliminated the obsolete "Pay Band and Grade Pay" system, replacing it with an intuitive, unified <strong>Pay Matrix</strong> comprising 18 primary functional levels and 40 vertical incremental progression cells. With macroeconomic shifts, changing Consumer Price Index for Industrial Workers (CPI-IW) datasets, and detailed representations by employee federations, the 8th Pay Commission introduces decisive revisions in salary mechanics.
         </p>
       </section>
 
       <section class="content-block">
         <h2>Fitment Factor Analysis: How Basic Pay Revisions Are Formulated</h2>
         <p>
-          The primary mathematical driver of basic pay and pension revisions in Indian Pay Commissions is the <strong>Fitment Factor</strong>. This uniform multiplier converts existing 7th CPC Basic Pay directly into revised 8th CPC Basic Pay. When the 7th CPC recommended an overall fitment factor of <strong>2.57</strong>, this was comprised of two distinct components: the merger of 125% Dearness Allowance (which had accrued by January 1, 2016) representing a 2.25x baseline, supplemented by a ~14.29% real net hike.
+          The primary mathematical driver of basic pay and pension revisions in Indian Pay Commissions is the <strong>Fitment Factor</strong>. This uniform multiplier converts existing 7th CPC Basic Pay directly into revised 8th CPC Basic Pay. When the 7th CPC recommended an overall fitment factor of <strong>2.57</strong>, this was comprised of two distinct components: the merger of 125% Dearness Allowance representing a 2.25x baseline, supplemented by a ~14.29% real net wage hike.
         </p>
         <p>
-          For the 8th Pay Commission, the Dearness Allowance crossed the statutory 50% milestone and continues its upward trajectory under AICPI-IW datasets. Consequently, fitment factor scenarios for the 8th CPC center on four primary economic scenarios:
+          For the 8th Pay Commission, the Dearness Allowance crossed the 50% milestone and continues its upward trajectory under AICPI-IW datasets. Consequently, fitment factor scenarios for the 8th CPC center on four primary economic scenarios:
         </p>
         
         <div class="table-wrapper">
@@ -408,7 +411,7 @@ const siteUrl = "https://8paycommission.com";
           House Rent Allowance is determined by geographic location and city classification under three categories:
         </p>
         <ul class="content-list">
-          <li><strong>X Category (Metros with population 50 Lakh+):</strong> Includes cities like New Delhi, Mumbai, Kolkata, Chennai, Bengaluru, and Hyderabad. HRA will stand at 24% to 27% of revised basic pay.</li>
+          <li><strong>X Category (Metros with population 50 Lakh+):</strong> Includes cities like New Delhi, Mumbai, Kolkata, Chennai, Bengaluru, and Hyderabad. HRA will stand at 24% to 27% (expected up to 30%) of revised basic pay.</li>
           <li><strong>Y Category (Tier-2 Cities with population 5 to 50 Lakh):</strong> Includes Pune, Ahmedabad, Lucknow, Jaipur, Patna, and Madurai. Revised rates range between 18% and 20%.</li>
           <li><strong>Z Category (Towns and Rural Locations):</strong> Applicable to all locations with population under 5 Lakh, set at a stable 9% to 10%.</li>
         </ul>
@@ -434,19 +437,26 @@ const siteUrl = "https://8paycommission.com";
       </section>
 
       <section class="content-block">
-        <h2>Impact on State Government Employees (Tamil Nadu, UP, and Beyond)</h2>
+        <h2>State-Wise Pay Commission Adoption: High Search Volume States</h2>
         <p>
-          While Central Pay Commissions directly govern central government civil employees, defence personnel, and railway staff, state administrations systematically evaluate and adopt the central recommendations through their respective Pay Revision Committees.
+          While Central Pay Commissions directly govern central civil employees, defence personnel, and railway staff, state administrations systematically evaluate and adopt the central recommendations through their respective state pay revision committees:
         </p>
-        <p>
-          In states like <strong>Tamil Nadu</strong>, <strong>Uttar Pradesh</strong>, <strong>Maharashtra</strong>, and <strong>Karnataka</strong>, the state finance departments review the Union Cabinet notification and issue localized government orders (G.O.) adopting the revised pay matrix and fitment factors for state cadres, teachers, and municipal employees. Consequently, trends tracked on this portal hold profound consequences for both central staff and millions of state public servants nationwide.
-        </p>
+        <ul class="content-list">
+          <li><strong>Tamil Nadu:</strong> TN constitutes its own State Pay Revision Committee following the Central notification. Typically implemented with a 12–18 month retrospective lag, covering secretariat staff, TNPSC cadres, police, and school teachers.</li>
+          <li><strong>Uttar Pradesh (UP):</strong> As India's largest state government employer base, UP traditionally aligns quickly with central pay scales, revising basic pay for primary teachers, UP Police, and state administrative officers.</li>
+          <li><strong>Maharashtra:</strong> Governed by State Pay Revision frameworks with specific HRA adjustments across Mumbai, Pune, Nagpur, and Tier-3 municipal regions.</li>
+          <li><strong>Rajasthan:</strong> Regularly constitutes official state committees to review central CPC fitment factors and pension commutation formulas for civil staff.</li>
+          <li><strong>Bihar:</strong> State finance departments evaluate DA merger baselines and fitment adjustments for teachers, revenue inspectors, and block officials.</li>
+          <li><strong>West Bengal:</strong> Tracks independent pay commission timelines (ROPA rules), where central DA merger decisions form the primary benchmark for employee union negotiations.</li>
+          <li><strong>Karnataka:</strong> State Pay Commission reviews central basic pay scales and allowances for municipal corporations, engineers, and healthcare staff.</li>
+          <li><strong>Madhya Pradesh (MP):</strong> Automatically synchronizes core pay scales and fitment factors with central DoPT notifications for state employees.</li>
+        </ul>
       </section>
 
     </article>
   </main>
 
-  <!-- ==================== FOOTER (DISCLAIMER + SITEMAP) ==================== -->
+  <!-- ==================== FOOTER (DISCLAIMER + MULTI-STATE SITEMAP) ==================== -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
@@ -455,25 +465,27 @@ const siteUrl = "https://8paycommission.com";
         <div class="footer-col disclaimer-col">
           <h3 class="footer-title">Disclaimer</h3>
           <p class="disclaimer-text">
-            <strong>8paycommission.com</strong> is an independent information and utility platform created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official entity of the Government of India, the Department of Personnel and Training (DoPT), or the Ministry of Finance</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference and educational purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official entity of the Government of India, DoPT, or the Ministry of Finance</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
           </p>
         </div>
 
-        <!-- Right Column: SEO High Intent Footer Links -->
+        <!-- Right Column: High Volume Search Target Links -->
         <div class="footer-col links-col">
-          <h3 class="footer-title">Important Links & Resources</h3>
+          <h3 class="footer-title">State Pay Revisions & Links</h3>
           <div class="footer-links-grid">
             <ul class="footer-nav">
-              <li><a href="/about-us/">About Us</a></li>
-              <li><a href="/contact/">Contact Us</a></li>
-              <li><a href="/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="/terms-of-service/">Terms of Service</a></li>
+              <li><a href="/tn-8th-pay-commission/">Tamil Nadu 8th Pay</a></li>
+              <li><a href="/up-8th-pay-commission/">Uttar Pradesh 8th Pay</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay</a></li>
             </ul>
             <ul class="footer-nav">
-              <li><a href="/pay-matrix/">Pay Matrix 1-18</a></li>
-              <li><a href="/fitment-factor/">Fitment Factor Analysis</a></li>
-              <li><a href="/pension-calculator/">Pension Guide</a></li>
-              <li><a href="/state-pay-commission/tamil-nadu/">Tamil Nadu Pay Rules</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay</a></li>
+              <li><a href="/mp-8th-pay-commission/">Madhya Pradesh 8th Pay</a></li>
+              <li><a href="/8th-pay-commission-pay-matrix/">Central Pay Matrix 1-18</a></li>
+              <li><a href="/privacy-policy/">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
@@ -488,7 +500,7 @@ const siteUrl = "https://8paycommission.com";
 
   <!-- ==================== CLIENT JAVASCRIPT ==================== -->
   <script is:inline>
-    // Mobile Navigation Drawer Toggle
+    // Mobile navigation drawer toggle
     const toggleBtn = document.getElementById('mobileNavToggle');
     const navMenu = document.getElementById('mainNavigation');
 
@@ -499,7 +511,7 @@ const siteUrl = "https://8paycommission.com";
       });
     }
 
-    // Dropdown toggles for touchscreens
+    // Touch dropdown handlers
     const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
     dropdownTriggers.forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -559,7 +571,7 @@ const siteUrl = "https://8paycommission.com";
     fitmentFactorSelect.addEventListener('change', calculatePay);
     cityTypeSelect.addEventListener('change', calculatePay);
 
-    // Initial calculation on load
+    // Initial calculation run
     calculatePay();
   </script>
 </body>
@@ -690,12 +702,16 @@ const siteUrl = "https://8paycommission.com";
     top: 100%;
     left: 0;
     background-color: var(--bg-surface);
-    min-width: 245px;
+    min-width: 270px;
     list-style: none;
     padding: 0.5rem 0;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
   }
 
   .dropdown-menu li a {
@@ -741,7 +757,7 @@ const siteUrl = "https://8paycommission.com";
     padding: 2rem 1.25rem 4rem 1.25rem;
   }
 
-  /* --- CALCULATOR HERO SECTION --- */
+  /* --- HERO: CALCULATOR --- */
   .calculator-hero {
     background: linear-gradient(135deg, #0f2b48 0%, #1e3a5f 100%);
     color: #ffffff;
@@ -1086,7 +1102,7 @@ const siteUrl = "https://8paycommission.com";
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.3fr 1.2fr;
     gap: 2.5rem;
     margin-bottom: 2.5rem;
   }
@@ -1197,7 +1213,7 @@ const siteUrl = "https://8paycommission.com";
       padding-left: 2rem;
     }
 
-    /* Full bleed edge-to-edge eliminating all margin/gaps */
+    /* Edge-to-edge eliminating all margin/gaps */
     .page-container {
       padding: 0 !important;
       margin: 0 !important;
@@ -1225,7 +1241,7 @@ const siteUrl = "https://8paycommission.com";
       gap: 1.25rem !important;
     }
 
-    /* 8 Grid items: 2 columns on mobile for smooth tapping */
+    /* 8 Grid items: 2 columns on mobile */
     .grid-container {
       grid-template-columns: repeat(2, 1fr) !important;
       gap: 0.6rem !important;
@@ -1253,10 +1269,10 @@ const siteUrl = "https://8paycommission.com";
     }
 
     .grid-card p {
-      display: none; /* Hidden on compact view for clean card buttons */
+      display: none; /* Hidden on compact mobile view */
     }
 
-    /* Full-width content block with clean interior padding */
+    /* Full-width content block */
     .seo-content-body {
       border-radius: 0 !important;
       border-left: none !important;
