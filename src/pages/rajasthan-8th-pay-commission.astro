@@ -1,0 +1,1520 @@
+---
+// src/pages/rajasthan-8th-pay-commission.astro
+const title = "₹ Rajasthan 8th Pay Commission: Salary Calculator, L-1 to L-24 Matrix & Rules (2026)";
+const description = "Complete guide on Rajasthan 8th Pay Commission. Calculate revised state employee salary, L-1 to L-24 Pay Matrix, Probation Trainee pay, Teacher/Police scales, and OPS status.";
+const canonicalUrl = "https://8paycommission.com/rajasthan-8th-pay-commission/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: Article & FAQPage for Rich Search Results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Rajasthan 8th Pay Commission: L-1 to L-24 Pay Matrix, Salary Calculator and Cadre Rules",
+          "description": "Comprehensive guide and interactive financial calculator for Rajasthan State Government employees, REET teachers, police personnel, and pensioners under the 8th Pay Commission.",
+          "author": {
+            "@type": "Organization",
+            "name": "8PayCommission Editorial Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "₹ 8PayCommission",
+            "url": "https://8paycommission.com"
+          },
+          "datePublished": "2026-05-10T09:00:00+05:30",
+          "dateModified": "2026-10-04T22:40:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is the Rajasthan Pay Matrix structured under Revised Pay Rules?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under the Rajasthan Civil Services (Revised Pay) Rules, the state operates a specialized 24-Level Pay Matrix spanning from Pay Level L-1 (starting entry basic of ₹17,700 for Class IV employees) to Pay Level L-24 (senior administrative secretaries starting at ₹1,44,200)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the 2-year Probation Trainee system in Rajasthan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Rajasthan, all newly recruited state government employees must complete a mandatory two-year probation period during which they receive a fixed monthly stipend (Probation Remuneration) without Dearness Allowance, HRA, or annual increments. Regular basic pay in the matrix begins only upon successful confirmation after two years."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does ACP operate in Rajasthan compared to the Central Government?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "While the Central Government implements MACP at 10, 20, and 30 years of continuous service, the Government of Rajasthan grants Assured Career Progression (ACP) at 9, 18, and 27 years of regular service, elevating stagnating employees to the next promotional Pay Level."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger active">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <a href="/state-pay-commissions/">State Pay Commissions</a> <span>›</span> 
+      <span class="active-page">Rajasthan 8th Pay Commission</span>
+    </nav>
+
+    <!-- HERO & INTERACTIVE RAJASTHAN SALARY CALCULATOR -->
+    <section class="calc-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Rajasthan Civil Services Revision (2026)</span>
+        <h1 class="main-heading">₹ Rajasthan 8th Pay Commission Calculator & L-1 to L-24 Matrix</h1>
+        <p class="hero-summary">
+          An authoritative analysis for Rajasthan State Government employees, REET Teachers (Gr-III, Gr-II, Gr-I), Rajasthan Police, Secretariat staff, and state pensioners. Calculate revised basic pay, city-specific HRA (Jaipur, Jodhpur, Kota), Probation Trainee pay, and RGHS / SI deductions under the 8th Pay Commission.
+        </p>
+      </div>
+
+      <!-- MAIN APP INTERACTION -->
+      <div class="salary-app-card" id="rjSalaryCalculatorApp">
+        <div class="app-layout-grid">
+          
+          <!-- Column 1: Input Parameters -->
+          <div class="input-controls-column">
+            <h2 class="sub-card-title">1. Rajasthan Service Parameters</h2>
+
+            <div class="field-item">
+              <label for="rjLevelSelect">Select Rajasthan Pay Level (L-Band):</label>
+              <select id="rjLevelSelect" class="styled-input">
+                <option value="17700" data-level="L-1" data-prob="12400">Level L-1 (GP ₹1,700) - Class IV / Peon (Min ₹17,700)</option>
+                <option value="17900" data-level="L-2" data-prob="12600">Level L-2 (GP ₹1,750) - Laboratory Attendant (Min ₹17,900)</option>
+                <option value="18200" data-level="L-3" data-prob="12800">Level L-3 (GP ₹1,900) - Forest Guard / Skilled Helper (Min ₹18,200)</option>
+                <option value="20800" data-level="L-4" data-prob="13500" selected>Level L-4 (GP ₹2,400) - Rajasthan Police Constable / Driver (Min ₹20,800)</option>
+                <option value="21400" data-level="L-5" data-prob="14600">Level L-5 (GP ₹2,400) - Junior Assistant / LDC (Min ₹21,400)</option>
+                <option value="24700" data-level="L-8" data-prob="15100">Level L-8 (GP ₹2,800) - Patwari / Lab Assistant / Head Constable (Min ₹24,700)</option>
+                <option value="29200" data-level="L-9" data-prob="18500">Level L-9 (GP ₹3,200) - Gram Vikas Adhikari (VDO) / ASI (Min ₹29,200)</option>
+                <option value="33800" data-level="L-10" data-prob="23700">Level L-10 (GP ₹3,600) - REET Teacher Gr-III / Junior Accountant / SI (Min ₹33,800)</option>
+                <option value="37800" data-level="L-11" data-prob="26500">Level L-11 (GP ₹4,200) - Senior Teacher Gr-II / Assistant Section Officer (Min ₹37,800)</option>
+                <option value="44300" data-level="L-12" data-prob="31100">Level L-12 (GP ₹4,800) - School Lecturer Gr-I / Tehsildar (Min ₹44,300)</option>
+                <option value="56100" data-level="L-14" data-prob="39300">Level L-14 (GP ₹5,400 PB-3) - RAS Officer / Deputy SP / Assistant Director (Min ₹56,100)</option>
+                <option value="67700" data-level="L-16" data-prob="47400">Level L-16 (GP ₹6,600) - Senior RAS / Executive Engineer (Min ₹67,700)</option>
+                <option value="78800" data-level="L-18" data-prob="55200">Level L-18 (GP ₹7,600) - Superintending Engineer / Joint Secretary (Min ₹78,800)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="rjProbationStatus">Employment Stage:</label>
+              <select id="rjProbationStatus" class="styled-input">
+                <option value="regular" selected>Regular Employee (Confirmed Service)</option>
+                <option value="probation">Probation Trainee (Within Initial 2 Years)</option>
+              </select>
+            </div>
+
+            <div class="field-item" id="basicPayInputBlock">
+              <label for="rjCurrentBasic">Current 7th CPC Rajasthan Basic Pay (₹):</label>
+              <input type="number" id="rjCurrentBasic" class="styled-input" value="20800" min="17700" step="100" />
+              <span class="field-note">Enter your exact basic pay from your IFMS / PayManager pay slip.</span>
+            </div>
+
+            <div class="field-item">
+              <label for="rjFitmentSelect">Expected Fitment Factor Multiplier:</label>
+              <select id="rjFitmentSelect" class="styled-input">
+                <option value="1.92">1.92x (Inflation Neutral / DA Merge Baseline)</option>
+                <option value="2.08">2.08x (Moderate Representation)</option>
+                <option value="2.28" selected>2.28x (NC-JCM Expected Working Base)</option>
+                <option value="2.57">2.57x (Rajasthan 7th CPC Parity Factor)</option>
+                <option value="2.86">2.86x (Staff Federation Maximum Demand)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="rjCityTierSelect">Posting City (Rajasthan HRA Slabs):</label>
+              <select id="rjCityTierSelect" class="styled-input">
+                <option value="0.18" selected>Class Y (18% Urban HRA) - Jaipur, Jodhpur, Kota, Ajmer, Bikaner</option>
+                <option value="0.09">Class Z (9% Rural HRA) - Other Districts, Tehsils, Gram Panchayats</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 2: Computed Pay Slip Breakdown -->
+          <div class="output-summary-column">
+            <h2 class="sub-card-title">2. Projected Monthly Pay Slip (RJ)</h2>
+
+            <div class="line-item emphasis">
+              <span class="line-label" id="labelOutputPrimary">Revised RJ 8th CPC Basic Pay:</span>
+              <span class="line-value brand" id="outRjRevisedBasic">₹47,424</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">House Rent Allowance (RJ HRA):</span>
+              <span class="line-value font-bold" id="outRjHra">₹8,536</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Dearness Allowance (At Inception):</span>
+              <span class="line-value">0% (Merged into Base)</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">City Conveyance / Fixed Allowance:</span>
+              <span class="line-value" id="outRjCa">₹620</span>
+            </div>
+
+            <div class="line-item gross-box">
+              <span class="line-label">Estimated Gross Salary:</span>
+              <span class="line-value text-gross" id="outRjGross">₹56,580</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <span class="deduction-header">Statutory Monthly Deductions</span>
+
+            <div class="line-item deduct">
+              <span class="line-label">GPF / Pension Contribution:</span>
+              <span class="line-value text-deduct" id="outRjGpfDeduct">- ₹3,000</span>
+            </div>
+
+            <div class="line-item deduct">
+              <span class="line-label">State Insurance (SI) &amp; RGHS Medical:</span>
+              <span class="line-value text-deduct" id="outRjSiDeduct">- ₹1,825</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="net-in-hand-wrap">
+              <span class="net-caption">Net Monthly Bank Credit:</span>
+              <span class="net-figure" id="outRjNetTakeHome">₹51,755</span>
+            </div>
+            
+            <p class="fine-print">
+              *Calculated based on Rajasthan Civil Services (Revised Pay) Rules modeling. Final in-hand salary reflects Government Orders issued by the Finance (Rules) Department.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1500+ WORDS COMPREHENSIVE EDITORIAL ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>The Framework of Pay Revisions in Rajasthan State Administration</h2>
+        <p>
+          In the Indian public administration framework, the Government of Rajasthan employs more than eight lakh active civil servants, state police personnel, school lecturers, primary teachers, healthcare professionals, and revenue field staff, alongside over five lakh pensioners. State employee compensation policies in Rajasthan have historically aligned closely with Central Pay Commission decisions, while maintaining distinct administrative mechanisms that reflect state conditions.
+        </p>
+        <p>
+          Rather than establishing a completely independent, prolonged pay commission, the Rajasthan State Government traditionally appoints a <strong>Pay Discrepancy Committee (Vetan Visangati Samiti)</strong> headed by a senior retired civil servant (such as the D.C. Samant and Khemraj Choudhary committees in previous revisions).
+        </p>
+        <p>
+          The committee reviews the Central Pay Commission notification, addresses cadre-specific anomalies across technical departments, and prepares the <strong>Rajasthan Civil Services (Revised Pay) Rules</strong>. Under the 7th CPC implementation, Rajasthan adopted a <strong>2.57 Fitment Factor</strong>, converting the historical Grade Pay structure into an integrated 24-Level Pay Matrix (Levels L-1 to L-24). As the <strong>8th Central Pay Commission</strong> approaches, employees across the state are evaluating projected basic pay adjustments, REET teacher salary scales, and retirement benefits.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>The 2-Year Probation Trainee Remuneration Rule Explained</h2>
+        <p>
+          A defining institutional feature of Rajasthan public employment that differentiates it from almost all other Indian states is the <strong>Probation Trainee System</strong>, codified under Rule 24 of the Rajasthan Service Rules (RSR):
+        </p>
+        <div class="callout-box">
+          <h4>Statutory Provisions of the 2-Year Probation Period:</h4>
+          <ul class="bullet-feature-list">
+            <li><strong>Fixed Stipendiary Pay:</strong> Every direct recruit joining Rajasthan State Government service must serve a mandatory <strong>two-year probation period</strong>. During these 24 months, the employee is designated as a "Probationer Trainee" and receives a fixed monthly remuneration.</li>
+            <li><strong>Zero Allowances:</strong> During the probation window, employees are not entitled to Dearness Allowance (DA), House Rent Allowance (HRA), annual 3% vertical increments, or city compensatory allowances.</li>
+            <li><strong>Regular Matrix Placement:</strong> Only upon the successful completion of the two-year probation period and subsequent formal confirmation is the employee placed into <strong>Cell 1 of their regular Pay Level</strong>, unlocking full allowances and annual increment accruals.</li>
+          </ul>
+          <p>
+            Under the 8th Pay Commission, this fixed probation remuneration will be revised upward proportionately, increasing the starting stipend for young graduates entering public service.
+          </p>
+        </div>
+      </section>
+
+      <!-- RAJASTHAN L-LEVEL MASTER PROGRESSION TABLE -->
+      <section class="editorial-chapter">
+        <h2>Rajasthan Pay Matrix: L-1 to L-18 Projections Under 8th CPC (2.28x Factor)</h2>
+        <p>
+          The table below illustrates starting basic pay cells (Cell 1), historical Grade Pay equivalents, and projected monthly figures under the working <strong>2.28 Fitment Factor</strong>:
+        </p>
+
+        <div class="table-scroll-container">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>Rajasthan Level</th>
+                <th>Pre-Revised Grade Pay</th>
+                <th>7th CPC Base (Cell 1)</th>
+                <th>8th CPC Base (2.28x)</th>
+                <th>Standard Postings in Rajasthan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Level L-1</strong></td>
+                <td>GP ₹1,700</td>
+                <td>₹17,700</td>
+                <td><strong>₹40,356</strong></td>
+                <td>Class IV, Peon, Mali, Chaukidar, Process Server</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-2</strong></td>
+                <td>GP ₹1,750</td>
+                <td>₹17,900</td>
+                <td><strong>₹40,812</strong></td>
+                <td>Laboratory Attendant, Record Keeper</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-3</strong></td>
+                <td>GP ₹1,900</td>
+                <td>₹18,200</td>
+                <td><strong>₹41,496</strong></td>
+                <td>Forest Guard, Skilled Helper, Mates</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-4</strong></td>
+                <td>GP ₹2,400 (PB-1A)</td>
+                <td>₹20,800</td>
+                <td><strong>₹47,424</strong></td>
+                <td>Rajasthan Police Constable, Driver, Jail Warder</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-5</strong></td>
+                <td>GP ₹2,400</td>
+                <td>₹21,400</td>
+                <td><strong>₹48,792</strong></td>
+                <td>Junior Assistant (LDC), Clerk Grade-II</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-8</strong></td>
+                <td>GP ₹2,800</td>
+                <td>₹24,700</td>
+                <td><strong>₹56,316</strong></td>
+                <td>Patwari, Lab Assistant, Head Constable</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-9</strong></td>
+                <td>GP ₹3,200</td>
+                <td>₹29,200</td>
+                <td><strong>₹66,576</strong></td>
+                <td>Gram Vikas Adhikari (VDO), Assistant Sub-Inspector (ASI)</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-10</strong></td>
+                <td>GP ₹3,600</td>
+                <td>₹33,800</td>
+                <td><strong>₹77,064</strong></td>
+                <td>REET Teacher Gr-III, Sub-Inspector (Police), Junior Accountant</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-11</strong></td>
+                <td>GP ₹4,200</td>
+                <td>₹37,800</td>
+                <td><strong>₹86,184</strong></td>
+                <td>Senior Teacher Gr-II, Assistant Section Officer (Secretariat)</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-12</strong></td>
+                <td>GP ₹4,800</td>
+                <td>₹44,300</td>
+                <td><strong>₹1,01,004</strong></td>
+                <td>School Lecturer Gr-I, Naib Tehsildar, Inspector of Police</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-14</strong></td>
+                <td>GP ₹5,400 (PB-3)</td>
+                <td>₹56,100</td>
+                <td><strong>₹1,27,908</strong></td>
+                <td>RAS Officer (Direct), Deputy SP, Assistant Collector</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-16</strong></td>
+                <td>GP ₹6,600</td>
+                <td>₹67,700</td>
+                <td><strong>₹1,54,356</strong></td>
+                <td>Senior RAS, Executive Engineer (PWD/PHED)</td>
+              </tr>
+              <tr>
+                <td><strong>Level L-18</strong></td>
+                <td>GP ₹7,600</td>
+                <td>₹78,800</td>
+                <td><strong>₹1,79,664</strong></td>
+                <td>Superintending Engineer, Joint Secretary to Government</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Departmental Deep-Dive: Teachers, Police &amp; Revenue Cadres</h2>
+        <p>
+          Specific departmental groupings command large budgetary shares within the Rajasthan state accounts:
+        </p>
+
+        <div class="cadre-card-grid">
+          <div class="cadre-box education">
+            <h4>REET &amp; Education Department Teachers</h4>
+            <div class="cadre-badge">Primary, Secondary &amp; Senior Secondary</div>
+            <p><strong>Covered Ranks:</strong> Grade-III Teachers (Level L-10: ₹33,800), Grade-II Senior Teachers (Level L-11: ₹37,800), and Grade-I School Lecturers (Level L-12: ₹44,300).</p>
+            <p><strong>Impact:</strong> Teachers represent the single largest cadre in the state. Under the 8th CPC, entry basic pay for Grade-III teachers will rise from ₹33,800 to <strong>₹77,064 per month</strong> upon confirmation.</p>
+            <span class="cadre-footer">Grade-III (7th CPC): ₹33,800 | 8th CPC (2.28x): <strong>₹77,064</strong></span>
+          </div>
+
+          <div class="cadre-box police">
+            <h4>Rajasthan Police Department</h4>
+            <div class="cadre-badge">Law Enforcement &amp; RAC Battalions</div>
+            <p><strong>Covered Ranks:</strong> Constables (Level L-4: ₹20,800), Head Constables (Level L-8: ₹24,700), Assistant Sub-Inspectors (Level L-9: ₹29,200), and Sub-Inspectors (Level L-10: ₹33,800).</p>
+            <p><strong>Impact:</strong> Constables will see their confirmed starting basic pay jump to <strong>₹47,424</strong>, alongside dedicated uniform and mess allowance increments.</p>
+            <span class="cadre-footer">Constable (7th CPC): ₹20,800 | 8th CPC (2.28x): <strong>₹47,424</strong></span>
+          </div>
+
+          <div class="cadre-box revenue">
+            <h4>Revenue &amp; Rural Development Staff</h4>
+            <div class="cadre-badge">Field Administration</div>
+            <p><strong>Covered Ranks:</strong> Patwari (Level L-8: ₹24,700), Gram Vikas Adhikari (Level L-9: ₹29,200), and Naib Tehsildar (Level L-12: ₹44,300).</p>
+            <p><strong>Impact:</strong> Field administrative workers manage local land records and rural development schemes, benefiting from substantial basic salary expansion.</p>
+            <span class="cadre-footer">Patwari (7th CPC): ₹24,700 | 8th CPC (2.28x): <strong>₹56,316</strong></span>
+          </div>
+
+          <div class="cadre-box ras">
+            <h4>Rajasthan Administrative Service (RAS)</h4>
+            <div class="cadre-badge">Executive Civil Services</div>
+            <p><strong>Covered Ranks:</strong> Sub-Divisional Magistrate / RAS Entry (Level L-14: ₹56,100), Senior RAS (Level L-16: ₹67,700), and Selection Scale RAS (Level L-18: ₹78,800).</p>
+            <p><strong>Impact:</strong> Forms the executive management of district collectorates, divisions, and state secretariats, receiving parity with central Group 'A' scales.</p>
+            <span class="cadre-footer">RAS Entry (7th CPC): ₹56,100 | 8th CPC (2.28x): <strong>₹1,27,908</strong></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>House Rent Allowance (HRA) Classification Across Rajasthan</h2>
+        <p>
+          Unlike three-tier central models, House Rent Allowance in Rajasthan is categorized into <strong>two distinct geographic classifications</strong> under the Rajasthan Civil Services (HRA) Rules:
+        </p>
+
+        <div class="city-classification-grid">
+          <div class="city-box tier-y">
+            <h4>Class Y Cities (Urban Centers)</h4>
+            <div class="badge-tag">Five Major Corporation Cities</div>
+            <p><strong>Projected HRA Rate:</strong> 18% of Basic Pay (or enhanced ceiling rate).</p>
+            <p><strong>Covered Cities:</strong> Jaipur, Jodhpur, Kota, Ajmer, and Bikaner.</p>
+            <span class="card-footer-note">Reflects prominent commercial, educational, and divisional hubs.</span>
+          </div>
+
+          <div class="city-box tier-z">
+            <h4>Class Z Areas (Other Districts &amp; Rural)</h4>
+            <div class="badge-tag">All Remaining 45+ Districts</div>
+            <p><strong>Projected HRA Rate:</strong> 9% of Basic Pay.</p>
+            <p><strong>Covered Areas:</strong> Udaipur, Alwar, Bhilwara, Sikar, Bharatpur, Pali, small towns, tehsils, and rural village schools.</p>
+            <span class="card-footer-note">Baseline rate providing housing subsidies across rural field postings.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>ACP Rules (9, 18, 27 Years) vs Central MACP (10, 20, 30 Years)</h2>
+        <p>
+          Rajasthan operates a specialized career progression scheme that provides faster financial relief than the central system:
+        </p>
+        <div class="callout-box">
+          <h4>The 9, 18, and 27 Year ACP Rule:</h4>
+          <p>
+            While Central Government employees wait 10, 20, and 30 years for Modified Assured Career Progression (MACP), Rajasthan grants <strong>Assured Career Progression (ACP) at 9, 18, and 27 years</strong> of continuous regular service.
+          </p>
+          <ul class="bullet-feature-list">
+            <li><strong>First ACP (9 Years):</strong> An employee completing 9 years without promotion advances to the next promotional Pay Level (e.g., L-4 moves to L-5, or L-10 moves to L-11).</li>
+            <li><strong>Second ACP (18 Years):</strong> Advances to the second promotional level upon completing 18 years of service.</li>
+            <li><strong>Third ACP (27 Years):</strong> Grants financial upgradation to the third promotional level upon completing 27 years.</li>
+          </ul>
+          <p>
+            Pay fixation under ACP awards one vertical 3% increment in the existing level before placing the employee into the equal or next higher cell of the upgraded level.
+          </p>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Pension Policy in Rajasthan: Old Pension Scheme (OPS) &amp; RGHS</h2>
+        <p>
+          Retirement compensation in Rajasthan carries significant policy importance:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>The Old Pension Scheme (OPS) Framework:</strong> Rajasthan was among the earliest states to announce the restoration of the defined-benefit <strong>Old Pension Scheme (OPS)</strong> for employees recruited post-2004, halting mandatory National Pension System (NPS) market deductions and replacing them with General Provident Fund (GPF) accounts. The state workforce closely monitors whether the 8th CPC will interface with OPS or the newly designed <strong>Unified Pension Scheme (UPS)</strong>.</li>
+          <li><strong>State Pensioner Revisions:</strong> More than five lakh existing pensioners will see their baseline monthly pension multiplied by the approved fitment factor, elevating the statutory minimum state pension from ₹9,000 to approximately <strong>₹20,520 per month</strong> under the 2.28 factor.</li>
+          <li><strong>Rajasthan Government Health Scheme (RGHS):</strong> State employees and pensioners benefit from cashless OPD and IPD medical coverage under RGHS, with standard monthly subscriptions deducted directly on electronic pay slips.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Digital Payroll Integration via IFMS &amp; PayManager Portals</h2>
+        <p>
+          Rajasthan administers its entire public wage disbursements through advanced digital accounting platforms:
+        </p>
+        <p>
+          All salary bills, monthly pay slips (GA-55 statements), annual increments, GPF advances, and State Insurance (SI) deductions are processed electronically through the <strong>PayManager (paymanager.raj.nic.in)</strong> and <strong>Integrated Financial Management System (IFMS 3.0)</strong> networks.
+        </p>
+        <p>
+          Once the 8th Pay Commission Government Orders are officially gazetted by the Finance (Rules) Department, revised basic pay matrices and retrospective arrear calculations will be automated within the electronic payroll network, ensuring rapid, direct-benefit bank transfers across all districts.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official unit of the Government of Rajasthan, the Finance (Rules) Department, PayManager, or the Government of India</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents (including the Rajasthan Civil Services Revised Pay Rules), and statistical indices. For official decisions, please refer directly to Government Orders and notifications issued by the Finance Department, Government of Rajasthan.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company &amp; Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central &amp; State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: RAJASTHAN SALARY CALCULATOR ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Real-Time Rajasthan Salary Calculation Engine
+    const rjLevelSelect = document.getElementById('rjLevelSelect');
+    const rjProbationStatus = document.getElementById('rjProbationStatus');
+    const rjCurrentBasic = document.getElementById('rjCurrentBasic');
+    const rjFitmentSelect = document.getElementById('rjFitmentSelect');
+    const rjCityTierSelect = document.getElementById('rjCityTierSelect');
+    const basicPayInputBlock = document.getElementById('basicPayInputBlock');
+
+    const labelOutputPrimary = document.getElementById('labelOutputPrimary');
+    const outRjRevisedBasic = document.getElementById('outRjRevisedBasic');
+    const outRjHra = document.getElementById('outRjHra');
+    const outRjCa = document.getElementById('outRjCa');
+    const outRjGross = document.getElementById('outRjGross');
+    const outRjGpfDeduct = document.getElementById('outRjGpfDeduct');
+    const outRjSiDeduct = document.getElementById('outRjSiDeduct');
+    const outRjNetTakeHome = document.getElementById('outRjNetTakeHome');
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateRjSalary() {
+      const isProbation = rjProbationStatus.value === 'probation';
+      const selectedOption = rjLevelSelect.options[rjLevelSelect.selectedIndex];
+      const base7th = parseFloat(selectedOption.value) || 20800;
+      const prob7th = parseFloat(selectedOption.getAttribute('data-prob')) || 13500;
+      const fitment = parseFloat(rjFitmentSelect.value) || 2.28;
+      const hraRate = parseFloat(rjCityTierSelect.value) || 0.18;
+
+      if (isProbation) {
+        // Probation Trainee Mode: Fixed remuneration without HRA/DA
+        basicPayInputBlock.style.opacity = '0.5';
+        labelOutputPrimary.innerText = 'Revised 8th CPC Probation Pay:';
+
+        const revisedProbationPay = Math.round((prob7th * fitment) / 100) * 100;
+        const hraAmount = 0;
+        const caAmount = 0;
+        const grossSalary = revisedProbationPay;
+
+        // Minor deductions during probation (RGHS medical only)
+        const gpfDeduct = 0;
+        const siDeduct = 440; // RGHS slab deduction
+        const netSalary = grossSalary - siDeduct;
+
+        outRjRevisedBasic.innerText = formatINR(revisedProbationPay);
+        outRjHra.innerText = '₹0 (No HRA in Probation)';
+        outRjCa.innerText = '₹0';
+        outRjGross.innerText = formatINR(grossSalary);
+        outRjGpfDeduct.innerText = '₹0';
+        outRjSiDeduct.innerText = '- ' + formatINR(siDeduct);
+        outRjNetTakeHome.innerText = formatINR(netSalary);
+      } else {
+        // Regular Employee Mode: Full Basic + HRA + Deductions
+        basicPayInputBlock.style.opacity = '1.0';
+        labelOutputPrimary.innerText = 'Revised RJ 8th CPC Basic Pay:';
+
+        const rawBasic = parseFloat(rjCurrentBasic.value) || base7th;
+        const revisedBasic = Math.round((rawBasic * fitment) / 100) * 100;
+
+        // HRA with statutory floor protection
+        let calculatedHra = revisedBasic * hraRate;
+        let floorLimit = (hraRate >= 0.18) ? 7390 : 3690;
+        calculatedHra = Math.max(calculatedHra, floorLimit);
+
+        // Fixed City Conveyance Allowance
+        const caAmount = 620;
+
+        // Estimated Gross Salary
+        const grossSalary = revisedBasic + calculatedHra + caAmount;
+
+        // Deductions: GPF slab contribution + State Insurance (SI) + RGHS
+        const gpfDeduct = Math.max(2100, Math.round(revisedBasic * 0.06));
+        const siDeduct = 1825; // SI slab + RGHS medical fund
+        const totalDeductions = gpfDeduct + siDeduct;
+
+        // Net Take-Home Pay
+        const netSalary = grossSalary - totalDeductions;
+
+        outRjRevisedBasic.innerText = formatINR(revisedBasic);
+        outRjHra.innerText = formatINR(calculatedHra);
+        outRjCa.innerText = formatINR(caAmount);
+        outRjGross.innerText = formatINR(grossSalary);
+        outRjGpfDeduct.innerText = '- ' + formatINR(gpfDeduct);
+        outRjSiDeduct.innerText = '- ' + formatINR(siDeduct);
+        outRjNetTakeHome.innerText = formatINR(netSalary);
+      }
+    }
+
+    // Sync input when level selection changes
+    rjLevelSelect.addEventListener('change', (e) => {
+      rjCurrentBasic.value = e.target.value;
+      calculateRjSalary();
+    });
+
+    rjProbationStatus.addEventListener('change', calculateRjSalary);
+    rjCurrentBasic.addEventListener('input', calculateRjSalary);
+    rjFitmentSelect.addEventListener('change', calculateRjSalary);
+    rjCityTierSelect.addEventListener('change', calculateRjSalary);
+
+    // Initial run
+    calculateRjSalary();
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero Section */
+  .calc-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* App Card */
+  .salary-app-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+
+  .app-layout-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sub-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+
+  .field-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .field-item label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .styled-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .styled-input:focus {
+    border-color: var(--brand-accent);
+    background-color: #ffffff;
+  }
+
+  .field-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+
+  /* Output Column */
+  .output-summary-column {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+    font-size: 0.92rem;
+  }
+
+  .line-item.emphasis {
+    background-color: #e0f2fe;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .line-value.brand {
+    color: #0369a1;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .font-bold {
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .line-item.gross-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+  }
+
+  .text-gross {
+    font-weight: 800;
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+  }
+
+  .deduction-header {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #dc2626;
+    margin: 0.4rem 0 0.2rem 0;
+  }
+
+  .text-deduct {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .divider-line {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.8rem 0;
+  }
+
+  .net-in-hand-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.4rem;
+  }
+
+  .net-caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .net-figure {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #047857;
+  }
+
+  .fine-print {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .bullet-feature-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  .callout-box {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-highlight);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-box h4 {
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-box p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .callout-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Cadre Boxes Grid */
+  .cadre-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .cadre-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cadre-box.education { border-top: 4px solid #047857; }
+  .cadre-box.police { border-top: 4px solid #0284c7; }
+  .cadre-box.revenue { border-top: 4px solid #d97706; }
+  .cadre-box.ras { border-top: 4px solid #2563eb; }
+
+  .cadre-box h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.35rem;
+  }
+
+  .cadre-badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    align-self: flex-start;
+  }
+
+  .cadre-box p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .cadre-footer {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-top: 0.6rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  /* City Grid */
+  .city-classification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .city-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .city-box.tier-y { border-top: 4px solid var(--brand-accent); }
+  .city-box.tier-z { border-top: 4px solid #047857; }
+
+  .city-box h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    align-self: flex-start;
+  }
+
+  .city-box p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .card-footer-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Data Table */
+  .table-scroll-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .editorial-table th {
+    background-color: #0f2b48;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .editorial-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .calc-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-heading {
+      font-size: 1.55rem;
+    }
+
+    .salary-app-card {
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .app-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cadre-card-grid, .city-classification-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .net-figure {
+      font-size: 1.35rem;
+    }
+  }
+</style>
