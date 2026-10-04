@@ -28,6 +28,7 @@ const siteUrl = "https://8paycommission.com";
       "@type": "WebSite",
       "name": "₹ 8PayCommission",
       "url": "https://8paycommission.com",
+      "description": "8th Pay Commission calculators, pay matrix level 1 to 18, fitment factors, and government circulars.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://8paycommission.com/search?q={search_term_string}",
@@ -109,7 +110,7 @@ const siteUrl = "https://8paycommission.com";
             </ul>
           </li>
 
-          <!-- #6 EXPANDED HIGH-VOLUME STATE PAY COMMISSION CLUSTER -->
+          <!-- #6 HIGH-VOLUME STATE PAY COMMISSION CLUSTER -->
           <li class="has-dropdown">
             <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
             <ul class="dropdown-menu mega-state-menu">
@@ -456,12 +457,12 @@ const siteUrl = "https://8paycommission.com";
     </article>
   </main>
 
-  <!-- ==================== FOOTER (DISCLAIMER + MULTI-STATE SITEMAP) ==================== -->
+  <!-- ==================== FOOTER: DISCLAIMER + 4 REQUIRED LINKS ONLY ==================== -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
         
-        <!-- Left Column: Disclaimer -->
+        <!-- Left Column: Disclaimer (Sketch Match) -->
         <div class="footer-col disclaimer-col">
           <h3 class="footer-title">Disclaimer</h3>
           <p class="disclaimer-text">
@@ -469,25 +470,15 @@ const siteUrl = "https://8paycommission.com";
           </p>
         </div>
 
-        <!-- Right Column: High Volume Search Target Links -->
+        <!-- Right Column: About us, Privacy policy, Terms of condition, Contact us ONLY -->
         <div class="footer-col links-col">
-          <h3 class="footer-title">State Pay Revisions & Links</h3>
-          <div class="footer-links-grid">
-            <ul class="footer-nav">
-              <li><a href="/tn-8th-pay-commission/">Tamil Nadu 8th Pay</a></li>
-              <li><a href="/up-8th-pay-commission/">Uttar Pradesh 8th Pay</a></li>
-              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay</a></li>
-              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay</a></li>
-              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay</a></li>
-            </ul>
-            <ul class="footer-nav">
-              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay</a></li>
-              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay</a></li>
-              <li><a href="/mp-8th-pay-commission/">Madhya Pradesh 8th Pay</a></li>
-              <li><a href="/8th-pay-commission-pay-matrix/">Central Pay Matrix 1-18</a></li>
-              <li><a href="/privacy-policy/">Privacy Policy</a></li>
-            </ul>
-          </div>
+          <h3 class="footer-title">Company & Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
         </div>
 
       </div>
@@ -1087,7 +1078,7 @@ const siteUrl = "https://8paycommission.com";
     margin-bottom: 0;
   }
 
-  /* --- FOOTER STYLES --- */
+  /* --- FOOTER (DISCLAIMER + REQUESTED 4 LINKS ONLY) --- */
   .footer {
     background-color: #0b1a2d;
     color: #94a3b8;
@@ -1102,7 +1093,7 @@ const siteUrl = "https://8paycommission.com";
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1.2fr;
+    grid-template-columns: 1.6fr 0.8fr;
     gap: 2.5rem;
     margin-bottom: 2.5rem;
   }
@@ -1124,30 +1115,27 @@ const siteUrl = "https://8paycommission.com";
     color: #f1f5f9;
   }
 
-  .footer-links-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .footer-nav {
+  /* Clean single list for 4 required links */
+  .footer-nav-simple {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .footer-nav li {
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-nav li a {
+  .footer-nav-simple li a {
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 0.88rem;
-    transition: color 0.15s;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
   }
 
-  .footer-nav li a:hover {
+  .footer-nav-simple li a:hover {
     color: #ffffff;
     text-decoration: underline;
+    padding-left: 4px;
   }
 
   .footer-bottom {
@@ -1298,10 +1286,6 @@ const siteUrl = "https://8paycommission.com";
   @media (max-width: 480px) {
     .total-value {
       font-size: 1.35rem !important;
-    }
-    .footer-links-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1rem !important;
     }
   }
 </style>
