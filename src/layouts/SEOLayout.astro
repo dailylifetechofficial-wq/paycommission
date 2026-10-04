@@ -1,0 +1,97 @@
+---
+/**
+ * SEO-Optimized Layout for AdSense & Search Engines
+ * Ensures all pages have proper meta tags for Google AdSense approval
+ */
+
+export interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+	canonicalURL?: string;
+	author?: string;
+	publishDate?: Date;
+	updatedDate?: Date;
+}
+
+const {
+	title,
+	description = "8PayCommission - Professional Commission Management Platform",
+	image = "https://8paycommission.com/og-image.png",
+	canonicalURL = new URL(Astro.url.pathname, Astro.site),
+	author = "8PayCommission Team",
+	publishDate,
+	updatedDate,
+} = Astro.props;
+
+const formattedPublishDate = publishDate?.toISOString().split("T")[0];
+const formattedUpdatedDate = updatedDate?.toISOString().split("T")[0];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="author" content={author} />
+
+		<!-- Open Graph / Facebook (for social sharing & AdSense crawlers) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
+
+		<!-- Canonical URL (prevents duplicate content issues) -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Robots & Indexing -->
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="googlebot" content="index, follow" />
+
+		<!-- Schema.org JSON-LD (for search engines) -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebPage",
+				"name": "{title}",
+				"description": "{description}",
+				"image": "{image}",
+				"url": "{canonicalURL}",
+				"author": {
+					"@type": "Organization",
+					"name": "8PayCommission"
+				}
+				{publishDate ? `, "datePublished": "${formattedPublishDate}"` : ""}
+				{updatedDate ? `, "dateModified": "${formattedUpdatedDate}"` : ""}
+			}
+		</script>
+
+		<!-- Google AdSense (optional - add your publisher ID) -->
+		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script> -->
+
+		<!-- Preload critical resources -->
+		<link rel="preload" as="style" href={Astro.resolve("../styles/global.css")} />
+
+		<slot name="head" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	/* Global styles will be added here */
+</style>
