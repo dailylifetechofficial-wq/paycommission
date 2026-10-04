@@ -1,0 +1,1400 @@
+---
+// src/pages/maharashtra-8th-pay-commission.astro
+const title = "₹ Maharashtra 8th Pay Commission: Salary Calculator, S-1 to S-31 Matrix & Rules (2026)";
+const description = "Complete guide on Maharashtra 8th Pay Commission. Calculate revised state government salary, S-1 to S-31 Pay Matrix, Mumbai/Pune HRA, Police, Teacher pay & UPS pension impact.";
+const canonicalUrl = "https://8paycommission.com/maharashtra-8th-pay-commission/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: Article & FAQPage for Rich Search Results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Maharashtra 8th Pay Commission: S-1 to S-31 Pay Matrix, Salary Calculator and Cadre Rules",
+          "description": "Comprehensive guide and interactive financial calculator for Maharashtra State Government employees, Zilla Parishad teachers, state police, and pensioners under the 8th Pay Commission.",
+          "author": {
+            "@type": "Organization",
+            "name": "8PayCommission Editorial Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "₹ 8PayCommission",
+            "url": "https://8paycommission.com"
+          },
+          "datePublished": "2026-05-05T09:00:00+05:30",
+          "dateModified": "2026-10-04T22:35:00+05:30"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is the Maharashtra Pay Matrix structured under Revised Pay Rules?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under the Maharashtra Civil Services (Revised Pay) Rules 2019, the state operates a distinct 31-Level Pay Matrix spanning from Level S-1 (starting at ₹15,000 for Class IV cadres) to Level S-31 (₹1,82,200 starting base for Principal Secretaries and Apex administrative posts)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the expected minimum starting basic pay in Maharashtra under the 8th Pay Commission?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under the working 2.28 fitment factor scenario, Level S-1 entry basic pay in Maharashtra is projected to rise from ₹15,000 to approximately ₹34,200 per month (or up to ₹41,040 if the state government aligns its entry floor directly with the central Level 1 benchmark of ₹18,000)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Has the Maharashtra Government implemented the Unified Pension Scheme (UPS)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the Maharashtra State Cabinet formally approved the implementation of the Unified Pension Scheme (UPS) for state government employees, guaranteeing an assured monthly pension of 50% of the average basic pay drawn in the last 12 months for employees with 25 years of qualifying service."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger active">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <a href="/state-pay-commissions/">State Pay Commissions</a> <span>›</span> 
+      <span class="active-page">Maharashtra 8th Pay Commission</span>
+    </nav>
+
+    <!-- HERO & INTERACTIVE MAHARASHTRA SALARY CALCULATOR -->
+    <section class="calc-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Maharashtra Civil Services Revision (2026)</span>
+        <h1 class="main-heading">₹ Maharashtra 8th Pay Commission Calculator & S-1 to S-31 Matrix</h1>
+        <p class="hero-summary">
+          An authoritative analysis for Maharashtra State Government employees, Zilla Parishad teachers, Maharashtra Police, Mantralaya cadres, and state pensioners. Calculate revised basic pay, city-specific HRA (Mumbai, Pune, Nagpur, Nashik), and Unified Pension Scheme (UPS) entitlements under the 8th Pay Commission.
+        </p>
+      </div>
+
+      <!-- MAIN APP INTERACTION -->
+      <div class="salary-app-card" id="mhSalaryCalculatorApp">
+        <div class="app-layout-grid">
+          
+          <!-- Column 1: Input Parameters -->
+          <div class="input-controls-column">
+            <h2 class="sub-card-title">1. Maharashtra Service Parameters</h2>
+
+            <div class="field-item">
+              <label for="mhLevelSelect">Select Maharashtra S-Level Cadre:</label>
+              <select id="mhLevelSelect" class="styled-input">
+                <option value="15000" data-level="S-1" selected>Level S-1 (Old GP ₹1,300) - Peon / Shipai / Class IV (Min ₹15,000)</option>
+                <option value="15300" data-level="S-2">Level S-2 (Old GP ₹1,400) - Naik / Daftari (Min ₹15,300)</option>
+                <option value="18000" data-level="S-5">Level S-5 (Old GP ₹1,800) - Havaldar / Driver (Min ₹18,000)</option>
+                <option value="19900" data-level="S-6">Level S-6 (Old GP ₹1,900) - Junior Clerk / Lipik / Police Constable (Min ₹19,900)</option>
+                <option value="21700" data-level="S-7">Level S-7 (Old GP ₹2,000) - Police Naik / Skilled Worker (Min ₹21,700)</option>
+                <option value="25500" data-level="S-8">Level S-8 (Old GP ₹2,400) - Senior Clerk / Head Constable (Min ₹25,500)</option>
+                <option value="29200" data-level="S-10">Level S-10 (Old GP ₹2,800) - Head Clerk / Assistant (Min ₹29,200)</option>
+                <option value="35400" data-level="S-13">Level S-13 (Old GP ₹4,200) - Primary Teacher / Police Sub-Inspector (Min ₹35,400)</option>
+                <option value="41800" data-level="S-14">Level S-14 (Old GP ₹4,300) - High School Teacher / Assistant Section Officer (Min ₹41,800)</option>
+                <option value="44900" data-level="S-15">Level S-15 (Old GP ₹4,600) - Police Inspector / Section Officer Mantralaya (Min ₹44,900)</option>
+                <option value="47600" data-level="S-16">Level S-16 (Old GP ₹4,800) - Junior College Teacher / Accounts Officer (Min ₹47,600)</option>
+                <option value="56100" data-level="S-20">Level S-20 (Old GP ₹5,400 PB-3) - Deputy Collector / DySP / Tehsildar (Min ₹56,100)</option>
+                <option value="67700" data-level="S-23">Level S-23 (Old GP ₹6,600) - Executive Engineer / SDO (Min ₹67,700)</option>
+                <option value="144200" data-level="S-30">Level S-30 (Old GP ₹10,000) - Chief Engineer / Joint Secretary (Min ₹1,44,200)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="mhCurrentBasic">Current 7th CPC Maharashtra Basic Pay (₹):</label>
+              <input type="number" id="mhCurrentBasic" class="styled-input" value="19900" min="15000" step="100" />
+              <span class="field-note">Enter your exact basic pay from your Sevaarth portal pay slip.</span>
+            </div>
+
+            <div class="field-item">
+              <label for="mhFitmentSelect">Expected Fitment Factor Multiplier:</label>
+              <select id="mhFitmentSelect" class="styled-input">
+                <option value="1.92">1.92x (Inflation Neutral / DA Merge Baseline)</option>
+                <option value="2.08">2.08x (Moderate Representation)</option>
+                <option value="2.28" selected>2.28x (NC-JCM Expected Working Base)</option>
+                <option value="2.57">2.57x (Maharashtra 7th CPC Parity Factor)</option>
+                <option value="2.86">2.86x (Staff Federation Maximum Demand)</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="mhCityCategorySelect">Duty Posting City (Maharashtra HRA Slabs):</label>
+              <select id="mhCityCategorySelect" class="styled-input">
+                <option value="0.27" data-city="X" selected>Class X (27% Metro HRA) - Mumbai MMR, Navi Mumbai, Thane, Pune</option>
+                <option value="0.18" data-city="Y">Class Y (18% Urban HRA) - Nagpur, Nashik, Aurangabad, Solapur, Kolhapur</option>
+                <option value="0.09" data-city="Z">Class Z (9% Rural HRA) - Other District Talukas, Gram Panchayats</option>
+              </select>
+            </div>
+
+            <div class="field-item">
+              <label for="mhPensionScheme">Pension System Subscriptions:</label>
+              <select id="mhPensionScheme" class="styled-input">
+                <option value="0.10" selected>UPS / NPS (10% Employee Contribution)</option>
+                <option value="0.00">Old Pension Scheme (OPS / GPF Beneficiary)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 2: Computed Pay Slip Breakdown -->
+          <div class="output-summary-column">
+            <h2 class="sub-card-title">2. Projected Monthly Pay Slip (MH)</h2>
+
+            <div class="line-item emphasis">
+              <span class="line-label">Revised MH 8th CPC Basic Pay:</span>
+              <span class="line-value brand" id="outMhRevisedBasic">₹45,372</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">House Rent Allowance (MH HRA):</span>
+              <span class="line-value font-bold" id="outMhHra">₹12,250</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Dearness Allowance (At Inception):</span>
+              <span class="line-value">0% (Merged into Base)</span>
+            </div>
+
+            <div class="line-item">
+              <span class="line-label">Transport Allowance (Estimated TA):</span>
+              <span class="line-value" id="outMhTa">₹2,430</span>
+            </div>
+
+            <div class="line-item gross-box">
+              <span class="line-label">Estimated Gross Salary:</span>
+              <span class="line-value text-gross" id="outMhGross">₹60,052</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <span class="deduction-header">Statutory Monthly Deductions</span>
+
+            <div class="line-item deduct">
+              <span class="line-label">Pension / UPS Deduction (10%):</span>
+              <span class="line-value text-deduct" id="outMhPensionDeduct">- ₹4,537</span>
+            </div>
+
+            <div class="line-item deduct">
+              <span class="line-label">GIS & Maharashtra Professional Tax:</span>
+              <span class="line-value text-deduct" id="outMhFixedDeduct">- ₹400</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <div class="net-in-hand-wrap">
+              <span class="net-caption">Net Monthly Bank Credit:</span>
+              <span class="net-figure" id="outMhNetTakeHome">₹55,115</span>
+            </div>
+            
+            <p class="fine-print">
+              *Calculated based on Maharashtra Civil Services (Revised Pay) Rules modeling. Final in-hand salary depends on Government Resolutions (GR) issued by the Finance Department.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1500+ WORDS COMPREHENSIVE EDITORIAL ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>The Architecture of Pay Revisions in Maharashtra State Administration</h2>
+        <p>
+          The State of Maharashtra maintains one of the largest and most complex public administration systems in India. With more than seventeen lakh active state government employees—comprising the Mantralaya Secretariat in Mumbai, Maharashtra Police Department, Zilla Parishad primary and secondary teachers, public healthcare personnel, municipal corporation staff, and revenue field formations—alongside more than eight lakh pensioners, the recommendations of the <strong>8th Central Pay Commission</strong> are of paramount importance.
+        </p>
+        <p>
+          Historically, the Government of Maharashtra does not appoint a completely separate commission to devise an independent wage architecture from scratch. Instead, following the notification of a Central Pay Commission by the Union Ministry of Finance, the state government constitutes a high-level <strong>State Pay Revision Committee</strong> (famously led during the 7th CPC era by retired Additional Chief Secretary <strong>K.P. Bakshi</strong>).
+        </p>
+        <p>
+          The Bakshi Committee assesses the financial liabilities of the state exchequer, evaluates administrative cadre representations, and aligns state designations with the national framework through the <strong>Maharashtra Civil Services (Revised Pay) Rules</strong>. In the previous revision, Maharashtra formally implemented revised pay scales with a <strong>2.57 Fitment Factor</strong> retrospectively from January 1, 2016, setting a clear institutional precedent for the upcoming 8th Pay Commission.
+        </p>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>The Maharashtra S-1 to S-31 Pay Matrix Structure Explained</h2>
+        <p>
+          While the Central Government operates an 18-Level Pay Matrix, Maharashtra features an adapted <strong>31-Level Pay Matrix (Levels S-1 to S-31)</strong> codified under the Maharashtra Civil Services (Revised Pay) Rules, 2019:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Levels S-1 to S-5 (Class IV / Operational Staff):</strong> Begins at Level S-1 with a minimum basic pay of ₹15,000 for Peons (Shipai), Sweepers, and Daftaris (old Grade Pay ₹1,300), progressing through Naik and Driver cadres up to Level S-5 (₹18,000).</li>
+          <li><strong>Levels S-6 to S-10 (Junior Clerical &amp; Constabulary):</strong> Encompasses Junior Clerks (Lipik), Police Constables (Level S-6: ₹19,900), Police Naiks (Level S-7: ₹21,700), Head Constables (Level S-8: ₹25,500), and Head Clerks / Assistants (Level S-10: ₹29,200).</li>
+          <li><strong>Levels S-13 to S-16 (Education &amp; Police Supervisory):</strong> Covers Primary Teachers (Zilla Parishad), Police Sub-Inspectors (Level S-13: ₹35,400), High School Teachers, ASOs (Level S-14: ₹41,800), Police Inspectors, and Section Officers in Mantralaya (Level S-15: ₹44,900).</li>
+          <li><strong>Levels S-20 to S-31 (State Civil Services &amp; Senior Administration):</strong> Direct recruitment ranks via MPSC including Deputy Collectors, DySPs, Tehsildars (Level S-20: ₹56,100), Executive Engineers (Level S-23: ₹67,700), Chief Engineers, and Apex administrative secretaries (Level S-31: ₹1,82,200).</li>
+        </ul>
+        <p>
+          Every vertical downward step in this matrix represents an annual <strong>compounding increment of exactly 3%</strong>, credited on either January 1st or July 1st based on the employee's appointment or promotional milestone.
+        </p>
+      </section>
+
+      <!-- MAHARASHTRA S-LEVEL MASTER COMPARISON TABLE -->
+      <section class="editorial-chapter">
+        <h2>Maharashtra Pay Matrix: S-1 to S-25 Projections Under 8th CPC (2.28x Factor)</h2>
+        <p>
+          The table below illustrates starting basic pay cells (Cell 1) across prominent Maharashtra S-levels under the 7th CPC baseline and projected figures under the working <strong>2.28 Fitment Factor</strong>:
+        </p>
+
+        <div class="table-scroll-container">
+          <table class="editorial-table">
+            <thead>
+              <tr>
+                <th>Maharashtra S-Level</th>
+                <th>Pre-Revised Grade Pay</th>
+                <th>7th CPC Base (Cell 1)</th>
+                <th>8th CPC Base (2.28x)</th>
+                <th>Standard Postings in Maharashtra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Level S-1</strong></td>
+                <td>GP ₹1,300</td>
+                <td>₹15,000</td>
+                <td><strong>₹34,200</strong></td>
+                <td>Peon (Shipai), Sweeper, Watchman, Hamal</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-2</strong></td>
+                <td>GP ₹1,400</td>
+                <td>₹15,300</td>
+                <td><strong>₹34,884</strong></td>
+                <td>Naik, Record Keeper, Daftari</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-5</strong></td>
+                <td>GP ₹1,800</td>
+                <td>₹18,000</td>
+                <td><strong>₹41,040</strong></td>
+                <td>Driver (Regular), Havaldar</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-6</strong></td>
+                <td>GP ₹1,900</td>
+                <td>₹19,900</td>
+                <td><strong>₹45,372</strong></td>
+                <td>Junior Clerk (Lipik), Police Constable, Typist</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-7</strong></td>
+                <td>GP ₹2,000</td>
+                <td>₹21,700</td>
+                <td><strong>₹49,476</strong></td>
+                <td>Police Naik, Talathi, Skilled Artisan</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-8</strong></td>
+                <td>GP ₹2,400</td>
+                <td>₹25,500</td>
+                <td><strong>₹58,140</strong></td>
+                <td>Senior Clerk (Varishtha Lipik), Police Head Constable</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-10</strong></td>
+                <td>GP ₹2,800</td>
+                <td>₹29,200</td>
+                <td><strong>₹66,576</strong></td>
+                <td>Assistant, Head Clerk, Revenue Assistant</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-13</strong></td>
+                <td>GP ₹4,200</td>
+                <td>₹35,400</td>
+                <td><strong>₹80,712</strong></td>
+                <td>Primary Teacher (ZP), Police Sub-Inspector (PSI), Junior Engineer</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-14</strong></td>
+                <td>GP ₹4,300</td>
+                <td>₹41,800</td>
+                <td><strong>₹95,304</strong></td>
+                <td>High School Teacher, Assistant Section Officer (ASO Mantralaya)</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-15</strong></td>
+                <td>GP ₹4,600</td>
+                <td>₹44,900</td>
+                <td><strong>₹1,02,372</strong></td>
+                <td>Police Inspector (PI), Section Officer (Mantralaya), Tehsildar (Entry)</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-16</strong></td>
+                <td>GP ₹4,800</td>
+                <td>₹47,600</td>
+                <td><strong>₹1,08,528</strong></td>
+                <td>Junior College Teacher, Accounts Officer, Block Development Officer (BDO)</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-20</strong></td>
+                <td>GP ₹5,400 (PB-3)</td>
+                <td>₹56,100</td>
+                <td><strong>₹1,27,908</strong></td>
+                <td>Deputy Collector, DySP / ACP, Tehsildar (Senior Selection)</td>
+              </tr>
+              <tr>
+                <td><strong>Level S-23</strong></td>
+                <td>GP ₹6,600</td>
+                <td>₹67,700</td>
+                <td><strong>₹1,54,356</strong></td>
+                <td>Executive Engineer, Sub-Divisional Officer (SDO)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>House Rent Allowance (HRA) Classification Across Maharashtra Cities</h2>
+        <p>
+          In Maharashtra, House Rent Allowance is administered based on population density under state financial rules, directly reflecting high urban living expenses:
+        </p>
+
+        <div class="city-classification-grid">
+          <div class="city-box tier-x">
+            <h4>Class X (Metropolitan Areas)</h4>
+            <div class="badge-tag">Mumbai MMR, Thane, Pune MMR</div>
+            <p><strong>Baseline HRA Rate:</strong> 27% of Basic Pay (Projected up to 30%).</p>
+            <p><strong>Covered Municipalities:</strong> Greater Mumbai (BMC), Navi Mumbai, Thane, Pune (PMC), and Pimpri-Chinchwad (PCMC).</p>
+            <span class="card-footer-note">Reflects the highest residential rental cost bracket in the country.</span>
+          </div>
+
+          <div class="city-box tier-y">
+            <h4>Class Y (Major Urban Corporations)</h4>
+            <div class="badge-tag">Population 5 Lakh to 50 Lakh</div>
+            <p><strong>Baseline HRA Rate:</strong> 18% of Basic Pay.</p>
+            <p><strong>Covered Cities:</strong> Nagpur, Nashik, Chhatrapati Sambhajinagar (Aurangabad), Solapur, Kolhapur, Amravati, Nanded, Sangli, and Jalgaon.</p>
+            <span class="card-footer-note">Covers prominent division headquarters and industrial municipal centers.</span>
+          </div>
+
+          <div class="city-box tier-z">
+            <h4>Class Z (Other Districts &amp; Rural Stations)</h4>
+            <div class="badge-tag">Taluka Headposts &amp; Gram Panchayats</div>
+            <p><strong>Baseline HRA Rate:</strong> 9% of Basic Pay.</p>
+            <p><strong>Covered Areas:</strong> Smaller taluka stations, rural Zilla Parishad schools, police chowkis, and non-classified areas.</p>
+            <span class="card-footer-note">Baseline rate ensuring minimum housing subsidy across rural postings.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Pension Policy in Maharashtra: Approval of the Unified Pension Scheme (UPS)</h2>
+        <p>
+          Maharashtra stands out as one of the pioneer states regarding retirement social security reforms:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Cabinet Approval of UPS:</strong> In response to employee representations regarding the National Pension System (NPS), the Maharashtra State Cabinet officially resolved to adopt the <strong>Unified Pension Scheme (UPS)</strong> for state government employees, guaranteeing:
+            <ul class="sub-list">
+              <li>An assured monthly pension of <strong>50% of the average basic pay</strong> drawn over the last 12 months prior to retirement for employees completing 25 years of qualifying service.</li>
+              <li>A statutory minimum pension floor of <strong>₹10,000 per month</strong> for employees completing at least 10 years of service.</li>
+              <li>An assured family pension of <strong>60% of the employee's pension</strong> upon their demise, complete with full Dearness Relief (DR) indexation.</li>
+            </ul>
+          </li>
+          <li><strong>Impact on State Pensioners:</strong> Over eight lakh existing retirees will see their basic pensions multiplied directly by the approved 8th CPC fitment factor, raising the minimum pension floor in Maharashtra from ₹9,000 to approximately <strong>₹20,520 per month</strong> under the 2.28 factor.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Career Progression (ACPS) and the Sevaarth Payroll Network</h2>
+        <p>
+          State employee compensation in Maharashtra is supported by distinct career progression and digital governance systems:
+        </p>
+        <div class="callout-box">
+          <h4>Assured Career Progression Scheme (ACPS 10, 20, 30 Years):</h4>
+          <p>
+            To alleviate stagnation in promotional ladders, the state government implements the <strong>Modified Assured Career Progression Scheme (ACPS)</strong> at 10, 20, and 30 years of regular service. An employee who stagnates without regular departmental promotion is awarded financial upgradation to the next higher S-Level in the hierarchy, with pay fixed by granting one 3% vertical increment.
+          </p>
+          <p>
+            All salary calculations, monthly pay slip disbursements, annual increments, and pension remittances are processed electronically via the state's centralized <strong>Sevaarth (sevaarth.mahakosh.gov.in)</strong> digital payroll platform under the Directorate of Accounts and Treasuries, ensuring seamless execution across all 36 districts of Maharashtra.
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official unit of the Government of Maharashtra, the Finance Department, Mahakosh, or the Government of India</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents (including the Maharashtra Civil Services Revised Pay Rules 2019), and statistical indices. For official decisions, please refer directly to Government Resolutions (GR) issued by the Government of Maharashtra.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company &amp; Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central &amp; State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT: MAHARASHTRA SALARY CALCULATOR ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Real-Time Maharashtra Salary Calculation Engine
+    const mhLevelSelect = document.getElementById('mhLevelSelect');
+    const mhCurrentBasic = document.getElementById('mhCurrentBasic');
+    const mhFitmentSelect = document.getElementById('mhFitmentSelect');
+    const mhCityCategorySelect = document.getElementById('mhCityCategorySelect');
+    const mhPensionScheme = document.getElementById('mhPensionScheme');
+
+    const outMhRevisedBasic = document.getElementById('outMhRevisedBasic');
+    const outMhHra = document.getElementById('outMhHra');
+    const outMhTa = document.getElementById('outMhTa');
+    const outMhGross = document.getElementById('outMhGross');
+    const outMhPensionDeduct = document.getElementById('outMhPensionDeduct');
+    const outMhFixedDeduct = document.getElementById('outMhFixedDeduct');
+    const outMhNetTakeHome = document.getElementById('outMhNetTakeHome');
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculateMhSalary() {
+      const basic = parseFloat(mhCurrentBasic.value) || 0;
+      const fitment = parseFloat(mhFitmentSelect.value) || 2.28;
+      const hraRate = parseFloat(mhCityCategorySelect.value) || 0.27;
+      const pensionRate = parseFloat(mhPensionScheme.value) || 0.10;
+
+      // 1. Revised Basic Pay (rounded to nearest 100)
+      const revisedBasic = Math.round((basic * fitment) / 100) * 100;
+
+      // 2. House Rent Allowance (HRA) with Maharashtra floor protection
+      let calculatedHra = revisedBasic * hraRate;
+      let floorLimit = 3690;
+      if (hraRate >= 0.27) floorLimit = 11080;
+      else if (hraRate >= 0.18) floorLimit = 7390;
+      calculatedHra = Math.max(calculatedHra, floorLimit);
+
+      // 3. Transport Allowance (TA estimation)
+      const selectedOption = mhLevelSelect.options[mhLevelSelect.selectedIndex];
+      const levelStr = selectedOption.getAttribute('data-level') || 'S-6';
+      const levelNum = parseInt(levelStr.replace('S-', '')) || 6;
+      let baseTa = (levelNum >= 15) ? 7200 : (levelNum >= 6 ? 3600 : 1350);
+      if (hraRate < 0.18) {
+        baseTa = (levelNum >= 15) ? 3600 : (levelNum >= 6 ? 1800 : 900);
+      }
+      const calculatedTa = baseTa * 1.60;
+
+      // 4. Estimated Gross Salary
+      const grossSalary = revisedBasic + calculatedHra + calculatedTa;
+
+      // 5. Deductions
+      const pensionDeduction = revisedBasic * pensionRate;
+      const fixedDeductions = 400; // GIS (Group Insurance Scheme) + Maharashtra Professional Tax (~₹200)
+      const totalDeductions = pensionDeduction + fixedDeductions;
+
+      // 6. Net Take-Home Pay
+      const netSalary = grossSalary - totalDeductions;
+
+      // Update DOM
+      outMhRevisedBasic.innerText = formatINR(revisedBasic);
+      outMhHra.innerText = formatINR(calculatedHra);
+      outMhTa.innerText = formatINR(calculatedTa);
+      outMhGross.innerText = formatINR(grossSalary);
+      outMhPensionDeduct.innerText = pensionDeduction > 0 ? ('- ' + formatINR(pensionDeduction)) : '₹0 (GPF)';
+      outMhFixedDeduct.innerText = '- ' + formatINR(fixedDeductions);
+      outMhNetTakeHome.innerText = formatINR(netSalary);
+    }
+
+    // Sync input when MH Level dropdown changes
+    mhLevelSelect.addEventListener('change', (e) => {
+      mhCurrentBasic.value = e.target.value;
+      calculateMhSalary();
+    });
+
+    mhCurrentBasic.addEventListener('input', calculateMhSalary);
+    mhFitmentSelect.addEventListener('change', calculateMhSalary);
+    mhCityCategorySelect.addEventListener('change', calculateMhSalary);
+    mhPensionScheme.addEventListener('change', calculateMhSalary);
+
+    // Initial run
+    calculateMhSalary();
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero Section */
+  .calc-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* App Card */
+  .salary-app-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+
+  .app-layout-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sub-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+
+  .field-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .field-item label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .styled-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .styled-input:focus {
+    border-color: var(--brand-accent);
+    background-color: #ffffff;
+  }
+
+  .field-note {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+
+  /* Output Column */
+  .output-summary-column {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem 0;
+    font-size: 0.92rem;
+  }
+
+  .line-item.emphasis {
+    background-color: #e0f2fe;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .line-value.brand {
+    color: #0369a1;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .font-bold {
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .line-item.gross-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+  }
+
+  .text-gross {
+    font-weight: 800;
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+  }
+
+  .deduction-header {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #dc2626;
+    margin: 0.4rem 0 0.2rem 0;
+  }
+
+  .text-deduct {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .divider-line {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.8rem 0;
+  }
+
+  .net-in-hand-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.4rem;
+  }
+
+  .net-caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+  }
+
+  .net-figure {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #047857;
+  }
+
+  .fine-print {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .bullet-feature-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  .sub-list {
+    margin-left: 1.2rem;
+    margin-top: 0.4rem;
+  }
+
+  .callout-box {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-highlight);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-box h4 {
+    color: var(--brand-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-box p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .callout-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* City Grid */
+  .city-classification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .city-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .city-box.tier-x { border-top: 4px solid var(--brand-highlight); }
+  .city-box.tier-y { border-top: 4px solid var(--brand-accent); }
+  .city-box.tier-z { border-top: 4px solid #047857; }
+
+  .city-box h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    align-self: flex-start;
+  }
+
+  .city-box p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .card-footer-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Data Table */
+  .table-scroll-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+
+  .editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .editorial-table th {
+    background-color: #0f2b48;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .editorial-table tbody tr:hover {
+    background-color: #f8fafc;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .calc-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-heading {
+      font-size: 1.55rem;
+    }
+
+    .salary-app-card {
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .app-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .city-classification-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .net-figure {
+      font-size: 1.35rem;
+    }
+  }
+</style>
