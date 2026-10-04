@@ -91,7 +91,7 @@ const canonicalUrl = "https://8paycommission.com/ups-unified-pension-scheme-8th-
         <span class="bar"></span>
       </button>
 
-      {<nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">}
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="/" class="nav-item">Home</a></li>
           
@@ -317,11 +317,11 @@ const canonicalUrl = "https://8paycommission.com/ups-unified-pension-scheme-8th-
         </p>
         <div class="callout-box">
           <h4>The Core UPS Assured Pension Equation:</h4>
-          <p>
-            $$\text{Assured Monthly Pension} = 50\% \times \text{Average Basic Pay (Last 12 Months)} \times \left(\frac{\text{Qualifying Service Years}}{25}\right)$$
+          <p class="formula-box">
+            <strong>Assured Monthly Pension</strong> = 50% × [Average Basic Pay in Last 12 Months] × (Qualifying Service Years ÷ 25)
           </p>
           <p>
-            Because the numerator of this equation is tied directly to the <strong>average basic pay</strong> drawn across the final year of active duty, any upward revision in the Pay Matrix via the 8th CPC fitment factor directly escalates the baseline from which lifetime monthly pensions are computed.
+            Because the calculation is tied directly to the <strong>average basic pay</strong> drawn across the final year of active duty, any upward revision in the Pay Matrix via the 8th CPC fitment factor directly escalates the baseline from which lifetime monthly pensions are computed.
           </p>
           <p>
             <em>Example:</em> An employee retiring at Pay Level 7 with a 7th CPC average basic pay of ₹65,000 would be entitled to an assured basic pension of ₹32,500 under UPS. When the 8th Pay Commission institutes a <strong>2.28 Fitment Factor</strong>, that same official's basic pay shifts to ₹1,48,200. Consequently, their guaranteed monthly pension under the UPS immediately jumps to <strong>₹74,100 per month</strong> for life, backed by sovereign guarantee.
@@ -433,14 +433,14 @@ const canonicalUrl = "https://8paycommission.com/ups-unified-pension-scheme-8th-
         </p>
         <div class="callout-box">
           <h4>The Lump-Sum Superannuation Formula:</h4>
-          <p>
-            $$\text{Lump-Sum Exit Payment} = \frac{1}{10} \times \left(\text{Monthly Pay} + \text{DA on Date of Superannuation}\right) \times \text{Completed Six-Monthly Periods (SMP)}$$
+          <p class="formula-box">
+            <strong>Lump-Sum Exit Payment</strong> = (1 ÷ 10) × [Monthly Pay + DA on Date of Superannuation] × Completed Six-Monthly Periods (SMP)
           </p>
           <p>
             <em>Example under 8th CPC Baseline:</em> Consider an employee superannuating after 30 years of qualifying service (60 completed SMPs) with a revised monthly basic pay of ₹1,20,000 (and 5% accrued post-implementation DA, making emoluments ₹1,26,000).
           </p>
           <p>
-            $$\text{Lump-Sum Payment} = \frac{1}{10} \times ₹1,26,000 \times 60 = ₹7,56,000$$
+            <strong>Lump-Sum Payment</strong> = 0.10 × ₹1,26,000 × 60 = <strong>₹7,56,000</strong>
           </p>
           <p>
             This <strong>₹7,56,000</strong> is paid directly to the retiree as a liquid cash credit at retirement, entirely separate from and <em>in addition to</em> their statutory retirement gratuity (capped up to ₹25L–₹35L), while leaving their 50% monthly assured pension completely intact.
@@ -1146,6 +1146,15 @@ const canonicalUrl = "https://8paycommission.com/ups-unified-pension-scheme-8th-
 
   .callout-box p:last-child {
     margin-bottom: 0;
+  }
+
+  .formula-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--brand-primary);
   }
 
   /* Pillar Grid */
