@@ -1,0 +1,1073 @@
+---
+// src/pages/contact-us.astro
+const title = "Contact Us - 8PayCommission.com | Support & Editorial Inquiries (2026)";
+const description = "Get in touch with 8PayCommission.com. Submit calculation feedback, editorial inquiries, Government Order updates, or technical support questions.";
+const canonicalUrl = "https://8paycommission.com/contact-us/";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Structured Data: ContactPage & Organization Schema for AdSense Trust -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "8PayCommission",
+          "url": "https://8paycommission.com",
+          "logo": "https://8paycommission.com/favicon.svg",
+          "email": "dailylifetech.official@gmail.com",
+          "description": "Independent analytical and financial education portal dedicated to civil service compensation, pay matrices, pension modeling, and Pay Commission developments across India."
+        },
+        {
+          "@type": "ContactPage",
+          "name": "Contact Us - 8PayCommission",
+          "url": "https://8paycommission.com/contact-us/",
+          "description": "Contact channels and editorial communication desk for 8PayCommission.com."
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="8PayCommission Home">
+        <span class="rupee-symbol">₹</span>
+        <span class="logo-text">8PayCommission<span class="dot">.com</span></span>
+      </a>
+
+      <button id="mobileNavToggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-item">Home</a></li>
+          
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Salary Calculator <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-salary-calculator/">8th Pay Commission Salary Calculator</a></li>
+              <li><a href="/8th-pay-commission-arrears-calculator/">8th Pay Commission Arrears Calculator</a></li>
+              <li><a href="/8th-pay-commission-pension-calculator/">8th Pay Commission Pension Calculator</a></li>
+              <li><a href="/da-hra-calculator-8th-pay-commission/">DA HRA Calculator 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pay Matrix <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pay-matrix/">8th Pay Commission Pay Matrix</a></li>
+              <li><a href="/pay-matrix-level-1-to-5/">Pay Matrix Level 1 to 5</a></li>
+              <li><a href="/pay-matrix-level-6-to-9/">Pay Matrix Level 6 to 9</a></li>
+              <li><a href="/pay-matrix-level-10-to-18/">Pay Matrix Level 10 to 18</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Fitment Factor <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/fitment-factor-8th-pay-commission/">Fitment Factor 8th Pay Commission</a></li>
+              <li><a href="/minimum-basic-pay-8th-pay-commission/">Minimum Basic Pay 8th Pay Commission</a></li>
+              <li><a href="/fitment-factor-2-86-vs-2-57/">Fitment Factor 2.86 vs 2.57</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">DA & Allowances <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/da-merger-8th-pay-commission/">DA Merger 8th Pay Commission</a></li>
+              <li><a href="/hra-slabs-8th-pay-commission/">HRA Slabs 8th Pay Commission</a></li>
+              <li><a href="/transport-allowance-8th-pay-commission/">Transport Allowance 8th Pay Commission</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">Pensioners <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/8th-pay-commission-pension-hike/">8th Pay Commission Pension Hike</a></li>
+              <li><a href="/gratuity-limit-8th-pay-commission/">Gratuity Limit 8th Pay Commission</a></li>
+              <li><a href="/ups-unified-pension-scheme-8th-cpc/">UPS Unified Pension Scheme 8th CPC</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <button class="dropdown-trigger">State Pay Commission <span class="arrow">▾</span></button>
+            <ul class="dropdown-menu mega-state-menu">
+              <li><a href="/tn-8th-pay-commission/">TN 8th Pay Commission (Tamil Nadu)</a></li>
+              <li><a href="/up-8th-pay-commission/">UP 8th Pay Commission (Uttar Pradesh)</a></li>
+              <li><a href="/maharashtra-8th-pay-commission/">Maharashtra 8th Pay Commission</a></li>
+              <li><a href="/rajasthan-8th-pay-commission/">Rajasthan 8th Pay Commission</a></li>
+              <li><a href="/bihar-8th-pay-commission/">Bihar 8th Pay Commission</a></li>
+              <li><a href="/west-bengal-8th-pay-commission/">West Bengal Pay Commission</a></li>
+              <li><a href="/karnataka-8th-pay-commission/">Karnataka 8th Pay Commission</a></li>
+              <li><a href="/mp-8th-pay-commission/">MP 8th Pay Commission (Madhya Pradesh)</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/8th-pay-commission-latest-news/" class="nav-item">Latest News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN PAGE CONTAINER ==================== -->
+  <main class="page-container">
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumb-trail" aria-label="Breadcrumb Navigation">
+      <a href="/">Home</a> <span>›</span> 
+      <span class="active-page">Contact Us</span>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="contact-hero-wrapper">
+      <div class="hero-text-block">
+        <span class="status-pill">Editorial Help Desk & Inquiries</span>
+        <h1 class="main-heading">Contact Our Editorial Team</h1>
+        <p class="hero-summary">
+          Have questions regarding salary formulas, state pay matrix tables, calculation discrepancies, or gazetted Government Orders? We are here to assist. Connect directly with our research and technical desk.
+        </p>
+      </div>
+
+      <!-- CONTACT INFO & FORM DUAL GRID -->
+      <div class="contact-layout-grid">
+        
+        <!-- Left: Direct Channels & Operational Details -->
+        <div class="contact-info-panel">
+          <h2 class="panel-title">Direct Communication Channels</h2>
+          
+          <div class="channel-card">
+            <div class="channel-icon">✉️</div>
+            <div class="channel-content">
+              <h3>Official Email Address</h3>
+              <p>For editorial queries, calculator feedback, corrections, and general support:</p>
+              <a href="mailto:dailylifetech.official@gmail.com" class="direct-mail-link">dailylifetech.official@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">⏱️</div>
+            <div class="channel-content">
+              <h3>Response Timeframe</h3>
+              <p>Our editorial and technical team reviews all incoming inquiries promptly. You can expect a detailed response within <strong>24 to 48 business hours</strong> (Monday to Friday).</p>
+            </div>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">📍</div>
+            <div class="channel-content">
+              <h3>Operating Jurisdiction</h3>
+              <p><strong>8PayCommission.com</strong> operates digitally across India, covering all Central Government departments, Defence headquarters, and 28 State Government administrations.</p>
+            </div>
+          </div>
+
+          <div class="editorial-scope-box">
+            <h4>Common Inquiries We Assist With:</h4>
+            <ul class="scope-list">
+              <li>Reporting calculation bugs or formula improvements on our interactive tools.</li>
+              <li>Providing tips on newly published State Government Orders (GOs) or Shasanadesh.</li>
+              <li>Inquiries regarding pension commutation formulas and tax relief under Section 89(1).</li>
+              <li>Permission requests for referencing our data tables in educational journals or research.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Message Dispatch Form -->
+        <div class="contact-form-panel">
+          <h2 class="panel-title">Send Us a Direct Message</h2>
+          <form id="contactForm" class="styled-form" novalidate>
+            
+            <div class="form-group">
+              <label for="senderName">Your Full Name <span class="required">*</span></label>
+              <input type="text" id="senderName" class="form-input" placeholder="e.g. Rajesh Sharma" required />
+              <span class="error-msg" id="nameError">Please enter your name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="senderEmail" class="form-input" placeholder="e.g. yourname@gmail.com" required />
+              <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inquiryType">Nature of Inquiry <span class="required">*</span></label>
+              <select id="inquiryType" class="form-input" required>
+                <option value="calculator">Calculator Feedback or Bug Report</option>
+                <option value="editorial">Editorial Correction or Clarification</option>
+                <option value="state">State Pay Commission Data Update</option>
+                <option value="pension">Pension or Retirement Scheme Query</option>
+                <option value="general" selected>General Feedback or Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="messageSubject">Subject <span class="required">*</span></label>
+              <input type="text" id="messageSubject" class="form-input" placeholder="e.g. Discrepancy in Level 6 Transport Allowance calculation" required />
+              <span class="error-msg" id="subjectError">Please provide a subject.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="messageBody">Detailed Message <span class="required">*</span></label>
+              <textarea id="messageBody" class="form-textarea" rows="5" placeholder="Please describe your query, feedback, or specific calculation with relevant cadre details..." required></textarea>
+              <span class="error-msg" id="bodyError">Please enter your message (at least 15 characters).</span>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span>Send Message</span>
+              <span class="btn-arrow">→</span>
+            </button>
+
+            <div class="form-alert success" id="formSuccessAlert">
+              Thank you! Your message has been prepared. If your mail client does not open automatically, please send your inquiry directly to <strong>dailylifetech.official@gmail.com</strong>.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ADSense TRUST & VERIFICATION GUIDELINES ==================== -->
+    <article class="editorial-body-wrapper">
+
+      <section class="editorial-chapter">
+        <h2>Editorial Corrections & Fact-Checking Policy</h2>
+        <p>
+          At <strong>8PayCommission.com</strong>, we are committed to mathematical accuracy and informational transparency. Public sector compensation involves statutory service regulations, Fundamental Rules (FR), and strict gazetted resolutions. A misplaced multiplier or rounding error can mislead public servants planning their family budgets.
+        </p>
+        <p>
+          If you believe any calculation, pay matrix cell, allowance slab, or cadre description published on this portal contains an error:
+        </p>
+        <ol class="editorial-number-list">
+          <li>Please email us at <a href="mailto:dailylifetech.official@gmail.com">dailylifetech.official@gmail.com</a> with the subject line <strong>"Correction Request: [Page Title / URL]"</strong>.</li>
+          <li>Include the specific page URL, the identified figure, and an official reference or Government Order (GO) citation supporting the requested revision.</li>
+          <li>Our editorial desk reviews all correction notices within 24 hours. Verified corrections are updated directly in our live matrices and acknowledged where appropriate.</li>
+        </ol>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Important Advisory on Personal & Sensitive Data</h2>
+        <p>
+          To maintain user privacy and digital security:
+        </p>
+        <ul class="bullet-feature-list">
+          <li><strong>Do NOT send sensitive credentials:</strong> Never email us your permanent bank account numbers, Aadhaar numbers, login passwords, or biometric information.</li>
+          <li><strong>Zero Tracking Guarantee:</strong> Our web calculators run entirely client-side on your local device. We never capture, harvest, or sell the salary numbers, Grade Pay values, or pension figures you simulate on our calculators.</li>
+          <li><strong>Educational Scope:</strong> We are a private analytical research desk and cannot intervene in individual pension sanction disputes, GPF non-refunds, or disciplinary department cases. Such administrative matters must be addressed directly to your departmental Drawing and Disbursing Officer (DDO) or regional Accountant General (AG) office.</li>
+        </ul>
+      </section>
+
+      <section class="editorial-chapter">
+        <h2>Legal Notice & Institutional Disclaimer</h2>
+        <p>
+          <strong>8PayCommission.com</strong> is an independent digital media platform. We are not affiliated with, endorsed by, or operated by the Government of India, the Ministry of Finance, the Department of Expenditure, the Department of Personnel and Training (DoPT), or any State Government Finance Department.
+        </p>
+        <p>
+          All calculations, projections, and fitment estimates published across our portal represent mathematical simulations based on employee union memorandums, historical Pay Commission precedents, and public statistics. For formal legal entitlements and administrative determinations, employees must always refer to official notifications published in the Gazette of India.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <!-- Left: Disclaimer -->
+        <div class="footer-col disclaimer-col">
+          <h3 class="footer-title">Disclaimer</h3>
+          <p class="disclaimer-text">
+            <strong>8paycommission.com</strong> is an independent educational and analytical portal created to help government employees and pensioners understand pay structures, formulas, and estimates. We are <strong>not affiliated with, endorsed by, or an official unit of the Government of India, DoPT, the Ministry of Finance, or any State Government</strong>. All calculations, fitment factor scenarios, and salary projections provided on this portal are for reference purposes based on employee federation representations, historical precedents, and statistical indices. For official decisions, please refer directly to gazetted notifications issued by the Government of India.
+          </p>
+        </div>
+
+        <!-- Right: 4 Required Links Only -->
+        <div class="footer-col links-col">
+          <h3 class="footer-title">Company & Legal</h3>
+          <ul class="footer-nav-simple">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-condition/">Terms of Condition</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ₹ 8PayCommission.com. All Rights Reserved. Built for Central & State Government Employees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CLIENT SCRIPT ==================== -->
+  <script is:inline>
+    // Navigation drawer for mobile
+    const toggleBtn = document.getElementById('mobileNavToggle');
+    const navMenu = document.getElementById('mainNavigation');
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+      });
+    }
+
+    // Touch dropdown handlers
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          const parent = btn.parentElement;
+          parent.classList.toggle('active');
+        }
+      });
+    });
+
+    // Client-Side Contact Form Submission Handling
+    const contactForm = document.getElementById('contactForm');
+    const senderName = document.getElementById('senderName');
+    const senderEmail = document.getElementById('senderEmail');
+    const inquiryType = document.getElementById('inquiryType');
+    const messageSubject = document.getElementById('messageSubject');
+    const messageBody = document.getElementById('messageBody');
+    const formSuccessAlert = document.getElementById('formSuccessAlert');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const subjectError = document.getElementById('subjectError');
+    const bodyError = document.getElementById('bodyError');
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+
+        // Reset errors
+        nameError.style.display = 'none';
+        emailError.style.display = 'none';
+        subjectError.style.display = 'none';
+        bodyError.style.display = 'none';
+
+        // Validate Name
+        if (!senderName.value.trim()) {
+          nameError.style.display = 'block';
+          isValid = false;
+        }
+
+        // Validate Email
+        if (!senderEmail.value.trim() || !validateEmail(senderEmail.value.trim())) {
+          emailError.style.display = 'block';
+          isValid = false;
+        }
+
+        // Validate Subject
+        if (!messageSubject.value.trim()) {
+          subjectError.style.display = 'block';
+          isValid = false;
+        }
+
+        // Validate Body
+        if (!messageBody.value.trim() || messageBody.value.trim().length < 15) {
+          bodyError.style.display = 'block';
+          isValid = false;
+        }
+
+        if (isValid) {
+          // Construct formatted mailto fallback
+          const targetEmail = 'dailylifetech.official@gmail.com';
+          const fullSubject = encodeURIComponent(`[${inquiryType.value.toUpperCase()}] ${messageSubject.value.trim()}`);
+          const formattedBody = encodeURIComponent(
+            `Name: ${senderName.value.trim()}\n` +
+            `Email: ${senderEmail.value.trim()}\n` +
+            `Inquiry Category: ${inquiryType.value}\n\n` +
+            `Message Details:\n${messageBody.value.trim()}\n\n` +
+            `---\nSent via 8PayCommission.com Contact Desk`
+          );
+
+          // Show confirmation UI
+          formSuccessAlert.style.display = 'block';
+          
+          // Trigger mail client safely
+          window.location.href = `mailto:${targetEmail}?subject=${fullSubject}&body=${formattedBody}`;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+<style is:global>
+  /* Base Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --brand-primary: #0f2b48;
+    --brand-accent: #2563eb;
+    --brand-accent-hover: #1d4ed8;
+    --brand-highlight: #d97706;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .header {
+    background-color: var(--brand-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .rupee-symbol {
+    background-color: var(--brand-highlight);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+
+  .logo-text .dot {
+    color: var(--brand-highlight);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .nav-item, .dropdown-trigger {
+    background: none;
+    border: none;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .nav-item:hover, .dropdown-trigger:hover, .dropdown-trigger.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-surface);
+    min-width: 270px;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu.mega-state-menu {
+    min-width: 310px;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.65rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: #f1f5f9;
+    color: var(--brand-accent);
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .nav-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumb-trail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-trail a {
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+
+  .breadcrumb-trail a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-trail span {
+    margin: 0 0.4rem;
+  }
+
+  .breadcrumb-trail .active-page {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Page Wrapper */
+  .page-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Hero Section */
+  .contact-hero-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text-block {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .status-pill {
+    display: inline-block;
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.25rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.85rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-summary {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Dual Grid Layout */
+  .contact-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 2rem;
+  }
+
+  .panel-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+
+  /* Left Panel */
+  .contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .channel-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.35rem;
+    display: flex;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .channel-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  .channel-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .channel-content p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 0.4rem;
+  }
+
+  .direct-mail-link {
+    display: inline-block;
+    color: var(--brand-accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    word-break: break-all;
+  }
+
+  .direct-mail-link:hover {
+    text-decoration: underline;
+  }
+
+  .editorial-scope-box {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--brand-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .editorial-scope-box h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 0.6rem;
+  }
+
+  .scope-list {
+    margin-left: 1.2rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .scope-list li {
+    margin-bottom: 0.4rem;
+  }
+
+  /* Right Panel: Form */
+  .contact-form-panel {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+  }
+
+  .styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+  }
+
+  .required {
+    color: #dc2626;
+  }
+
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--brand-accent);
+    background-color: #ffffff;
+  }
+
+  .error-msg {
+    display: none;
+    color: #dc2626;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+  }
+
+  .submit-btn {
+    background-color: var(--brand-accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 0.4rem;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--brand-accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .form-alert {
+    display: none;
+    padding: 0.9rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-top: 0.8rem;
+  }
+
+  .form-alert.success {
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+  }
+
+  /* Editorial Body */
+  .editorial-body-wrapper {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .editorial-chapter {
+    margin-bottom: 2.5rem;
+  }
+
+  .editorial-chapter h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.4rem;
+  }
+
+  .editorial-chapter p {
+    color: #334155;
+    font-size: 1.02rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.78;
+  }
+
+  .editorial-chapter a {
+    color: var(--brand-accent);
+    text-decoration: underline;
+  }
+
+  .bullet-feature-list, .editorial-number-list {
+    margin-left: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #334155;
+  }
+
+  .bullet-feature-list li, .editorial-number-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #0b1a2d;
+    color: #94a3b8;
+    padding: 3rem 1.25rem 1.5rem 1.25rem;
+    border-top: 3px solid var(--brand-highlight);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .disclaimer-text strong {
+    color: #f1f5f9;
+  }
+
+  .footer-nav-simple {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav-simple li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s, padding-left 0.15s;
+    display: inline-block;
+  }
+
+  .footer-nav-simple li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    padding-left: 4px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+
+  /* ==================== MOBILE EDGE-TO-EDGE VIEW (ZERO GAPS) ==================== */
+  @media (max-width: 960px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--brand-primary);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.open {
+      display: block;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+    }
+
+    .nav-item, .dropdown-trigger {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: 0;
+      justify-content: space-between;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background-color: #0b1e33;
+      border: none;
+      padding: 0;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      color: #cbd5e1;
+      padding-left: 2rem;
+    }
+
+    /* Edge-to-edge eliminating all margin/gaps */
+    .page-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .breadcrumb-trail {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .contact-hero-wrapper {
+      padding: 0.5rem 1rem 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-heading {
+      font-size: 1.55rem;
+    }
+
+    .contact-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+
+    .contact-form-panel {
+      padding: 1.3rem;
+      border-radius: var(--radius-md);
+    }
+
+    .editorial-body-wrapper {
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 1.5rem 1rem !important;
+    }
+
+    .editorial-chapter h2 {
+      font-size: 1.35rem;
+    }
+
+    .footer {
+      padding: 2rem 1rem 1rem 1rem !important;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+</style>
