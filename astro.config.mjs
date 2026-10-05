@@ -15,8 +15,16 @@ export default defineConfig({
 			filter: (page) => !page.includes("/admin") && !page.includes("/private"),
 			changefreq: "weekly",
 			priority: 0.8,
-			lastmod: new Date(),
+			lastmod: new Date().toISOString().split('T')[0],
 			entryLimit: 45000, // Google sitemap limit
+			i18n: {
+				// Enable i18n support if using multiple languages
+				defaultLocale: "en",
+				locales: {
+					en: "en-US",
+					// Add more locales as needed: fr: "fr-FR", de: "de-DE"
+				},
+			},
 		}),
 	],
 	adapter: cloudflare({
