@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
@@ -10,12 +11,12 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap({
-			// Generate sitemap.xml for search engines
+			// Generate sitemap.xml for search engines and AdSense crawlers
 			filter: (page) => !page.includes("/admin") && !page.includes("/private"),
 			changefreq: "weekly",
 			priority: 0.8,
-			lastmod: new Date().toISOString().split('T')[0],
-			entryLimit: 45000,
+			lastmod: new Date(),
+			entryLimit: 45000, // Google sitemap limit
 		}),
 	],
 	adapter: cloudflare({
@@ -23,9 +24,8 @@ export default defineConfig({
 			enabled: true,
 		},
 	}),
-	// Output configuration for Cloudflare Pages
-	output: "hybrid",
-	outDir: "./dist",
+	// SEO & Performance optimizations
+	output: "static",
 	vite: {
 		build: {
 			minify: "terser",
