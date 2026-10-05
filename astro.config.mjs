@@ -22,7 +22,6 @@ export default defineConfig({
 				defaultLocale: "en",
 				locales: {
 					en: "en-US",
-					// Add more locales as needed: fr: "fr-FR", de: "de-DE"
 				},
 			},
 		}),
@@ -34,6 +33,9 @@ export default defineConfig({
 	}),
 	// SEO & Performance optimizations
 	output: "static",
+	build: {
+		assets: 'assets',
+	},
 	vite: {
 		build: {
 			minify: "terser",
