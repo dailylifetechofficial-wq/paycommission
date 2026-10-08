@@ -26,6 +26,9 @@ const {
 
 const formattedPublishDate = publishDate?.toISOString().split("T")[0];
 const formattedUpdatedDate = updatedDate?.toISOString().split("T")[0];
+
+// Get AdSense client ID from environment variable or use default
+const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-7557955393674418";
 ---
 
 <!doctype html>
@@ -79,8 +82,8 @@ const formattedUpdatedDate = updatedDate?.toISOString().split("T")[0];
 			}
 		</script>
 
-		<!-- Google AdSense (optional - add your publisher ID) -->
-		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script> -->
+		<!-- Google AdSense -->
+		<script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`} crossorigin="anonymous"></script>
 
 		<!-- Preload critical resources -->
 		<link rel="preload" as="style" href={Astro.resolve("../styles/global.css")} />
