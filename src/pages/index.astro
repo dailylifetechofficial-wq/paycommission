@@ -93,6 +93,7 @@ const canonicalURL = "https://8paycommission.com/";
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.25rem;
+      position: relative;
     }
 
     .brand-logo {
@@ -540,6 +541,108 @@ const canonicalURL = "https://8paycommission.com/";
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 0.85rem;
       color: #cbd5e1;
+    }
+
+    @media (max-width: 960px) {
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        position: relative;
+      }
+
+      .nav-links .nav-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.6rem);
+        right: 0;
+        width: min(320px, 88vw);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        background: #ffffff;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 0.9rem;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .nav-links.open .nav-menu {
+        display: flex;
+      }
+
+      .nav-menu li,
+      .has-dropdown {
+        width: 100%;
+      }
+
+      .nav-item,
+      .dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        color: var(--text-primary);
+        background: #f8fafc;
+        border: 1px solid var(--border-color);
+      }
+
+      .nav-item:hover,
+      .dropdown-trigger:hover,
+      .nav-item.active {
+        color: var(--brand-primary);
+        background-color: #eef2ff;
+      }
+
+      .has-dropdown:hover .dropdown-menu {
+        display: none;
+      }
+
+      .has-dropdown.active .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        margin-top: 0.45rem;
+        background: #ffffff;
+        border: 1px solid var(--border-color);
+        box-shadow: none;
+      }
+
+      .dropdown-menu li a {
+        padding: 0.7rem 0.9rem;
+      }
+
+      .calc-grid,
+      .footer-grid,
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .page-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .calculator-hero {
+        padding: 1.5rem 1rem;
+      }
+
+      .main-heading {
+        font-size: 1.7rem;
+      }
+
+      .output-item,
+      .output-total {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+      }
+
+      .seo-content-body {
+        padding: 1.25rem;
+      }
     }
   </style>
 </head>
