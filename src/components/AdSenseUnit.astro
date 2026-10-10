@@ -1,0 +1,56 @@
+---
+/**
+ * Google AdSense Ad Unit Component
+ * Insert display ads, in-feed ads, or article ads on pages
+ */
+
+export interface Props {
+  type?: 'display' | 'in-feed' | 'article';
+  slot?: string;
+  format?: string;
+  responsive?: boolean;
+  className?: string;
+}
+
+const {
+  type = 'display',
+  slot = '1234567890',
+  format = 'auto',
+  responsive = true,
+  className = '',
+} = Astro.props;
+
+const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7557955393674418';
+---
+
+<div class={`ad-unit ad-${type} ${className}`}>
+  <ins
+    class="adsbygoogle"
+    style="display: block;"
+    data-ad-client={adsenseClientId}
+    data-ad-slot={slot}
+    data-ad-format={format}
+    data-full-width-responsive={responsive}
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<style>
+  .ad-unit {
+    margin: 1rem 0;
+    min-height: 100px;
+  }
+
+  .ad-display {
+    text-align: center;
+  }
+
+  .ad-article {
+    margin: 2rem 0;
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    padding: 1rem 0;
+  }
+</style>

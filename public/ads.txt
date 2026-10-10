@@ -1,1 +1,3 @@
-google.com, pub-7557955393674418, DIRECT, f08c47fec0942fa0
+# ads.txt for 8PayCommission.com
+# AdSense Publisher ID for ad network verification
+google.com, ca-pub-7557955393674418, DIRECT, f08c47fec0942fa0
