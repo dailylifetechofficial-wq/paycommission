@@ -1,8 +1,8 @@
 ---
-// src/pages/privacy-policy.astro
-const title = "Privacy Policy - 8PayCommission.com (2026)";
-const description = "Privacy Policy for 8PayCommission.com. Learn how we handle data, our zero-storage calculator standards, cookie policies, and advertising disclosures.";
-const canonicalUrl = "https://8paycommission.com/privacy-policy/";
+// src/pages/terms-of-condition.astro
+const title = "Terms of Condition - 8PayCommission.com (2026)";
+const description = "Terms of Condition for 8PayCommission.com. Review our computational disclaimers, intellectual property terms, educational scope, and liability limits.";
+const canonicalUrl = "https://8paycommission.com/terms-of-condition/";
 ---
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@ const canonicalUrl = "https://8paycommission.com/privacy-policy/";
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="google-adsense-account" content="ca-pub-7557955393674418"> <!-- Added publisher meta -->
   <link rel="canonical" href={canonicalUrl} />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="googlebot" content="noindex, nofollow" />
@@ -22,7 +23,7 @@ const canonicalUrl = "https://8paycommission.com/privacy-policy/";
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
 
-  <!-- Structured Data: WebPage & Organization Schema for Search Transparency -->
+  <!-- Structured Data: WebPage & Organization Schema for Legal Transparency -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,9 +37,9 @@ const canonicalUrl = "https://8paycommission.com/privacy-policy/";
         },
         {
           "@type": "WebPage",
-          "name": "Privacy Policy - 8PayCommission",
-          "url": "https://8paycommission.com/privacy-policy/",
-          "description": "Comprehensive privacy policy, cookie disclosures, and advertising practices for 8PayCommission.com."
+          "name": "Terms of Condition - 8PayCommission",
+          "url": "https://8paycommission.com/terms-of-condition/",
+          "description": "Terms of condition, legal disclaimer, usage conditions, and limitation of liability for 8PayCommission.com."
         }
       ]
     }

@@ -12,6 +12,7 @@ export interface Props {
 	author?: string;
 	publishDate?: Date;
 	updatedDate?: Date;
+	noindex?: boolean;
 }
 
 const {
@@ -22,10 +23,12 @@ const {
 	author = "8PayCommission Team",
 	publishDate,
 	updatedDate,
+	noindex = false,
 } = Astro.props;
 
 const formattedPublishDate = publishDate?.toISOString().split("T")[0];
 const formattedUpdatedDate = updatedDate?.toISOString().split("T")[0];
+const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
 // Get AdSense client ID from environment variable or use default
 const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-7557955393674418";
@@ -42,6 +45,7 @@ const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-7557
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<meta name="author" content={author} />
+		<meta name="google-adsense-account" content="ca-pub-7557955393674418"> <!-- Added publisher meta -->
 
 		<!-- Open Graph / Facebook (for social sharing & AdSense crawlers) -->
 		<meta property="og:type" content="website" />
@@ -61,8 +65,8 @@ const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-7557
 		<link rel="canonical" href={canonicalURL} />
 
 		<!-- Robots & Indexing -->
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		<meta name="googlebot" content="index, follow" />
+		<meta name="robots" content={robotsContent} />
+		<meta name="googlebot" content={robotsContent} />
 
 		<!-- Schema.org JSON-LD (for search engines) -->
 		<script type="application/ld+json">

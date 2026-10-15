@@ -1,9 +1,8 @@
 ---
-// src/pages/about-us.astro
-const title = "About Us - 8PayCommission.com | Editorial Standards & Mission (2026)";
-const description = "Learn about 8PayCommission.com: Our mission, editorial methodology, public compensation modeling tools, independent governance, and research standards.";
-const canonicalUrl = "https://8paycommission.com/about-us/";
-const noindex = true;
+// src/pages/contact-us.astro
+const title = "Contact Us - 8PayCommission.com | Support & Editorial Inquiries (2026)";
+const description = "Get in touch with 8PayCommission.com. Submit calculation feedback, editorial inquiries, Government Order updates, or technical support questions.";
+const canonicalUrl = "https://8paycommission.com/contact-us/";
 ---
 
 <!DOCTYPE html>
@@ -13,6 +12,7 @@ const noindex = true;
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="google-adsense-account" content="ca-pub-7557955393674418"> <!-- Added publisher meta -->
   <link rel="canonical" href={canonicalUrl} />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="googlebot" content="noindex, nofollow" />
@@ -23,7 +23,7 @@ const noindex = true;
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
   
-  <!-- Structured Data: Organization & AboutPage Schema for E-E-A-T Trust -->
+  <!-- Structured Data: ContactPage & Organization Schema for AdSense Trust -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,10 +37,10 @@ const noindex = true;
           "description": "Independent analytical and financial education portal dedicated to civil service compensation, pay matrices, pension modeling, and Pay Commission developments across India."
         },
         {
-          "@type": "AboutPage",
-          "name": "About Us - 8PayCommission",
-          "url": "https://8paycommission.com/about-us/",
-          "description": "An overview of the editorial principles, computational methodologies, and mission behind 8PayCommission.com."
+          "@type": "ContactPage",
+          "name": "Contact Us - 8PayCommission",
+          "url": "https://8paycommission.com/contact-us/",
+          "description": "Contact channels and editorial communication desk for 8PayCommission.com."
         }
       ]
     }

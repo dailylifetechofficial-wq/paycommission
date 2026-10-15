@@ -1,8 +1,8 @@
 ---
-// src/pages/contact-us.astro
-const title = "Contact Us - 8PayCommission.com | Support & Editorial Inquiries (2026)";
-const description = "Get in touch with 8PayCommission.com. Submit calculation feedback, editorial inquiries, Government Order updates, or technical support questions.";
-const canonicalUrl = "https://8paycommission.com/contact-us/";
+// src/pages/privacy-policy.astro
+const title = "Privacy Policy - 8PayCommission.com (2026)";
+const description = "Privacy Policy for 8PayCommission.com. Learn how we handle data, our zero-storage calculator standards, cookie policies, and advertising disclosures.";
+const canonicalUrl = "https://8paycommission.com/privacy-policy/";
 ---
 
 <!DOCTYPE html>
@@ -12,17 +12,18 @@ const canonicalUrl = "https://8paycommission.com/contact-us/";
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="google-adsense-account" content="ca-pub-7557955393674418"> <!-- Added publisher meta -->
   <link rel="canonical" href={canonicalUrl} />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="googlebot" content="noindex, nofollow" />
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
-  
-  <!-- Structured Data: ContactPage & Organization Schema for AdSense Trust -->
+
+  <!-- Structured Data: WebPage & Organization Schema for Search Transparency -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,14 +33,13 @@ const canonicalUrl = "https://8paycommission.com/contact-us/";
           "name": "8PayCommission",
           "url": "https://8paycommission.com",
           "logo": "https://8paycommission.com/favicon.svg",
-          "email": "dailylifetech.official@gmail.com",
-          "description": "Independent analytical and financial education portal dedicated to civil service compensation, pay matrices, pension modeling, and Pay Commission developments across India."
+          "email": "dailylifetech.official@gmail.com"
         },
         {
-          "@type": "ContactPage",
-          "name": "Contact Us - 8PayCommission",
-          "url": "https://8paycommission.com/contact-us/",
-          "description": "Contact channels and editorial communication desk for 8PayCommission.com."
+          "@type": "WebPage",
+          "name": "Privacy Policy - 8PayCommission",
+          "url": "https://8paycommission.com/privacy-policy/",
+          "description": "Comprehensive privacy policy, cookie disclosures, and advertising practices for 8PayCommission.com."
         }
       ]
     }
