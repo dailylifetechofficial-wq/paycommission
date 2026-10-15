@@ -18,11 +18,15 @@ const {
 	title,
 	description = "8PayCommission - Professional Commission Management Platform",
 	image = "https://8paycommission.com/og-image.png",
-	canonicalURL = new URL(Astro.url.pathname, Astro.site),
+	canonicalURL: incomingCanonical,
 	author = "8PayCommission Team",
 	publishDate,
 	updatedDate,
 } = Astro.props;
+
+const rawPath = incomingCanonical ?? Astro.url.pathname;
+const normalizedPath = rawPath === '/' ? '/' : String(rawPath).replace(/\/+$/u, '');
+const canonicalURL = new URL(normalizedPath, Astro.site).toString();
 
 const formattedPublishDate = publishDate?.toISOString().split("T")[0];
 const formattedUpdatedDate = updatedDate?.toISOString().split("T")[0];
@@ -86,15 +90,3 @@ const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-7557
 		<script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`} crossorigin="anonymous"></script>
 
 		<!-- Preload critical resources -->
-		<link rel="preload" as="style" href={Astro.resolve("../styles/global.css")} />
-
-		<slot name="head" />
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
-
-<style is:global>
-	/* Global styles will be added here */
-</style>
