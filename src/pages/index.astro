@@ -1,39 +1,1156 @@
 ---
 // src/pages/index.astro
-const title = "₹ 8PayCommission: Expected Pay Matrix, Salary Calculator & Fitment Factor (2026)";
-const description = "Calculate 8th Pay Commission salary, pay matrix level 1 to 18, fitment factor 2.28 vs 2.86, DA merger, and state revisions for TN, UP, Maharashtra, Rajasthan, Bihar, and WB.";
+const pageTitle = "8th Pay Commission Calculator - Expected Salary & Pension Hike Estimator";
+const pageDescription = "Calculate your projected salary, fitment factor hike, basic pay, and pension under the 8th Pay Commission. Live calculator with Level 1 to 18 pay matrix for Central Government employees and pensioners.";
 const canonicalURL = "https://8paycommission.com/";
+
+// Schema.org Structured Data
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://8paycommission.com/#website",
+      "url": "https://8paycommission.com/",
+      "name": "8th Pay Commission Calculator & Portal",
+      "description": pageDescription,
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://8paycommission.com/#calculator",
+      "url": canonicalURL,
+      "name": "8th Pay Commission Salary & Pension Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Runs client-side on all modern browsers.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://8paycommission.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When will the 8th Pay Commission be implemented?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Following the 10-year periodic revision cycle established by previous Central Pay Commissions (6th CPC in 2006, 7th CPC in 2016), the 8th Central Pay Commission is slated for implementation with effect from January 1, 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the expected fitment factor for the 8th Pay Commission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employee federations have demanded a fitment factor ranging from 2.86 to 3.68. However, economic analysts project a baseline fitment factor between 1.92 and 2.57, which would raise minimum basic pay from ₹18,000 to approximately ₹34,560 – ₹46,260."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is 8th CPC basic pay calculated from 7th CPC basic pay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Revised Basic Pay is calculated by multiplying your existing 7th CPC basic pay by the recommended fitment factor (e.g., 7th CPC Basic Pay × 2.57 or 2.86) and rounding off to the nearest index value in the newly notified Pay Matrix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Dearness Allowance (DA) be merged into basic pay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Historically, with every new Pay Commission, accumulated Dearness Allowance (which reaches 50% or more) is zeroed out and absorbed into the revised basic pay structure through the fitment factor, restarting DA from 0%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How will 8th Pay Commission affect pensioners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pensioners will receive revisions based on parity formulas. The standard minimum pension (currently ₹9,000) will be scaled using the fitment factor, increasing to an estimated ₹17,280 – ₹25,740 depending on the final approved multiplier."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const schemaJson = JSON.stringify(schemaData);
+
+// Pay Matrix Level References (7th CPC starting points)
+const payLevels = [
+  { level: "Level 1", gp: "GP 1800", min7: 18000, max7: 56900 },
+  { level: "Level 2", gp: "GP 1900", min7: 19900, max7: 63200 },
+  { level: "Level 3", gp: "GP 2000", min7: 21700, max7: 69100 },
+  { level: "Level 4", gp: "GP 2400", min7: 25500, max7: 81100 },
+  { level: "Level 5", gp: "GP 2800", min7: 29200, max7: 92300 },
+  { level: "Level 6", gp: "GP 4200", min7: 35400, max7: 112400 },
+  { level: "Level 7", gp: "GP 4600", min7: 44900, max7: 142400 },
+  { level: "Level 8", gp: "GP 4800", min7: 47600, max7: 151100 },
+  { level: "Level 9", gp: "GP 5400 (PB-2)", min7: 53100, max7: 167800 },
+  { level: "Level 10", gp: "GP 5400 (PB-3)", min7: 56100, max7: 177500 },
+  { level: "Level 11", gp: "GP 6600", min7: 67700, max7: 208700 },
+  { level: "Level 12", gp: "GP 7600", min7: 78800, max7: 209200 },
+  { level: "Level 13", gp: "GP 8700", min7: 123100, max7: 215900 },
+  { level: "Level 14", gp: "GP 10000", min7: 144200, max7: 218200 }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=5.0" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
   <link rel="canonical" href={canonicalURL} />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
+
+  <!-- Open Graph / Social Tags -->
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
   <meta property="og:url" content={canonicalURL} />
-  
-  <!-- Schema Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "₹ 8PayCommission",
-      "url": "https://8paycommission.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://8paycommission.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1e3a8a" />
+
+  <script type="application/ld+json" set:html={schemaJson}></script>
+
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-hover: #1e40af;
+      --primary-light: #eff6ff;
+      --accent: #d97706;
+      --accent-light: #fef3c7;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --border-focus: #93c5fd;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 35px -8px rgba(15, 23, 42, 0.12);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-badge {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 900;
+      box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    /* HERO */
+    .hero-section {
+      text-align: center;
+      padding: 56px 0 36px;
+      background: radial-gradient(circle at 50% 5%, #eff6ff 0%, #f8fafc 85%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-light);
+      border: 1px solid #fde68a;
+      color: #b45309;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 28px;
+    }
+
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .stat-chip {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* CALCULATOR GRID */
+    .calc-wrapper {
+      padding: 44px 0 68px;
+    }
+
+    .calc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 36px;
+    }
+
+    .section-heading {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .form-hint {
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .form-select, .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      background: #ffffff;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-select:focus, .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+    }
+
+    .fitment-pills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .fitment-btn {
+      padding: 8px 6px;
+      background: var(--bg-body);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .fitment-btn.active, .fitment-btn:hover {
+      color: #ffffff;
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    /* OUTPUT DASHBOARD */
+    .output-dashboard {
+      background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+      border: 1.5px solid #dbeafe;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .result-hero {
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .result-hero-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .result-hero-val {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .result-diff-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin-top: 8px;
+    }
+
+    .breakdown-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .breakdown-table td {
+      padding: 8px 4px;
+      border-bottom: 1px dashed #cbd5e1;
+    }
+
+    .breakdown-table td:last-child {
+      text-align: right;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .pension-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-top: auto;
+    }
+
+    .pension-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .pension-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .pension-row span.bold {
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    /* PAY MATRIX TABLE */
+    .matrix-section {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 0;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin-top: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pay-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+      min-width: 640px;
+    }
+
+    .pay-table th {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .pay-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .pay-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .pay-table tr:hover {
+      background: #eff6ff;
+    }
+
+    .pay-table td strong {
+      color: var(--text-main);
+    }
+
+    /* EDITORIAL CONTENT */
+    .editorial-section {
+      padding: 72px 0;
+    }
+
+    .editorial-content {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .editorial-content h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 40px 0 16px;
+      letter-spacing: -0.025em;
+    }
+
+    .editorial-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .editorial-content h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 26px 0 12px;
+    }
+
+    .editorial-content p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .editorial-content ul, .editorial-content ol {
+      margin: 0 0 24px 22px;
+      color: var(--text-muted);
+    }
+
+    .editorial-content li {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .info-card {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0;
+    }
+
+    .info-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #1e3a8a;
+    }
+
+    /* FAQ BLOCK */
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .faq-answer {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 60px 0 32px;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      color: #ffffff;
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .footer-brand p {
+      line-height: 1.65;
+      color: #94a3b8;
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .legal-nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .legal-nav a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    .legal-nav a:hover {
+      color: #ffffff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .calc-card {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .fitment-pills {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-logo" title="8th Pay Commission Calculator">
+        <div class="logo-badge">8th</div>
+        <span>8PayCommission<span style="color: var(--accent);">.com</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#calculator" class="nav-link">Calculator</a></li>
+          <li><a href="#pay-matrix" class="nav-link">Pay Matrix</a></li>
+          <li><a href="#fitment-factor" class="nav-link">Fitment Factor</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-badge">Expected Implementation: January 1, 2026</div>
+        <h1 class="hero-title">8th Pay Commission <span>Salary &amp; Pension Calculator</span></h1>
+        <p class="hero-subtitle">
+          Estimate your revised basic pay, allowances (HRA, DA, TA), monthly gross salary, and expected pension under the proposed 8th Central Pay Commission recommendations.
+        </p>
+
+        <div class="stats-bar">
+          <div class="stat-chip">&bull; Minimum Basic: Projected ₹34,560 - ₹51,480</div>
+          <div class="stat-chip">&bull; Multiple Fitment Factors (1.92 to 3.68)</div>
+          <div class="stat-chip">&bull; Level 1 to 18 Covered</div>
+          <div class="stat-chip">&bull; 100% In-Browser Privacy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR SECTION -->
+    <section class="calc-wrapper" id="calculator">
+      <div class="container">
+        <div class="calc-card">
+          
+          <!-- INPUTS -->
+          <div class="calc-inputs">
+            <div class="section-heading">
+              <span>&#9881;</span> Enter Current 7th CPC Details
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="payLevelSelect">
+                <span>Select 7th CPC Pay Level</span>
+                <span class="form-hint">Level 1 (GP 1800) to Level 18</span>
+              </label>
+              <select id="payLevelSelect" class="form-select">
+                {payLevels.map((lvl) => (
+                  <option value={lvl.min7}>
+                    {lvl.level} ({lvl.gp}) - Min ₹{lvl.min7.toLocaleString('en-IN')}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="basicPayInput">
+                <span>Current 7th CPC Basic Pay (₹)</span>
+                <span class="form-hint">Monthly Basic Pay</span>
+              </label>
+              <input 
+                type="number" 
+                id="basicPayInput" 
+                class="form-input" 
+                value="18000" 
+                min="18000" 
+                max="250000" 
+                step="100"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span>Choose Proposed Fitment Factor</span>
+                <span class="form-hint" id="activeFitmentLabel">Active: 2.57</span>
+              </label>
+              <div class="fitment-pills">
+                <button type="button" class="fitment-btn" data-factor="1.92">1.92 (Conservative)</button>
+                <button type="button" class="fitment-btn active" data-factor="2.57">2.57 (7th CPC Baseline)</button>
+                <button type="button" class="fitment-btn" data-factor="2.86">2.86 (Union Demand)</button>
+                <button type="button" class="fitment-btn" data-factor="3.68">3.68 (Apex Demand)</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cityCategorySelect">
+                <span>City Classification for HRA</span>
+                <span class="form-hint">X / Y / Z Category</span>
+              </label>
+              <select id="cityCategorySelect" class="form-select">
+                <option value="0.30">X Class City (30% HRA - Metros)</option>
+                <option value="0.20" selected>Y Class City (20% HRA - Tier 2)</option>
+                <option value="0.10">Z Class City (10% HRA - Rural/Small Towns)</option>
+                <option value="0.00">Government Quarters (0% HRA)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="daRateSelect">
+                <span>Expected New DA Rate</span>
+                <span class="form-hint">DA resets upon CPC launch</span>
+              </label>
+              <select id="daRateSelect" class="form-select">
+                <option value="0.00" selected>0% (Initial Merger State)</option>
+                <option value="0.04">4% (First Half-Year Hike)</option>
+                <option value="0.08">8% (First Year Combined)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- OUTPUT DASHBOARD -->
+          <div class="output-dashboard">
+            <div>
+              <div class="result-hero">
+                <div class="result-hero-title">Projected 8th CPC Monthly Gross</div>
+                <div class="result-hero-val" id="grossSalaryText">₹ 55,512</div>
+                <div class="result-diff-badge" id="monthlyGainBadge">
+                  + ₹ 21,312 (+62.3%) Gain
+                </div>
+              </div>
+
+              <table class="breakdown-table">
+                <tbody>
+                  <tr>
+                    <td>Current Basic Pay (7th CPC)</td>
+                    <td id="curBasicText">₹ 18,000</td>
+                  </tr>
+                  <tr>
+                    <td>Projected Revised Basic (8th CPC)</td>
+                    <td id="revBasicText">₹ 46,260</td>
+                  </tr>
+                  <tr>
+                    <td>Estimated HRA Allowance</td>
+                    <td id="revHraText">₹ 9,252</td>
+                  </tr>
+                  <tr>
+                    <td>Dearness Allowance (DA)</td>
+                    <td id="revDaText">₹ 0</td>
+                  </tr>
+                  <tr>
+                    <td>Estimated Transport Allowance (TA)</td>
+                    <td id="revTaText">₹ 2,400</td>
+                  </tr>
+                  <tr style="border-bottom: 2px solid #1e3a8a;">
+                    <td><strong>Estimated Annual Increase</strong></td>
+                    <td id="annualGainText" style="color: #15803d;"><strong>+ ₹ 2,55,744</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- PENSION PROJECTION -->
+            <div class="pension-box">
+              <div class="pension-row">
+                <span>Estimated Pension (50% of Basic):</span>
+                <span id="revPensionText" class="bold">₹ 23,130 / mo</span>
+              </div>
+              <div class="pension-row">
+                <span>Family Pension (30% of Basic):</span>
+                <span id="revFamilyPensionText" class="bold">₹ 13,878 / mo</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAY MATRIX SECTION -->
+    <section class="matrix-section" id="pay-matrix">
+      <div class="container">
+        <h2 style="font-size: 2rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">
+          8th Pay Commission Expected Pay Matrix (Level 1 to 14)
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Comparison between existing 7th CPC baseline pay and projected 8th CPC minimum starting basic pay based on standard fitment multipliers (2.57x and 2.86x).
+        </p>
+
+        <div class="table-container">
+          <table class="pay-table">
+            <thead>
+              <tr>
+                <th>Pay Level</th>
+                <th>Grade Pay (Pre-7th)</th>
+                <th>7th CPC Minimum</th>
+                <th>Projected 8th CPC (2.57x)</th>
+                <th>Projected 8th CPC (2.86x)</th>
+                <th>Maximum Index (7th CPC)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {payLevels.map((item) => (
+                <tr>
+                  <td><strong>{item.level}</strong></td>
+                  <td>{item.gp}</td>
+                  <td>₹ {item.min7.toLocaleString('en-IN')}</td>
+                  <td><strong>₹ {Math.round(item.min7 * 2.57).toLocaleString('en-IN')}</strong></td>
+                  <td><strong style="color: var(--accent);">₹ {Math.round(item.min7 * 2.86).toLocaleString('en-IN')}</strong></td>
+                  <td>₹ {item.max7.toLocaleString('en-IN')}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL CONTENT -->
+    <section class="editorial-section">
+      <div class="container editorial-content">
+        <h2>Understanding the 8th Central Pay Commission: Evolution &amp; Projections</h2>
+        <p>
+          The constitution of the 8th Central Pay Commission represents a major fiscal milestone for over 4.9 million central government employees and more than 6.5 million pensioners across India. In accordance with the historical 10-year convention established by the Central Government, pay commissions are instituted every decade to review, rationalize, and elevate basic pay scales, allowance frameworks, and pension dispensations in response to inflation and macroeconomic growth.
+        </p>
+
+        <div class="info-card">
+          <h4>Why January 1, 2026 is the Crucial Benchmark Date</h4>
+          <p>
+            The 6th CPC took effect on January 1, 2006, and the 7th CPC became effective on January 1, 2016. In line with this decade-long interval, the 8th Central Pay Commission recommendations are expected to take effect from <strong>January 1, 2026</strong>.
+          </p>
+        </div>
+
+        <h3 id="fitment-factor">The Fitment Factor Debate: 1.92 vs 2.57 vs 2.86 vs 3.68</h3>
+        <p>
+          The cornerstone of any Pay Commission's recommendations is the <strong>fitment factor</strong>. The fitment factor is the uniform numerical multiplier applied to existing basic pay to calculate the revised basic pay under the newly drafted pay matrix.
+        </p>
+        <ul>
+          <li><strong>Conservative Projection (1.92x):</strong> Reflects inflation neutralization if accumulated Dearness Allowance (DA) is absorbed with a modest real wage growth markup. Minimum basic pay would rise from ₹18,000 to approximately ₹34,560.</li>
+          <li><strong>7th CPC Baseline Benchmark (2.57x):</strong> The factor recommended by the Justice A.K. Mathur commission in the 7th CPC. Applying this benchmark elevates minimum wage to ₹46,260.</li>
+          <li><strong>Staff Side / Union Demand (2.86x – 3.68x):</strong> National employee joint consultative bodies argue that soaring housing, education, and healthcare costs warrant a higher multiplier to match the Aykroyd formula for minimum nutritional and living standards.</li>
+        </ul>
+
+        <h3>DA Merger &amp; House Rent Allowance (HRA) Rationalization</h3>
+        <p>
+          When a new pay commission is formally adopted, the accumulated Dearness Allowance percentage (which reached 50% in early 2024 and continues rising) is reset back to zero. The accumulated purchasing power relief is permanently folded into the expanded basic pay. Subsequently, House Rent Allowance (HRA) undergoes categorization adjustments:
+        </p>
+        <ol>
+          <li><strong>X-Class Cities (Metros):</strong> Revised basic pay attracts 30% HRA (subject to periodic upward revisions as DA crosses prescribed milestones).</li>
+          <li><strong>Y-Class Cities (Tier 2 Municipalities):</strong> Compensated with 20% HRA.</li>
+          <li><strong>Z-Class Cities (Towns &amp; Rural Stations):</strong> Compensated with 10% HRA.</li>
+        </ol>
+
+        <!-- FAQS -->
+        <div class="faq-block" id="faqs">
+          <h2>Frequently Asked Questions (FAQs)</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">When will the 8th Pay Commission be implemented?</div>
+            <div class="faq-answer">
+              Following the established 10-year periodic review cycle (6th CPC in 2006, 7th CPC in 2016), the 8th Central Pay Commission is expected to take effect from January 1, 2026.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">What is the formula to calculate 8th CPC revised basic pay?</div>
+            <div class="faq-answer">
+              The standard formula is: <code>8th CPC Basic Pay = Current 7th CPC Basic Pay × Approved Fitment Factor</code>, followed by index-matching to the nearest cell in the newly published Pay Matrix.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">How are pensioners affected by the 8th Pay Commission?</div>
+            <div class="faq-answer">
+              Under central parity principles, pensions are revised using the same fitment factor. Basic pension is computed as 50% of the revised notional basic pay, accompanied by revised Dearness Relief (DR).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Is 8paycommission.com an official government portal?</div>
+            <div class="faq-answer">
+              No. 8paycommission.com is an independent educational and financial calculation utility designed to help employees and pensioners estimate future payouts based on past commission precedents and official union proposals.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h3>8PayCommission<span>.com</span></h3>
+          <p>
+            An independent online calculation portal providing salary projections, pension estimates, and pay matrix analytics for Central Government staff, defense personnel, and pensioners.
+          </p>
+          <p style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">
+            Disclaimer: Projections are indicative and calculated using empirical models, union submissions, and historical CPC multipliers. Official figures are subject to Cabinet notifications.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>CPC Calculators</h4>
+          <ul class="footer-links">
+            <li><a href="#calculator">8th CPC Salary Calculator</a></li>
+            <li><a href="#calculator">Pension &amp; Family Pension</a></li>
+            <li><a href="#pay-matrix">Level 1-18 Pay Matrix</a></li>
+            <li><a href="#fitment-factor">Fitment Factor Analysis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portal &amp; Legal</h4>
+          <ul class="footer-links">
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/contact-us/">Contact Us</a></li>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/disclaimer/">Disclaimer</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 8paycommission.com. All rights reserved. 100% Client-Side Calculations.</span>
+        <div class="legal-nav">
+          <a href="/privacy-policy/">Privacy</a>
+          <a href="/terms-of-service/">Terms</a>
+          <a href="/disclaimer/">Disclaimer</a>
+          <a href="/contact-us/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLIENT-SIDE CALCULATION ENGINE -->
+  <script is:inline>
+    // Elements
+    const payLevelSelect = document.getElementById('payLevelSelect');
+    const basicPayInput = document.getElementById('basicPayInput');
+    const fitmentButtons = document.querySelectorAll('.fitment-btn');
+    const activeFitmentLabel = document.getElementById('activeFitmentLabel');
+    const cityCategorySelect = document.getElementById('cityCategorySelect');
+    const daRateSelect = document.getElementById('daRateSelect');
+
+    // Outputs
+    const grossSalaryText = document.getElementById('grossSalaryText');
+    const monthlyGainBadge = document.getElementById('monthlyGainBadge');
+    const curBasicText = document.getElementById('curBasicText');
+    const revBasicText = document.getElementById('revBasicText');
+    const revHraText = document.getElementById('revHraText');
+    const revDaText = document.getElementById('revDaText');
+    const revTaText = document.getElementById('revTaText');
+    const annualGainText = document.getElementById('annualGainText');
+    const revPensionText = document.getElementById('revPensionText');
+    const revFamilyPensionText = document.getElementById('revFamilyPensionText');
+
+    let currentFactor = 2.57;
+
+    function formatINR(val) {
+      return "₹ " + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function calculatePay() {
+      const basic7th = parseFloat(basicPayInput.value) || 18000;
+      const hraRate = parseFloat(cityCategorySelect.value) || 0.20;
+      const daRate = parseFloat(daRateSelect.value) || 0.00;
+
+      // 7th CPC baseline gross estimate (assumes 50% DA in late 7th CPC + HRA)
+      const currentDaEstimate = basic7th * 0.50;
+      const currentHraEstimate = basic7th * hraRate;
+      const currentTaEstimate = 1800;
+      const currentGross = basic7th + currentDaEstimate + currentHraEstimate + currentTaEstimate;
+
+      // 8th CPC projected basic
+      const rawRevisedBasic = basic7th * currentFactor;
+      // Round to nearest 100 as per Pay Commission matrix conventions
+      const revisedBasic = Math.round(rawRevisedBasic / 100) * 100;
+
+      // Revised allowances
+      const revisedHra = Math.round(revisedBasic * hraRate);
+      const revisedDa = Math.round(revisedBasic * daRate);
+      
+      // Estimated TA based on level
+      const revisedTa = revisedBasic > 50000 ? 3600 : 2400;
+
+      const revisedGross = revisedBasic + revisedHra + revisedDa + revisedTa;
+      const monthlyGain = revisedGross - currentGross;
+      const pctGain = ((monthlyGain / currentGross) * 100).toFixed(1);
+      const annualGain = monthlyGain * 12;
+
+      // Pension projections (50% and 30% of basic)
+      const revisedPension = Math.round(revisedBasic * 0.50);
+      const revisedFamilyPension = Math.round(revisedBasic * 0.30);
+
+      // Render outputs
+      grossSalaryText.innerText = formatINR(revisedGross);
+      curBasicText.innerText = formatINR(basic7th);
+      revBasicText.innerText = formatINR(revisedBasic);
+      revHraText.innerText = formatINR(revisedHra);
+      revDaText.innerText = formatINR(revisedDa);
+      revTaText.innerText = formatINR(revisedTa);
+
+      if (monthlyGain > 0) {
+        monthlyGainBadge.innerText = `+ ${formatINR(monthlyGain)} (+${pctGain}%) Gain`;
+        monthlyGainBadge.style.display = "inline-flex";
+        annualGainText.innerText = `+ ${formatINR(annualGain)}`;
+      } else {
+        monthlyGainBadge.style.display = "none";
+        annualGainText.innerText = formatINR(0);
+      }
+
+      revPensionText.innerText = `${formatINR(revisedPension)} / mo`;
+      revFamilyPensionText.innerText = `${formatINR(revisedFamilyPension)} / mo`;
+    }
+
+    // Event Handlers
+    payLevelSelect.addEventListener('change', (e) => {
+      basicPayInput.value = e.target.value;
+      calculatePay();
+    });
+
+    basicPayInput.addEventListener('input', calculatePay);
+    cityCategorySelect.addEventListener('change', calculatePay);
+    daRateSelect.addEventListener('change', calculatePay);
+
+    fitmentButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        fitmentButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFactor = parseFloat(btn.getAttribute('data-factor'));
+        activeFitmentLabel.innerText = `Active: ${currentFactor}`;
+        calculatePay();
+      });
+    });
+
+    // Initial calculation on load
+    calculatePay();
   </script>
 
-  <!-- ==================== PREMIUM ZERO-GAP RESPONSIVE STYLES ==================== -->
+</body>
+</html>
