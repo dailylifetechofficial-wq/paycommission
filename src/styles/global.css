@@ -78,21 +78,3 @@ img { max-width: 100%; height: auto; border-radius: 12px; }
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
-
-.independent-trust-banner {
-  background-color: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  border-left: 5px solid #16a34a;
-  color: #166534;
-  padding: 0.9rem 1.2rem;
-  border-radius: var(--radius-md);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.independent-trust-banner strong {
-  color: #14532d;
-}
